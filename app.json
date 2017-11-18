@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "ChatWithRe_ducks",
+    "description": "ChatWithRe_ducks",
+    "slug": "ChatWithRe-ducks",
+    "privacy": "public",
+    "sdkVersion": "22.0.0",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "primaryColor": "#cccccc",
+    "loading": {
+      "hideExponentText": false
+    },
+    "packagerOpts": {
+      "assetExts": ["ttf", "mp4"],
+    },
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}
