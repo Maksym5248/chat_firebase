@@ -1,22 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TouchableOpacity } from 'react-native';
-import { EvilIcons } from '@expo/vector-icons';
+import { TouchableOpacity, Text } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import styles from './styles';
 
-
-const ButtonFacebook = ({ onPress }) => (
+const ButtonLogOut = ({ onPress }) => (
   <TouchableOpacity onPress={onPress} style={styles.container}>
-    <EvilIcons name='sc-facebook' size={36} color='white' />
+    <MaterialCommunityIcons name='exit-to-app' size={18} />
+    <Text> Вийти </Text>
   </TouchableOpacity>
 );
 
-ButtonFacebook.defaultProps = {
-
-};
-
-ButtonFacebook.propTypes = {
+ButtonLogOut.propTypes = {
   onPress: PropTypes.func,
 };
 
-export default ButtonFacebook;
+export default ButtonLogOut;

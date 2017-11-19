@@ -1,7 +1,7 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { composeWithDevTools } from 'remote-redux-devtools';
 import thunk from 'redux-thunk';
-import { persistStore, persistCombineReducers } from 'redux-persist';
+import { persistStore, persistCombineReducers, persistReducer } from 'redux-persist';
 import AsyncStorage from 'redux-persist/es/storage';
 import appReducer from './modules';
 
@@ -12,6 +12,10 @@ const config = {
 
 const reducer = persistCombineReducers(config, appReducer);
 
+let rootReducer = combineReducers({
+  storage: combineReducers();
+  persist: persistReducer(barPersistConfig, barReducer),
+});
 
 function configureStore() {
   const store = createStore(

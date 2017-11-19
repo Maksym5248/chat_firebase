@@ -4,4 +4,5 @@ export default {
   Authentication: 'Authentication',
   Settings: 'Settings',
   Collections: 'Collections',
+  DrawerMenu: 'DrawerMenu',
 };

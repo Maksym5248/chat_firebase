@@ -1,13 +1,13 @@
 import app from './app';
 import navigator from './navigator';
 import settings from './settings';
-import authenticationReducer from './Authentication';
+import authentication from './authentication';
 
 export default {
   app,
   navigator,
   settings,
-  authenticationReducer,
+  authentication,
 };
 
 /*

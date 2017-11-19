@@ -11,10 +11,6 @@ const ButtonFacebook = ({ onPress }) => (
   </TouchableOpacity>
 );
 
-ButtonFacebook.defaultProps = {
-
-};
-
 ButtonFacebook.propTypes = {
   onPress: PropTypes.func,
 };

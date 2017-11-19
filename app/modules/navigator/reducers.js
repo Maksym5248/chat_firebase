@@ -23,7 +23,7 @@ const navigatorReducer = (state, action) => {
   return (newState || state);
   // }
 
-  // return getResetState(state, screens.Authentication);
+  // return getResetState(state, screens.authentication);
 };
 
 export default navigatorReducer;

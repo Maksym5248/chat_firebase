@@ -11,7 +11,6 @@ import styles from './styles';
 import ButtonFacebook from './components/ButtonFacebook';
 
 const AuthenticationScreen = ({
-  loading,
   email,
   setEmail,
   password,

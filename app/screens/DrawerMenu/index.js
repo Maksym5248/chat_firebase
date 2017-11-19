@@ -1,34 +1,32 @@
 import { connect } from 'react-redux';
-import { compose, withState, withHandlers, hoistStatics, lifecycle } from 'recompose';
-// import { withLoadingModal, withLoadingState } from '../../utils/enhancers';
-import AuthenticationScreen from './AuthenticationScreen';
-import { authenticationOperations } from '../../modules/Authentication';
+import { compose, withHandlers, hoistStatics, lifecycle } from 'recompose';
+import { withLoadingModal } from '../../utils/enhancers';
+import DrawerMenuScreen from './DrawerMenuScreen';
+import { drawerMenuOperations } from '../../modules/drawerMenu';
+import {isLoading} from "../../modules/app/actions";
 
-const { logInWithPasswordAndEmail, logInWithFacebook } = authenticationOperations;
+
+const { logOut } = drawerMenuOperations;
 
 const mapStateToProps = state => ({
-  statea: state.authenticationReducer,
+  statea: state.app,
+  isLoading: state.app.isLoading,
+  emailAndPassword: state.authentication.emailAndPassword,
+  credentialFacebook: state.authentication.credentialFacebook,
 });
 
 const enhance = compose(
   connect(mapStateToProps),
-  withState('email', 'setEmail', ''),
-  withState('password', 'setPassword', ''),
+  // withLoadingModal.stateProp('isLoading'),
   withHandlers({
-    setEmail: ({ setEmail }) => (text) => setEmail(text),
-    setPassword: ({ setPassword }) => (text) => setPassword(text),
-    logInWithFaceBook: ({ dispatch }) => () => dispatch(logInWithFacebook()),
-    logInWithPasswordAndEmail: ({ email, password, dispatch }) => () => (
-      dispatch(logInWithPasswordAndEmail({ email, password }))),
+    logOut: ({ dispatch }) => () => dispatch(logOut()),
   }),
   lifecycle({
-    componentWillReceiveProps(nextProps) {
+    componentWillmount(nextProps) {
+
       // console.log('componentWillReceiveProps state ===========', nextProps.statea);
-    },
-    componentDidMount() {
-      // console.log('componentDidMount state ===========', this.props.statea);
     },
   }),
 );
 
-export default hoistStatics(enhance)(AuthenticationScreen);
+export default hoistStatics(enhance)(DrawerMenuScreen);

@@ -1,2 +1,2 @@
-export * from './ButtonFacebook';
+export * from './ButtonLogOut';
 

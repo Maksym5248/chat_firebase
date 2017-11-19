@@ -4,7 +4,9 @@ import {
   ChatListScreen,
   CollectionsScreen,
   SettingsScreen,
+  DrawerMenuScreen
 } from '../screens';
+// import CustomDrawerContentComponent from '../components/driverContent/index';
 
 const RootRoutes = {
   [screens.ChatList]: {
@@ -18,4 +20,8 @@ const RootRoutes = {
   },
 };
 
-export default DrawerNavigator(RootRoutes);
+const DrawerOptions = {
+  contentComponent: DrawerMenuScreen,
+};
+
+export default DrawerNavigator(RootRoutes, DrawerOptions);
