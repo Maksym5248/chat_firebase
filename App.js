@@ -33,6 +33,5 @@ const App = () => (
     </Provider>
   </View>
 );
-
 export default App;
 

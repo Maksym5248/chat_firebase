@@ -5,16 +5,13 @@ import ChatListScreen from './ChatListScreen';
 
 const mapStateToProps = state => ({
   statea: state.app,
-  isLoading: state.app.isLoading,
+  isLoading: state.app,
 });
 
 const enhance = compose(
   connect(mapStateToProps),
-  withProps({ isLoading: false }),
-  withLoadingModal.stateProp('isLoading'),
   lifecycle({
     componentWillReceiveProps(nextProps) {
-
       // console.log('ChatListScreen componentWillReceiveProps state ===========', nextProps.statea);
     },
     componentDidMount() {

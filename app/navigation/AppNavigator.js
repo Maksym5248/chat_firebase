@@ -4,9 +4,8 @@ import {
   ChatListScreen,
   CollectionsScreen,
   SettingsScreen,
-  DrawerMenuScreen
+  DrawerMenuScreen,
 } from '../screens';
-// import CustomDrawerContentComponent from '../components/driverContent/index';
 
 const RootRoutes = {
   [screens.ChatList]: {

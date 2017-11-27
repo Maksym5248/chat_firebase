@@ -1,88 +1,94 @@
-import * as firebase from 'firebase';
-import Expo from 'expo';
-import { setUser, setCredentialFacebook, setEmailAndPassword } from './actions';
+import { setUser } from './actions';
 import { initialized, isLoading } from '../app/actions';
+import getFacebookCredential from '../../utils/firebase/autorize/getFacebookCredential';
+import signInWithCredential from '../../utils/firebase/autorize/signInWithCredential';
+import signInWithEmailAndPassword from '../../utils/firebase/autorize/signInWithEmailAndPassword';
+import createUserWithEmailAndPassword from '../../utils/firebase/autorize/createUserWithEmailAndPassword';
+import createUser from '../../utils/firebase/autorize/createUser';
+import { ToastAndroid } from 'react-native';
+import types from './types';
+import appTypes from '../app/types';
 
-// import types from './types';
-// import appTypes from '../app/types';
-
-const config = {
-  apiKey: 'AIzaSyA-qUVBSXwQrwyAGTkNHKsB9sN_jdJl1C0',
-  authDomain: 'chat-c96a7.firebaseapp.com',
-  databaseURL: 'https://chat-c96a7.firebaseio.com',
-  storageBucket: 'chat-c96a7.appspot.com',
+const ifSuccess = (user, dispatch) => {
+  // console.log('-----------------------', user);
+  dispatch(setUser(user));
+  dispatch(isLoading(false));
+  return setTimeout(() => {
+    dispatch(initialized(user));
+  }, 500);
 };
 
-firebase.initializeApp(config);
-
-const logInWithPasswordAndEmail = (user) => async dispatch => {
-  dispatch(onAuthStateChanged());
-
-  firebase.auth().signInWithEmailAndPassword(user.email, user.password).then(() => {
-    dispatch(setEmailAndPassword(user));
-  }).catch((error) => {
-    firebase.auth().createUserWithEmailAndPassword(user.email, user.password).then(() => {
-      dispatch(setEmailAndPassword(user));
-    }).catch((err) => {
-      dispatch(isLoading(false));
-      console.log('err createUserWithEmailAndPassword', err.code, err.message);
+const logInWithPasswordAndEmail = emailAndPassord => async dispatch => {
+  dispatch(isLoading(true));
+  signInWithEmailAndPassword(emailAndPassord)
+    .then(createUser)
+    .then((user) => ifSuccess(user, dispatch))
+    .catch((error) => {
+      createUserWithEmailAndPassword(emailAndPassord)
+        .then(createUser)
+        .then((user) => ifSuccess(user, dispatch))
+        .catch((err) => {
+          dispatch(isLoading(false));
+          console.log('err createUserWithEmailAndPassword', err.code, err.message);
+        });
+      console.log('err createUserWithEmailAndPassword', error.code, error.message);
     });
-    console.log('err createUserWithEmailAndPassword', error.code, error.message);
-  });
+  return null;
 };
 
 const logInWithFacebook = () => dispatch => {
   dispatch(isLoading(true));
-  dispatch(onAuthStateChanged());
-  logInWithFace(dispatch);
-};
-
-async function logInWithFace(dispatch) {
-  const {type, token} = await Expo.Facebook.logInWithReadPermissionsAsync(
-    '1144476165685142',
-    {permissions: ['public_profile', 'email']},
-  );
-
-  if (type === 'success') {
-    const credential = await firebase.auth.FacebookAuthProvider.credential(token);
-    dispatch(signInWithCredential(credential));
-  }
-}
-
-
-const signInWithCredential = (credential) => async dispatch => {
-  firebase.auth().signInWithCredential(credential).then(() => {
-    dispatch(setCredentialFacebook({ accessToken: credential.accessToken, providerId: credential.providerId }));
-  })
-    .catch((error) => {
+  return getFacebookCredential()
+    .then((token) => signInWithCredential(token))
+    .then(createUser)
+    .then((user) => ifSuccess(user, dispatch))
+    .catch((err) => {
       dispatch(isLoading(false));
-      console.log('error logInWithFace signInWithCredential', error);
+      console.log('logInWithFacebook err', err);
     });
 };
 
 
-const onAuthStateChanged = () => async dispatch => {
-  firebase.auth().onAuthStateChanged((res) => {
-    if (res !== null) {
-      const user = {
-        displayName: res.displayName,
-        email: res.providerData[0].email,
-        phoneNumber: res.phoneNumber,
-        photoURL: res.providerData[0].photoURL,
-        uid: res.uid,
-      };
-      dispatch(isLoading(false));
-      dispatch(setUser(user));
-      dispatch(initialized(user));
-      console.log('We are authenticated now!');
-    } else {
-      console.log('We are out');
-    }
-  });
-};
-
 export default {
   logInWithPasswordAndEmail,
   logInWithFacebook,
-  signInWithCredential,
+  setUser,
 };
+
+
+// function ifSuccess(user, dispatch) {
+//   console.log('-----------------------', user, dispatch);
+//   dispatch(setUser(user));
+//   dispatch(isLoading(false));
+//   return setTimeout(() => {
+//     dispatch(initialized(user));
+//   }, 500);
+// }
+//
+// const logInWithPasswordAndEmail = emailAndPassord => async dispatch => {
+//   dispatch(isLoading(true));
+//   signInWithEmailAndPassword(emailAndPassord)
+//     .then(createUser)
+//     .then((user) => ifSuccess(user, dispatch))
+//     .catch((error) => {
+//       createUserWithEmailAndPassword(emailAndPassord)
+//         .then((user) => ifSuccess(user, dispatch))
+//         .catch((err) => {
+//           dispatch(isLoading(false));
+//           console.log('err createUserWithEmailAndPassword', err.code, err.message);
+//         });
+//       console.log('err createUserWithEmailAndPassword', error.code, error.message);
+//     });
+// };
+//
+// const logInWithFacebook = () => dispatch => {
+//   dispatch(isLoading(true));
+//   return getFacebookCredential()
+//     .then((token) => signInWithCredential(token))
+//     .then(createUser)
+//     .then((user) => ifSuccess(user, dispatch))
+//     .catch((err) => {
+//       dispatch(isLoading(false));
+//       console.log('logInWithFacebook err', err);
+//     });
+// };

@@ -1,5 +1,6 @@
-import { imagesLoaded } from './actions';
+import { imagesLoaded, initialized } from './actions';
 
 export default {
   imagesLoaded,
+  initialized,
 };

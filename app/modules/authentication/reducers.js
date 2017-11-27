@@ -10,8 +10,9 @@ const initialStateUser = {
   phoneNumber: null,
   photoURL: null,
   uid: null,
+  accessToken: null,
+  refreshToken: null,
 };
-
 const initialStateEmailAndPassword = {
   email: null,
   password: null,
@@ -33,6 +34,7 @@ const emailAndPassword = handleActions({
 const credentialFacebook = handleActions({
   [types.SET_CREDENTIAL_FACEBOOK]: mergeIn(action => action.payload),
 }, initialStateCredentialFacebook);
+
 
 const authenticationReducer = combineReducers({
   user,

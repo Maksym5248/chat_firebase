@@ -1,16 +1,31 @@
 import React from 'react';
 import {
   View,
-  Text,
+  ScrollView,
 } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+import ModalDelete from './components/ModalMenuDelete/index';
+import ChatListItem from './components/ChatListItem/index';
 
-
-const ChatListScreen = ({
-  loading,
-}) => (
+const ChatListScreen = () => (
   <View>
-    <Text>Hello from FeedScreen</Text>
+    <ScrollView>
+      <ChatListItem onLongPress={() => null} onPress={() => null} />
+      <ChatListItem onLongPress={() => null} onPress={() => null} />
+      <ChatListItem onLongPress={() => null} onPress={() => null} />
+      <ChatListItem onLongPress={() => null} onPress={() => null} />
+      <ChatListItem onLongPress={() => null} onPress={() => null} />
+      <ChatListItem onLongPress={() => null} onPress={() => null} />
+      <ChatListItem onLongPress={() => null} onPress={() => null} />
+      <ChatListItem onLongPress={() => null} onPress={() => null} />
+      <ChatListItem onLongPress={() => null} onPress={() => null} />
+      <ChatListItem onLongPress={() => null} onPress={() => null} />
+    </ScrollView>
+    <ModalDelete
+      isVisible={false}
+      setUnVisible={() => null}
+      deleteItem={() => null}
+    />
   </View>
 );
 

@@ -3,4 +3,7 @@ export default {
   black: '#000',
   backgroundFacebookButton: '#2A49A5',
   backgroundColor: '#F5FCFF',
+  backgroundChatListItemBorder: 'gray',
+  backgroundColorChatListItemNew: '#bfcee3',
+  backgroundColorChatListHeader: '#848ba3',
 };
