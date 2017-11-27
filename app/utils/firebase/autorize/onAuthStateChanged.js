@@ -1,35 +1,20 @@
 import firebase from '../initializeApp';
 import createUser from './createUser';
+import { setUser } from '../../../modules/authentication/actions';
 
-const onAuthStateChanged = () => {
-  return new Promise((resolve, reject) => (
-    firebase.auth().onAuthStateChanged((res) => {
-      if (res !== null) {
-        return resolve(createUser(res));
-      }
-      return reject(' onAuthStateChanged res !== null');
-    })
-  ));
-};
-/*
-function onAuthStateChanged() {
-  return new Promise((resolve, reject) => (
-    firebase.auth().onAuthStateChanged((res) => {
-      if (res !== null) {
-        return resolve(res.getIdToken().then((accesToken) => ({
-          displayName: res.displayName,
-          email: res.providerData[0].email,
-          phoneNumber: res.phoneNumber,
-          photoURL: res.providerData[0].photoURL,
-          uid: res.uid,
-          accessToken: accesToken,
-          refreshToken: res.refreshToken,
-        })));
-      }
-      return reject(' onAuthStateChanged res !== null');
-    })
-  ));
-}
- */
+const onAuthStateChanged = (dispatch) => new Promise((resolve) => (
+  firebase.auth().onAuthStateChanged((res) => {
+    if (res !== null) {
+      console.log('onAuthStateChanged res sing in');
+      return resolve(createUser(res).then((user) => {
+        dispatch(setUser(user));
+        return user;
+      }));
+    }
+    console.log('onAuthStateChanged res == null');
+    return null;
+    // return reject('onAuthStateChanged res === null');
+  })
+));
 
 export default onAuthStateChanged;

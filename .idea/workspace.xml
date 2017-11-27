@@ -2,113 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1528dd33-58c6-48e7-943b-ba660d927736" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/assets/fonts/GillSans.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/assets/icons/app-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/assets/icons/loading-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/components/LoadingModal/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/components/LoadingModal/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/components/RootSpinner/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/components/RootSpinner/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/components/Text.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/components/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/constants/images.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/constants/screens.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/modules/app/actions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/modules/app/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/modules/app/operations.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/modules/app/reducers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/modules/app/types.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/modules/authentication/actions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/modules/authentication/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/modules/authentication/operations.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/modules/authentication/reducers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/modules/authentication/types.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/modules/drawerMenu/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/modules/drawerMenu/operations.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/modules/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/modules/navigator/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/modules/navigator/reducers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/modules/settings/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/modules/settings/operations.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/modules/settings/reducers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/modules/settings/types.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/navigation/AppNavigator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/navigation/RootNavigator.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/navigation/RootNavigatorView.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/navigation/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/Authentication/AuthenticationScreen.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/Authentication/components/ButtonFacebook/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/Authentication/components/ButtonFacebook/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/Authentication/components/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/Authentication/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/Authentication/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/ChatList/ChatListScreen.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/ChatList/components/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/ChatList/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/ChatList/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/Collections/CollectionsScreen.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/Collections/components/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/Collections/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/Collections/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/DrawerMenu/DrawerMenuScreen.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/DrawerMenu/components/ButtonLogOut/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/DrawerMenu/components/ButtonLogOut/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/DrawerMenu/components/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/DrawerMenu/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/DrawerMenu/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/Settings/SettingsScreen.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/Settings/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/Settings/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/screens/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/store.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/styles/colors.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/styles/dimensions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/styles/fontSizes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/styles/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/styles/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/utils/enhancers/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/utils/enhancers/withLoadingModal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/utils/enhancers/withLoadingState.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/utils/enhancers/withStyle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/utils/generateImagesUrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/utils/navHelper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/1/app/utils/stateHelpers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/components/Avatar/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/ChatList/components/ChatListHeader/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/ChatList/components/ChatListHeader/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/ChatList/components/ChatListItem/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/ChatList/components/ChatListItem/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/ChatList/components/ModalMenuDelete/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/ChatList/components/ModalMenuDelete/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/ChatList/components/Search/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/ChatList/components/Search/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/firebase/autorize/createUser.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/firebase/autorize/createUserWithEmailAndPassword.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/firebase/autorize/getFacebookCredential.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/firebase/autorize/onAuthStateChanged.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/firebase/autorize/signInWithCredential.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/firebase/autorize/signInWithCustomToken.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/firebase/autorize/signInWithEmailAndPassword.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/firebase/autorize/signOut.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/firebase/database/signOut.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/firebase/initializeApp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/firebase/database/createUserInDatabase.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/firebase/database/ref.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/utils/firebase/database/subscribe.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/utils/firebase/database/signOut.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App.js" afterPath="$PROJECT_DIR$/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/app/actions.js" afterPath="$PROJECT_DIR$/app/modules/app/actions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/app/operations.js" afterPath="$PROJECT_DIR$/app/modules/app/operations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/authentication/actions.js" afterPath="$PROJECT_DIR$/app/modules/authentication/actions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/authentication/operations.js" afterPath="$PROJECT_DIR$/app/modules/authentication/operations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/authentication/reducers.js" afterPath="$PROJECT_DIR$/app/modules/authentication/reducers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/drawerMenu/operations.js" afterPath="$PROJECT_DIR$/app/modules/drawerMenu/operations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/navigation/AppNavigator.js" afterPath="$PROJECT_DIR$/app/navigation/AppNavigator.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/navigation/RootNavigatorView.js" afterPath="$PROJECT_DIR$/app/navigation/RootNavigatorView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/Authentication/index.js" afterPath="$PROJECT_DIR$/app/screens/Authentication/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/ChatList/ChatListScreen.js" afterPath="$PROJECT_DIR$/app/screens/ChatList/ChatListScreen.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/ChatList/index.js" afterPath="$PROJECT_DIR$/app/screens/ChatList/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/DrawerMenu/index.js" afterPath="$PROJECT_DIR$/app/screens/DrawerMenu/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/store.js" afterPath="$PROJECT_DIR$/app/store.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/colors.js" afterPath="$PROJECT_DIR$/app/styles/colors.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/dimensions.js" afterPath="$PROJECT_DIR$/app/styles/dimensions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/firebase/autorize/createUser.js" afterPath="$PROJECT_DIR$/app/utils/firebase/autorize/createUser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/firebase/autorize/onAuthStateChanged.js" afterPath="$PROJECT_DIR$/app/utils/firebase/autorize/onAuthStateChanged.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -121,7 +24,73 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="ref.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/utils/firebase/database/ref.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="subscribe.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/utils/firebase/database/subscribe.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createUserInDatabase.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/utils/firebase/database/createUserInDatabase.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RootNavigatorView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/navigation/RootNavigatorView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="49" column="20" lean-forward="false" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="operations.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/modules/authentication/operations.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="onAuthStateChanged.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/utils/firebase/autorize/onAuthStateChanged.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+                <marker date="1511773532812" expanded="true" signature="189:598" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -141,9 +110,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/modules/DrawerMenu/index.js" />
-        <option value="$PROJECT_DIR$/app/modules/Authentication/operations.js" />
-        <option value="$PROJECT_DIR$/app/screens/DrawerMenu/DrawerMenuScreen.js" />
         <option value="$PROJECT_DIR$/app/screens/DrawerMenu/components/ButtonLogOut/index.js" />
         <option value="$PROJECT_DIR$/app/modules/app/reducers.js" />
         <option value="$PROJECT_DIR$/app/modules/index.js" />
@@ -187,11 +153,14 @@
         <option value="$PROJECT_DIR$/app/navigation/RootNavigator.js" />
         <option value="$PROJECT_DIR$/app/screens/Authentication/index.js" />
         <option value="$PROJECT_DIR$/app/store.js" />
-        <option value="$PROJECT_DIR$/app/utils/firebase/autorize/createUser.js" />
-        <option value="$PROJECT_DIR$/app/modules/authentication/operations.js" />
-        <option value="$PROJECT_DIR$/app/utils/firebase/autorize/onAuthStateChanged.js" />
-        <option value="$PROJECT_DIR$/app/navigation/RootNavigatorView.js" />
+        <option value="$PROJECT_DIR$/app/utils/firebase/database/signOut.js" />
         <option value="$PROJECT_DIR$/app/modules/drawerMenu/operations.js" />
+        <option value="$PROJECT_DIR$/app/modules/authentication/operations.js" />
+        <option value="$PROJECT_DIR$/app/navigation/RootNavigatorView.js" />
+        <option value="$PROJECT_DIR$/app/utils/firebase/autorize/createUser.js" />
+        <option value="$PROJECT_DIR$/app/utils/firebase/autorize/onAuthStateChanged.js" />
+        <option value="$PROJECT_DIR$/app/utils/firebase/database/createUserInDatabase.js" />
+        <option value="$PROJECT_DIR$/app/utils/firebase/database/subscribe.js" />
       </list>
     </option>
   </component>
@@ -252,6 +221,21 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ChatWithRe_Ducks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChatWithRe_Ducks" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="firebase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChatWithRe_Ducks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChatWithRe_Ducks" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="firebase" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -272,16 +256,16 @@
     <property name="add_unversioned_files" value="$PROJECT_DIR$/node_modules/react-native/Libraries/Core/Devtools/setupDevtools.js" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\services" />
-      <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\utils\firebase\autorize" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\utils\firebase\autorize" />
       <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\utils\firebase\database" />
+      <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\utils\firebase\autorize" />
       <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\utils\firebase" />
       <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\screens\ChatList\components\ChatListHeader" />
       <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\screens\ChatList\components\ChatListItem" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\services" />
+      <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\utils\firebase\autorize" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -331,7 +315,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166370000" />
+    <option name="totallyTimeSpent" value="168268000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -344,8 +328,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26100796" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26100796" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297619" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="ReactNative" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -357,12 +342,23 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297619" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="ReactNative" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6690562" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26100796" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297619" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -398,20 +394,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/styles/dimensions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/fontSizes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/screens/ChatList/components/ChatListItem/styles.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -496,13 +478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/utils/firebase/database/signOut.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/components/LoadingModal/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -514,13 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/DrawerMenu/DrawerMenuScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -549,13 +517,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/utils/firebase/autorize/signOut.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -692,13 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/navigation/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/navigation/AppNavigator.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -713,13 +667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/utils/firebase/autorize/onAuthStateChanged.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/authentication/reducers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -727,17 +674,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/navigation/RootNavigatorView.js">
+    <entry file="file://$PROJECT_DIR$/app/navigation/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="39" column="19" lean-forward="true" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
+        <state relative-caret-position="96">
+          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/utils/firebase/autorize/signOut.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/DrawerMenu/DrawerMenuScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/drawerMenu/operations.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        <state relative-caret-position="288">
+          <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -745,13 +710,60 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/navigation/RootNavigatorView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="49" column="20" lean-forward="false" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/authentication/operations.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        <state relative-caret-position="96">
+          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/utils/firebase/autorize/onAuthStateChanged.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+            <marker date="1511773532812" expanded="true" signature="189:598" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/utils/firebase/database/createUserInDatabase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/utils/firebase/database/ref.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/utils/firebase/database/subscribe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -11,7 +11,7 @@ import appTypes from '../app/types';
 
 const ifSuccess = (user, dispatch) => {
   // console.log('-----------------------', user);
-  dispatch(setUser(user));
+  // dispatch(setUser(user));
   dispatch(isLoading(false));
   return setTimeout(() => {
     dispatch(initialized(user));
@@ -21,7 +21,7 @@ const ifSuccess = (user, dispatch) => {
 const logInWithPasswordAndEmail = emailAndPassord => async dispatch => {
   dispatch(isLoading(true));
   signInWithEmailAndPassword(emailAndPassord)
-    .then(createUser)
+    // .then(createUser)
     .then((user) => ifSuccess(user, dispatch))
     .catch((error) => {
       createUserWithEmailAndPassword(emailAndPassord)
@@ -40,7 +40,7 @@ const logInWithFacebook = () => dispatch => {
   dispatch(isLoading(true));
   return getFacebookCredential()
     .then((token) => signInWithCredential(token))
-    .then(createUser)
+    // .then(createUser)
     .then((user) => ifSuccess(user, dispatch))
     .catch((err) => {
       dispatch(isLoading(false));

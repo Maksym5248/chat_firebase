@@ -47,7 +47,7 @@ const enhance = compose(withHandlers({
     Font.loadAsync({
       'gill-sans': require('../assets/fonts/GillSans.ttf'), // eslint-disable-line global-require
     }),
-    onAuthStateChanged().then((userResponse) => {
+    onAuthStateChanged(dispatch).then((userResponse) => {
       console.log('authentication', userResponse);
       dispatch(authenticationOperations.setUser(userResponse));
       dispatch(appOperations.initialized(userResponse));
