@@ -1,5 +1,9 @@
 import * as firebase from 'firebase';
 
+console.ignoredYellowBox = [
+  'Setting a timer',
+];
+
 const config = {
   apiKey: 'AIzaSyA-qUVBSXwQrwyAGTkNHKsB9sN_jdJl1C0',
   authDomain: 'chat-c96a7.firebaseapp.com',

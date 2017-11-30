@@ -1,21 +1,54 @@
 import { connect } from 'react-redux';
-import { compose, hoistStatics, lifecycle, withProps } from 'recompose';
+import { compose, hoistStatics, lifecycle, withHandlers, withStateHandlers } from 'recompose';
 import { withLoadingModal } from '../../utils/enhancers';
 import ChatListScreen from './ChatListScreen';
+import screens from '../../constants/screens';
+
 
 const mapStateToProps = state => ({
-  statea: state.app,
-  isLoading: state.app,
+  chatList: state.chatList.chats,
+  chatsListId: state.chatList.chatsId,
+  userCurrent: state.authentication.currentUser,
+  userList: state.userList.users,
 });
 
 const enhance = compose(
   connect(mapStateToProps),
+  withStateHandlers(
+    ({ initialCounter = { isVisible: false, idChat: '' } }) => ({
+      modal: initialCounter,
+    }),
+    {
+      setUnVisible: () => () => ({
+        modal: { isVisible: false, idChat: '' },
+      }),
+      itemOnLongPress: () => (id) => {
+        console.log('uid----------', id);
+        return {
+          modal: { isVisible: true, idChat: id },
+        };
+      },
+      deleteChat: ({ modal }) => () => {
+        console.log('uid----------');
+        // !!! Запит на видалення !!!!!!!!!!
+        // modal.idChat
+        return {
+          modal: { isVisible: false, idChat: '' },
+        };
+      },
+    },
+  ),
+  withHandlers({
+    moveToChat: ({ navigation }) => (id) => {
+      navigation.navigate(screens.CurrentChat, { idChat: id });
+    },
+  }),
   lifecycle({
     componentWillReceiveProps(nextProps) {
-      // console.log('ChatListScreen componentWillReceiveProps state ===========', nextProps.statea);
+      // console.log('ChatListScreen componentWillReceiveProps state ===========', nextProps.chats, nextProps.chatsId);
     },
     componentDidMount() {
-      // console.log('ChatListScreen componentDidMount state ===========', this.props.statea);
+      console.log('userList-----------------', this.props.userList);
     },
   }),
 );

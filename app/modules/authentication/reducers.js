@@ -14,12 +14,12 @@ const initialStateUser = {
   refreshToken: null,
 };
 
-const user = handleActions({
-  [types.SET_USER]: mergeIn(action => action.payload),
+const currentUserReducer = handleActions({
+  [types.SET_CURRENT_USER]: mergeIn(action => action.payload),
 }, initialStateUser);
 
 const authenticationReducer = combineReducers({
-  user,
+  currentUser: currentUserReducer,
 });
 
 export default authenticationReducer;

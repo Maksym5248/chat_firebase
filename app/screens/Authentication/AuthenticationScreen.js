@@ -35,6 +35,7 @@ const AuthenticationScreen = ({
       <TextInput
         style={styles.input}
         placeholder='Введіть пароль'
+        secureTextEntry
         onChangeText={setPassword}
         value={password}
       />

@@ -4,31 +4,34 @@ import { View, Modal, TouchableOpacity, Text, alert } from 'react-native';
 import styles from './styles';
 
 
-const ModalDelete = ({ isVisible, setUnVisible, deleteItem }) => (
+const ModalMenu = ({
+  isVisible, setUnVisible, onPress, text,
+}) => (
   <Modal
     animationType='fade'
     transparent
     visible={isVisible}
     onRequestClose={() => { alert('меню закрито'); }}
   >
-    <TouchableOpacity style={styles.container} onPress={setUnVisible}>
+    <TouchableOpacity style={styles.container} onPress={setUnVisible} >
       <View style={styles.containerButton}>
-        <TouchableOpacity onPress={deleteItem}>
-          <Text>Видалити</Text>
+        <TouchableOpacity onPress={onPress}>
+          <Text style={styles.text}>{text}</Text>
         </TouchableOpacity>
       </View>
     </TouchableOpacity>
   </Modal>
 );
 
-ModalDelete.defaudefaultProps = {
+ModalMenu.defaudefaultProps = {
   isVisible: false,
 };
 
-ModalDelete.propTypes = {
+ModalMenu.propTypes = {
   isVisible: PropTypes.bool.isRequired,
   setUnVisible: PropTypes.func,
-  deleteItem: PropTypes.func,
+  onPress: PropTypes.func,
+  text: PropTypes.string,
 };
 
-export default ModalDelete;
+export default ModalMenu;

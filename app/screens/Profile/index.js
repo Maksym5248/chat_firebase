@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { compose, withHandlers, withState } from 'recompose';
 
-import SettingsScreen from './SettingsScreen';
+import SettingsScreen from './ProfileScreen';
 import * as settingsOperations from '../../modules/settings/operations';
 
 const authorize = ({ twitterToken, setSettingsProps }) => () => {

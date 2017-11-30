@@ -1,19 +1,24 @@
 import firebase from '../initializeApp';
 import createUser from './createUser';
-import { setUser } from '../../../modules/authentication/actions';
+import { setCurrentUser } from '../../../modules/authentication/actions';
+import setUserInFb from '../database/setUserInFb';
 
-const onAuthStateChanged = (dispatch) => new Promise((resolve) => (
+const onAuthStateChanged = (dispatch) => new Promise((resolve, reject) => (
   firebase.auth().onAuthStateChanged((res) => {
     if (res !== null) {
       console.log('onAuthStateChanged res sing in');
-      return resolve(createUser(res).then((user) => {
-        dispatch(setUser(user));
+      resolve(createUser(res).then((user) => {
+        dispatch(setCurrentUser(user));
+        setUserInFb(user);
+        setInterval(() => {
+          setUserInFb(user);
+        }, 60000);
         return user;
       }));
     }
-    console.log('onAuthStateChanged res == null');
-    return null;
-    // return reject('onAuthStateChanged res === null');
+    // console.log('onAuthStateChanged res == null');
+    // return null;
+    reject('onAuthStateChanged res === null');
   })
 ));
 

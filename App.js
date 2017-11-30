@@ -7,7 +7,12 @@ import configureStore from './app/store';
 import Navigation from './app/navigation';
 import styles, { colors } from './app/styles';
 import { LoadingModal } from './app/components/index';
-import { initialized } from "./app/modules/app/actions";
+import { initialized } from './app/modules/app/actions';
+
+
+console.ignoredYellowBox = [
+  'Setting a timer',
+];
 
 const { persistor, store } = configureStore();
 

@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../../../styles';
+// import { colors } from '../../../../styles';
 // import { indent } from '../../../../styles/dimensions';
 
 const styles = StyleSheet.create({
@@ -7,15 +7,17 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'rgba(0, 0, 0, 0.4)',
     justifyContent: 'center',
-    alignItems: 'stretch',
     padding: 5,
   },
   containerButton: {
     borderRadius: 5,
-    flexDirection: 'row',
-    justifyContent: 'center',
+    height: 50,
+    alignItems: 'center',
     padding: 5,
     backgroundColor: 'grey',
+  },
+  text: {
+    fontSize: 18,
   },
 });
 

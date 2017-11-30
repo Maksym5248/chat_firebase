@@ -7,7 +7,6 @@ import { appOperations } from '../modules/app';
 import Navigator from './RootNavigator';
 import onAuthStateChanged from '../services/firebase/autorize/onAuthStateChanged';
 
-
 const NavigatorView = ({
   dispatch,
   navigator,
@@ -35,16 +34,17 @@ NavigatorView.propTypes = {
   finishJob: T.func,
   jobError: T.func,
 };
-// { dispatch }
+
 const enhance = compose(withHandlers({
   asyncJob: ({ dispatch }) => () => Promise.all([
     Font.loadAsync({
       'gill-sans': require('../assets/fonts/GillSans.ttf'), // eslint-disable-line global-require
     }),
-    onAuthStateChanged(dispatch).then((userResponse) => {
-      if (userResponse !== null) {
-        dispatch(appOperations.initialized(userResponse));
-      }
+    onAuthStateChanged(dispatch).then(() => {
+      dispatch(appOperations.initialized({}));
+      return true;
+    }).catch((err) => {
+      console.log('err---------', err);
     }),
   ]),
   finishJob: props => () => {

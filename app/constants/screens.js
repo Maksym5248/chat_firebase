@@ -1,8 +1,9 @@
 export default {
   App: 'App',
-  ChatList: 'ChatList',
-  Authentication: 'Authentication',
-  Settings: 'Settings',
-  Collections: 'Collections',
   DrawerMenu: 'DrawerMenu',
+  Authentication: 'Authentication',
+  ChatList: 'ChatList',
+  Profile: 'Profile',
+  UsersList: 'UsersList',
+  CurrentChat: 'CurrentChat',
 };

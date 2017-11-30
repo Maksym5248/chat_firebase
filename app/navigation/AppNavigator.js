@@ -2,20 +2,35 @@ import { DrawerNavigator, StackNavigator } from 'react-navigation';
 import screens from '../constants/screens';
 import {
   ChatListScreen,
-  CollectionsScreen,
-  SettingsScreen,
+  UsersListScreen,
+  ProfileScreen,
   DrawerMenuScreen,
+  CurrentChatScreen,
 } from '../screens';
+
+const ChatListNav = StackNavigator({
+  init: { screen: ChatListScreen },
+  [screens.CurrentChat]: {
+    screen: CurrentChatScreen,
+  },
+});
+
+const UsersListNav = StackNavigator({
+  init: { screen: UsersListScreen },
+  [screens.CurrentChat]: {
+    screen: CurrentChatScreen,
+  },
+});
 
 const RootRoutes = {
   [screens.ChatList]: {
-    screen: StackNavigator({ init: { screen: ChatListScreen } }),
+    screen: ChatListNav,
   },
-  [screens.Collections]: {
-    screen: StackNavigator({ init: { screen: CollectionsScreen } }),
+  [screens.UsersList]: {
+    screen: UsersListNav,
   },
-  [screens.Settings]: {
-    screen: StackNavigator({ init: { screen: SettingsScreen } }),
+  [screens.Profile]: {
+    screen: StackNavigator({ init: { screen: ProfileScreen } }),
   },
 };
 

@@ -1,4 +1,4 @@
-import { setUser } from './actions';
+import { setCurrentUser } from './actions';
 import { initialized, isLoading } from '../app/actions';
 import getFacebookCredential from '../../services/firebase/autorize/getFacebookCredential';
 import signInWithCredential from '../../services/firebase/autorize/signInWithCredential';
@@ -49,5 +49,5 @@ const logInWithFacebook = () => dispatch => {
 export default {
   logInWithPasswordAndEmail,
   logInWithFacebook,
-  setUser,
+  setCurrentUser,
 };

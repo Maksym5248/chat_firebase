@@ -3,31 +3,63 @@ import {
   View,
   ScrollView,
 } from 'react-native';
+import Type from 'prop-types';
 import { MaterialIcons } from '@expo/vector-icons';
-import ModalDelete from './components/ModalMenuDelete/index';
-import ChatListItem from './components/ChatListItem/index';
+import ModalMenu from '../../components/ModalMenu';
+import ChatListItem from './components/ChatListItem';
 
-const ChatListScreen = () => (
+
+const ChatListScreen = ({
+  chatsListId,
+  chatList,
+  userList,
+  moveToChat,
+  itemOnLongPress,
+  modal,
+  setUnVisible,
+  deleteChat,
+}) => (
   <View>
     <ScrollView>
-      <ChatListItem onLongPress={() => null} onPress={() => null} />
-      <ChatListItem onLongPress={() => null} onPress={() => null} />
-      <ChatListItem onLongPress={() => null} onPress={() => null} />
-      <ChatListItem onLongPress={() => null} onPress={() => null} />
-      <ChatListItem onLongPress={() => null} onPress={() => null} />
-      <ChatListItem onLongPress={() => null} onPress={() => null} />
-      <ChatListItem onLongPress={() => null} onPress={() => null} />
-      <ChatListItem onLongPress={() => null} onPress={() => null} />
-      <ChatListItem onLongPress={() => null} onPress={() => null} />
-      <ChatListItem onLongPress={() => null} onPress={() => null} />
+      {
+        chatsListId.map(item => (
+          <ChatListItem
+            user={userList[chatList[item].lastMessages.autor]}
+            lastMessage={chatList[item].lastMessages}
+            key={item}
+            onLongPress={() => itemOnLongPress(item)}
+            onPress={() => moveToChat(item)}
+          />))
+      }
     </ScrollView>
-    <ModalDelete
-      isVisible={false}
-      setUnVisible={() => null}
-      deleteItem={() => null}
+    <ModalMenu
+      isVisible={modal.isVisible}
+      setUnVisible={setUnVisible}
+      onPress={deleteChat}
+      text='Видалити'
     />
   </View>
 );
+
+
+ChatListScreen.defaudefaultProps = {
+  userCurrent: {},
+  userList: {},
+  chatList: [],
+  chatsListId: [],
+  visibleModal: false,
+};
+
+ChatListScreen.propTypes = {
+  chatList: Type.object,
+  chatsListId: Type.array,
+  userList: Type.object,
+  modal: Type.object,
+  setUnVisible: Type.func,
+  moveToChat: Type.func,
+  itemOnLongPress: Type.func,
+  deleteChat: Type.func,
+};
 
 ChatListScreen.navigationOptions = ({ navigation }) => ({
   title: 'Список чатів',

@@ -2,12 +2,16 @@ import app from './app';
 import navigator from './navigator';
 import settings from './settings';
 import authentication from './authentication';
+import userList from './usersList/reducers';
+import chatList from './chatList/reducers';
 
 export default {
   app,
   navigator,
   settings,
   authentication,
+  userList,
+  chatList,
 };
 
 /*
