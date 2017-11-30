@@ -1,5 +1,6 @@
 function createObjectInChat(idChatt, idUser, data) {
   if (data) {
+    console.log('RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR', data);
     return {
       idChat: data.val().idChat ? data.val().idChat : null,
       lastMessages: {

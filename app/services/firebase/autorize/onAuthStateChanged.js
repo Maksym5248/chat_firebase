@@ -2,6 +2,7 @@ import firebase from '../initializeApp';
 import createUser from './createUser';
 import { setCurrentUser } from '../../../modules/authentication/actions';
 import setUserInFb from '../database/setUserInFb';
+let interval;
 
 const onAuthStateChanged = (dispatch) => new Promise((resolve, reject) => (
   firebase.auth().onAuthStateChanged((res) => {
@@ -10,12 +11,13 @@ const onAuthStateChanged = (dispatch) => new Promise((resolve, reject) => (
       resolve(createUser(res).then((user) => {
         dispatch(setCurrentUser(user));
         setUserInFb(user);
-        setInterval(() => {
+        interval = setInterval(() => {
           setUserInFb(user);
-        }, 60000);
+        }, 10000);
         return user;
       }));
     }
+    clearTimeout(interval);
     // console.log('onAuthStateChanged res == null');
     // return null;
     reject('onAuthStateChanged res === null');

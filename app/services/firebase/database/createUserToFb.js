@@ -1,5 +1,6 @@
 function createUserToFb(user, answer = null) {
   if (answer) {
+    console.log('user=====================', user);
     return {
       displayName: user.val().uid !== null ? user.val().displayName : 'none',
       photoURL: user.val().photoURL !== null ? user.val().photoURL : 'none',
@@ -7,6 +8,7 @@ function createUserToFb(user, answer = null) {
       online: user.val().online !== null ? user.val().online : 'none',
     };
   }
+  console.log('user++++++++++++++++++++++', user);
   return {
     displayName: user.displayName !== null ? user.displayName : 'none',
     photoURL: user.photoURL !== null ? user.photoURL : 'none',

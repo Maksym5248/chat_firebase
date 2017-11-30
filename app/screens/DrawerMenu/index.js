@@ -35,7 +35,7 @@ const enhance = compose(
       subscribe.changed(url.users, (data) => {
         //  console.log('DrawerMenuScreen index subscribe.changed', error);
         if (data) {
-          dispatch(setChat(createObjectInChat(null, null, data)));
+          dispatch(setUser(createUserToFb(data, true)));
         }
       }),
       subscribe.removed(url.users, (data) => {
