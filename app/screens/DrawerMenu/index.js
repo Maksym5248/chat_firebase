@@ -33,9 +33,9 @@ const enhance = compose(
         }
       }),
       subscribe.changed(url.users, (data) => {
-        console.log('DrawerMenuScreen index subscribe.changed ', data);
+        //  console.log('DrawerMenuScreen index subscribe.changed', error);
         if (data) {
-          dispatch(setUser(createUserToFb(data, true)));
+          dispatch(setChat(createObjectInChat(null, null, data)));
         }
       }),
       subscribe.removed(url.users, (data) => {

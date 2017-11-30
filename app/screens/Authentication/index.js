@@ -9,6 +9,8 @@ const { logInWithPasswordAndEmail, logInWithFacebook } = authenticationOperation
 const mapStateToProps = state => ({
   statea: state.app,
   isLoading: state.app.isLoading,
+  chatList: state.chatList.chats,
+  chatsListId: state.chatList.chatsId,
 });
 
 const enhance = compose(
@@ -25,7 +27,12 @@ const enhance = compose(
   }),
   lifecycle({
     componentDidMount() {
-
+      // console.log('chatList ---------------', this.props.chatList);
+      // console.log('chatsListId  ---------------', this.props.chatsListId);
+    },
+    componentWillReceiveProps() {
+      // console.log('chatList ---------------', this.props.chatList);
+      // console.log('chatsListId  ---------------', this.props.chatsListId);
     },
   }),
 );

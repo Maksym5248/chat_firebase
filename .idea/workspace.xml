@@ -2,66 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1528dd33-58c6-48e7-943b-ba660d927736" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/chatList/actions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/chatList/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/chatList/operations.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/chatList/reducers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/chatList/types.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/usersList/actions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/usersList/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/usersList/operations.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/usersList/reducers.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/usersList/types.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/InputMessage/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/InputMessage/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/Message/Message.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/MessageMain.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/ModalAvatar/ModalAvatar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/UsersList/components/UserListItem/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/UsersList/components/UserListItem/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/UsersList/components/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/UsersList/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/services/firebase/database/createChat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/services/firebase/database/createObjectInChat.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/services/firebase/database/setUserInFb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/Message/styles.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App.js" afterPath="$PROJECT_DIR$/App.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/constants/screens.js" afterPath="$PROJECT_DIR$/app/constants/screens.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/authentication/actions.js" afterPath="$PROJECT_DIR$/app/modules/authentication/actions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/authentication/operations.js" afterPath="$PROJECT_DIR$/app/modules/authentication/operations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/authentication/reducers.js" afterPath="$PROJECT_DIR$/app/modules/authentication/reducers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/authentication/types.js" afterPath="$PROJECT_DIR$/app/modules/authentication/types.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/chatList/actions.js" afterPath="$PROJECT_DIR$/app/modules/chatList/actions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/chatList/operations.js" afterPath="$PROJECT_DIR$/app/modules/chatList/operations.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/chatList/reducers.js" afterPath="$PROJECT_DIR$/app/modules/chatList/reducers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/chatList/types.js" afterPath="$PROJECT_DIR$/app/modules/chatList/types.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/drawerMenu/operations.js" afterPath="$PROJECT_DIR$/app/modules/drawerMenu/operations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/index.js" afterPath="$PROJECT_DIR$/app/modules/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/navigation/AppNavigator.js" afterPath="$PROJECT_DIR$/app/navigation/AppNavigator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/navigation/RootNavigatorView.js" afterPath="$PROJECT_DIR$/app/navigation/RootNavigatorView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/Authentication/AuthenticationScreen.js" afterPath="$PROJECT_DIR$/app/screens/Authentication/AuthenticationScreen.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/ChatList/ChatListScreen.js" afterPath="$PROJECT_DIR$/app/screens/ChatList/ChatListScreen.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/ChatList/components/ChatListItem/index.js" afterPath="$PROJECT_DIR$/app/screens/ChatList/components/ChatListItem/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/ChatList/index.js" afterPath="$PROJECT_DIR$/app/screens/ChatList/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/DrawerMenu/DrawerMenuScreen.js" afterPath="$PROJECT_DIR$/app/screens/DrawerMenu/DrawerMenuScreen.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/Authentication/index.js" afterPath="$PROJECT_DIR$/app/screens/Authentication/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/components/InputMessage/index.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/InputMessage/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/DrawerMenu/index.js" afterPath="$PROJECT_DIR$/app/screens/DrawerMenu/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/index.js" afterPath="$PROJECT_DIR$/app/screens/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/firebase/autorize/createUser.js" afterPath="$PROJECT_DIR$/app/services/firebase/autorize/createUser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/firebase/autorize/getFacebookCredential.js" afterPath="$PROJECT_DIR$/app/services/firebase/autorize/getFacebookCredential.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/firebase/autorize/onAuthStateChanged.js" afterPath="$PROJECT_DIR$/app/services/firebase/autorize/onAuthStateChanged.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/firebase/database/ref.js" afterPath="$PROJECT_DIR$/app/services/firebase/database/ref.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/firebase/database/subscribe.js" afterPath="$PROJECT_DIR$/app/services/firebase/database/subscribe.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/firebase/initializeApp.js" afterPath="$PROJECT_DIR$/app/services/firebase/initializeApp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/screens/ChatList/components/ModalMenuDelete/index.js" afterPath="$PROJECT_DIR$/app/components/ModalMenu/index.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/screens/ChatList/components/ModalMenuDelete/styles.js" afterPath="$PROJECT_DIR$/app/components/ModalMenu/styles.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/screens/Collections/CollectionsScreen.js" afterPath="$PROJECT_DIR$/app/screens/UsersList/UsersListScreen.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/screens/Collections/components/index.js" afterPath="$PROJECT_DIR$/app/constants/url.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/screens/Collections/index.js" afterPath="$PROJECT_DIR$/app/screens/UsersList/index.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/screens/Collections/styles.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/styles.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/screens/Settings/SettingsScreen.js" afterPath="$PROJECT_DIR$/app/screens/Profile/ProfileScreen.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/screens/Settings/index.js" afterPath="$PROJECT_DIR$/app/screens/Profile/index.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/screens/Settings/styles.js" afterPath="$PROJECT_DIR$/app/screens/Profile/styles.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/services/firebase/database/createUserInDatabase.js" afterPath="$PROJECT_DIR$/app/services/firebase/database/createUserToFb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/firebase/database/createObjectInChat.js" afterPath="$PROJECT_DIR$/app/services/firebase/database/createObjectInChat.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/components/Message/Message.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/Message/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -75,72 +28,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/index.js">
+      <file leaf-file-name="operations.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/modules/drawerMenu/operations.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state relative-caret-position="120">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
-                <element signature="e#0#38#0" expanded="true" />
-                <marker date="1512045152831" expanded="true" signature="608:897" ph="{...}" />
-                <marker date="1512045152831" expanded="true" signature="916:1723" ph="{...}" />
-                <marker date="1512045152831" expanded="true" signature="959:1068" ph="{...}" />
-                <marker date="1512045152831" expanded="true" signature="1094:1718" ph="{...}" />
-                <marker date="1512045152831" expanded="true" signature="1232:1712" ph="//..." />
+                <element signature="e#0#45#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/screens/Authentication/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="531">
+              <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="types.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/modules/chatList/types.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="reducers.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/modules/authentication/reducers.js">
+        <entry file="file://$PROJECT_DIR$/app/modules/chatList/reducers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CurrentChatScreen.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="78" column="6" lean-forward="false" selection-start-line="78" selection-start-column="6" selection-end-line="78" selection-end-column="6" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/InputMessage/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="27" column="2" lean-forward="true" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/InputMessage/styles.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChatListScreen.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/screens/ChatList/ChatListScreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-240">
-              <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="288">
+              <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -149,11 +73,10 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/screens/ChatList/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="39" column="4" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="39" selection-end-column="4" />
+            <state relative-caret-position="120">
+              <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="38" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
-                <marker date="1512045152829" expanded="true" signature="1330:1607" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -179,9 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/screens/Authentication/index.js" />
-        <option value="$PROJECT_DIR$/app/screens/UsersList/components/index.js" />
-        <option value="$PROJECT_DIR$/app/screens/UsersList/styles.js" />
         <option value="$PROJECT_DIR$/app/screens/UsersList/components/UserListItem/styles.js" />
         <option value="$PROJECT_DIR$/app/screens/ChatList/components/ModalMenuDelete/index.js" />
         <option value="$PROJECT_DIR$/app/screens/ChatList/components/ModalMenu/index.js" />
@@ -199,25 +119,18 @@
         <option value="$PROJECT_DIR$/app/navigation/AppNavigator.js" />
         <option value="$PROJECT_DIR$/app/modules/index.js" />
         <option value="$PROJECT_DIR$/app/modules/chatList/index.js" />
-        <option value="$PROJECT_DIR$/app/modules/chatList/operations.js" />
         <option value="$PROJECT_DIR$/app/services/firebase/database/subscribe.js" />
         <option value="$PROJECT_DIR$/app/screens/UsersList/UsersListScreen.js" />
         <option value="$PROJECT_DIR$/app/services/firebase/autorize/getFacebookCredential.js" />
         <option value="$PROJECT_DIR$/app/services/firebase/autorize/createUser.js" />
-        <option value="$PROJECT_DIR$/app/modules/drawerMenu/operations.js" />
         <option value="$PROJECT_DIR$/app/screens/DrawerMenu/DrawerMenuScreen.js" />
         <option value="$PROJECT_DIR$/app/navigation/RootNavigatorView.js" />
         <option value="$PROJECT_DIR$/app/navigation/index.js" />
         <option value="$PROJECT_DIR$/app/services/firebase/database/setUserInFb.js" />
         <option value="$PROJECT_DIR$/app/modules/usersList/actions.js" />
-        <option value="$PROJECT_DIR$/app/modules/chatList/actions.js" />
-        <option value="$PROJECT_DIR$/app/modules/chatList/types.js" />
         <option value="$PROJECT_DIR$/app/modules/usersList/types.js" />
         <option value="$PROJECT_DIR$/app/modules/usersList/operations.js" />
-        <option value="$PROJECT_DIR$/app/services/firebase/database/createObjectInChat.js" />
-        <option value="$PROJECT_DIR$/app/modules/chatList/reducers.js" />
         <option value="$PROJECT_DIR$/app/modules/usersList/reducers.js" />
-        <option value="$PROJECT_DIR$/app/screens/DrawerMenu/index.js" />
         <option value="$PROJECT_DIR$/app/services/firebase/database/createUserToFb.js" />
         <option value="$PROJECT_DIR$/app/services/firebase/autorize/onAuthStateChanged.js" />
         <option value="$PROJECT_DIR$/app/screens/UsersList/components/UserListItem/index.js" />
@@ -229,7 +142,17 @@
         <option value="$PROJECT_DIR$/app/screens/UsersList/index.js" />
         <option value="$PROJECT_DIR$/app/screens/CurrentChat/components/InputMessage/styles.js" />
         <option value="$PROJECT_DIR$/app/screens/CurrentChat/components/InputMessage/index.js" />
+        <option value="$PROJECT_DIR$/app/screens/CurrentChat/components/Message/styles.js" />
+        <option value="$PROJECT_DIR$/app/screens/CurrentChat/components/Message/index.js" />
         <option value="$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js" />
+        <option value="$PROJECT_DIR$/app/screens/DrawerMenu/index.js" />
+        <option value="$PROJECT_DIR$/app/services/firebase/database/createObjectInChat.js" />
+        <option value="$PROJECT_DIR$/app/modules/chatList/types.js" />
+        <option value="$PROJECT_DIR$/app/modules/chatList/actions.js" />
+        <option value="$PROJECT_DIR$/app/modules/chatList/operations.js" />
+        <option value="$PROJECT_DIR$/app/modules/drawerMenu/operations.js" />
+        <option value="$PROJECT_DIR$/app/modules/chatList/reducers.js" />
+        <option value="$PROJECT_DIR$/app/screens/Authentication/index.js" />
       </list>
     </option>
   </component>
@@ -251,7 +174,7 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="950" />
     <option name="width" value="980" />
     <option name="height" value="1030" />
@@ -288,12 +211,6 @@
               <item name="ChatWithRe_Ducks" type="b2602c69:ProjectViewProjectNode" />
               <item name="ChatWithRe_Ducks" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChatWithRe_Ducks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChatWithRe_Ducks" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -301,48 +218,14 @@
               <item name="ChatWithRe_Ducks" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="CurrentChat" type="462c0819:PsiDirectoryNode" />
+              <item name="Authentication" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ChatWithRe_Ducks" type="b2602c69:ProjectViewProjectNode" />
               <item name="ChatWithRe_Ducks" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="CurrentChat" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChatWithRe_Ducks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChatWithRe_Ducks" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="CurrentChat" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="InputMessage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChatWithRe_Ducks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChatWithRe_Ducks" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="DrawerMenu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChatWithRe_Ducks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChatWithRe_Ducks" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="DrawerMenu" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChatWithRe_Ducks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChatWithRe_Ducks" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="DrawerMenu" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="ButtonLogOut" type="462c0819:PsiDirectoryNode" />
+              <item name="ChatList" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -365,11 +248,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\screens\CurrentChat\components\Message" />
       <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\screens\CurrentChat\components\InputMessage" />
       <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\screens\CurrentChat\components" />
       <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\modules" />
       <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\screens\CurrentChat" />
-      <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\screens" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\components" />
@@ -429,12 +312,12 @@
       <workItem from="1511887409191" duration="1995000" />
       <workItem from="1511899078467" duration="7339000" />
       <workItem from="1511939624002" duration="21907000" />
-      <workItem from="1512026422927" duration="19285000" />
+      <workItem from="1512026422927" duration="22356000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="258065000" />
+    <option name="totallyTimeSpent" value="261136000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -446,7 +329,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20795757" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297619" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -456,7 +339,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6236559" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48028675" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -501,24 +384,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/constants/screens.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/MessageMain.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/ModalAvatar/ModalAvatar.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
@@ -589,26 +454,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/drawerMenu/operations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="34" lean-forward="true" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#45#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/Authentication/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/services/firebase/autorize/createUser.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -637,14 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/authentication/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="15" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/services/firebase/database/setUserInFb.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -660,22 +497,6 @@
           <folding>
             <element signature="e#0#46#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/chatList/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/chatList/types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -697,20 +518,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/chatList/operations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/usersList/operations.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="e#0#36#0" expanded="true" />
+            <element signature="e#0#36#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -746,24 +559,8 @@
         <state relative-caret-position="336">
           <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#0#40#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/chatList/reducers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/firebase/database/createObjectInChat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -772,16 +569,6 @@
         <state relative-caret-position="48">
           <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="38" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/DrawerMenu/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="31" column="36" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -798,7 +585,7 @@
         <state relative-caret-position="288">
           <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="74" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -808,27 +595,6 @@
         <state relative-caret-position="240">
           <caret line="24" column="99" lean-forward="false" selection-start-line="24" selection-start-column="74" selection-end-line="24" selection-end-column="99" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/ChatList/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="39" column="4" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="39" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <marker date="1512045152829" expanded="true" signature="1330:1607" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/Message/Message.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="37" column="31" lean-forward="true" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -908,24 +674,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/InputMessage/styles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/ChatList/ChatListScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-240">
-          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -937,23 +687,153 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/InputMessage/styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/Message/styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="17" column="4" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/InputMessage/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="27" column="2" lean-forward="true" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
+        <state relative-caret-position="96">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="106" column="13" lean-forward="false" selection-start-line="106" selection-start-column="13" selection-end-line="106" selection-end-column="13" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js">
+    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/Message/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="78" column="6" lean-forward="false" selection-start-line="78" selection-start-column="6" selection-end-line="78" selection-end-column="6" />
+        <state relative-caret-position="240">
+          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/firebase/database/createObjectInChat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/ChatList/ChatListScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/authentication/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="15" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/chatList/operations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="15" />
+          <folding>
+            <element signature="e#40#111#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/chatList/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="49" lean-forward="false" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#46#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/app/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#46#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/DrawerMenu/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="35" column="10" lean-forward="false" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/drawerMenu/operations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/chatList/types.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/ChatList/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="38" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/chatList/reducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/Authentication/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, FlatList, KeyboardAvoidingView } from 'react-native';
 import Type from 'prop-types';
 
-import Message from './components/Message/Message';
+import Message from './components/Message/index';
 import MessageMain from './components/MessageMain/MessageMain';
 import ModalAvatar from './components/ModalAvatar/ModalAvatar';
 import InputMessage from './components/InputMessage/index';
@@ -18,35 +18,56 @@ const styles = StyleSheet.create({
   },
 });
 
-
+// read || notSent || sending || delivered
 const arr = [{
-  key: 'a',
-  photoURL: 'https://lh3.googleusercontent.com/3qybHqE4ff9MOts7v5l4S09W3HtOymwDic4LYzNVU-PhDIFvYAbju8qfRKB7AoxeWA=w170',
-}, {
-  key: 'b',
-  photoURL: 'https://lh3.googleusercontent.com/3qybHqE4ff9MOts7v5l4S09W3HtOymwDic4LYzNVU-PhDIFvYAbju8qfRKB7AoxeWA=w170',
-}, {
-  key: 'c',
-  photoURL: 'https://lh3.googleusercontent.com/3qybHqE4ff9MOts7v5l4S09W3HtOymwDic4LYzNVU-PhDIFvYAbju8qfRKB7AoxeWA=w170',
-}, {
-  key: 'd',
-  photoURL: 'https://lh3.googleusercontent.com/3qybHqE4ff9MOts7v5l4S09W3HtOymwDic4LYzNVU-PhDIFvYAbju8qfRKB7AoxeWA=w170',
-}, {
-  key: 'e',
-  photoURL: 'https://lh3.googleusercontent.com/3qybHqE4ff9MOts7v5l4S09W3HtOymwDic4LYzNVU-PhDIFvYAbju8qfRKB7AoxeWA=w170',
-}, {
-  key: 'f',
-  photoURL: 'https://lh3.googleusercontent.com/3qybHqE4ff9MOts7v5l4S09W3HtOymwDic4LYzNVU-PhDIFvYAbju8qfRKB7AoxeWA=w170',
-}, {
-  key: 'x',
-  photoURL: 'https://lh3.googleusercontent.com/3qybHqE4ff9MOts7v5l4S09W3HtOymwDic4LYzNVU-PhDIFvYAbju8qfRKB7AoxeWA=w170',
-}, {
-  key: 'g',
-  photoURL: 'https://lh3.googleusercontent.com/3qybHqE4ff9MOts7v5l4S09W3HtOymwDic4LYzNVU-PhDIFvYAbju8qfRKB7AoxeWA=w170',
-}, {
-  key: 'q',
-  photoURL: 'https://lh3.googleusercontent.com/3qybHqE4ff9MOts7v5l4S09W3HtOymwDic4LYzNVU-PhDIFvYAbju8qfRKB7AoxeWA=w170',
-}];
+  user: {
+    photoUrl: 'https://lh3.googleusercontent.com/3qybHqE4ff9MOts7v5l4S09W3HtOymwDic4LYzNVU-PhDIFvYAbju8qfRKB7AoxeWA=w170',
+  },
+  message: {
+    id: 'g',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam culpa cumque delectus eos impedit modi nihil nisi, nulla rerum ullam.',
+    time: Date.now(),
+    status: 'read',
+    author: 'id',
+  },
+},
+{
+  user: {
+    photoUrl: 'https://lh3.googleusercontent.com/3qybHqE4ff9MOts7v5l4S09W3HtOymwDic4LYzNVU-PhDIFvYAbju8qfRKB7AoxeWA=w170',
+  },
+  message: {
+    id: 'b',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam culpa cumque delectus eos impedit modi nihil nisi, nulla rerum ullam.',
+    time: Date.now(),
+    status: 'read',
+    author: 'id',
+  },
+},
+{
+  user: {
+    photoUrl: 'https://lh3.googleusercontent.com/3qybHqE4ff9MOts7v5l4S09W3HtOymwDic4LYzNVU-PhDIFvYAbju8qfRKB7AoxeWA=w170',
+  },
+  message: {
+    id: 'a',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam culpa cumque delectus eos impedit modi nihil nisi, nulla rerum ullam.',
+    time: Date.now(),
+    status: 'read',
+    author: 'id',
+  },
+},
+{
+  user: {
+    photoUrl: 'https://lh3.googleusercontent.com/3qybHqE4ff9MOts7v5l4S09W3HtOymwDic4LYzNVU-PhDIFvYAbju8qfRKB7AoxeWA=w170',
+  },
+  message: {
+    id: 'c',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam culpa cumque delectus eos impedit modi nihil nisi, nulla rerum ullam.',
+    time: Date.now(),
+    status: 'read',
+    author: 'id',
+  },
+},
+];
 
 
 const CurrentChatScreen = ({ modal, setUnVisible, setVisible }) => (
@@ -57,10 +78,12 @@ const CurrentChatScreen = ({ modal, setUnVisible, setVisible }) => (
   >
     <FlatList
       data={arr}
-      renderItem={({ item }) => item.key === 'a' ?
+      keyExtractor={(item) => item.message.id}
+      renderItem={({ item }) => item.id === 'a' ?
         <Message
-          onVisibleModalVisible={() => setVisible(item.photoURL)}
-          src={item.photoURL}
+          key={item.id}
+          setVisibleModal={() => setVisible(item.photoURL)}
+          user={item.user}
         /> :
         <MessageMain />
       }
@@ -71,7 +94,7 @@ const CurrentChatScreen = ({ modal, setUnVisible, setVisible }) => (
       visible={modal.isVisible}
     />
     <InputMessage
-      value={''}
+      value=''
       onChangeText={() => null}
       send={() => null}
       openCamera={() => null}
@@ -81,7 +104,7 @@ const CurrentChatScreen = ({ modal, setUnVisible, setVisible }) => (
 );
 
 CurrentChatScreen.navigationOptions = ({ navigation }) => ({
-  title: 'Список чатів',
+  title: 'Чат',
 });
 
 CurrentChatScreen.defaudefaultProps = {

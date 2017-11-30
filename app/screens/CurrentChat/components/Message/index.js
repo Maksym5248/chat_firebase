@@ -2,42 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import Avatar from '../../../../components/Avatar/index';
+import styles from './styles';
 
-const styles = StyleSheet.create({
-  wrapper: {
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
-    padding: 5,
-  },
-  container: {
-    maxWidth: '70%',
-    alignItems: 'flex-start',
-    paddingTop: 5,
-    paddingBottom: 5,
-  },
-  wrapperMessage: {
-    backgroundColor: '#c2c2c2',
-    alignItems: 'flex-start',
-    margin: 5,
-    marginBottom: 0,
-    padding: 5,
-    paddingRight: 20,
-    borderRadius: 20,
-    borderTopLeftRadius: 0,
-  },
-  time: {
-    padding: 5,
-  },
-  statusMessage: {
-    paddingLeft: 20,
-  },
-});
-
-
-const Message = ({ user, onVisibleModalVisible, src }) => (
+const Message = ({ user, setVisibleModal }) => (
   <View style={styles.wrapper}>
-    <TouchableOpacity onPress={onVisibleModalVisible}>
-      <Avatar size={40} src={src} />
+    <TouchableOpacity onPress={setVisibleModal}>
+      <Avatar size={40} src={user.photoUrl} />
     </TouchableOpacity>
     <View style={styles.container}>
       <View style={styles.wrapperMessage}>
@@ -57,7 +27,7 @@ const Message = ({ user, onVisibleModalVisible, src }) => (
 
 Message.propTypes = {
   user: PropTypes.object,
-  onVisibleModalVisible: PropTypes.func,
+  setVisibleModal: PropTypes.func,
   src: PropTypes.string,
 };
 

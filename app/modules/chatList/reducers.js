@@ -26,6 +26,7 @@ const chatsReducer = handleActions({
     ...state,
     [action.payload.idChat]: null,
   })),
+  [types.REMOVE_All_CHAT]: () => initialStateChat,
 }, initialStateChat);
 
 
@@ -41,6 +42,8 @@ const chatsIdReducer = (state = initialStateChatId, action) => {
         arr.push(action.payload.idChat);
       }
       return arr;
+    case types.REMOVE_All_CHAT:
+      return initialStateChatId;
     default:
       return state;
   }

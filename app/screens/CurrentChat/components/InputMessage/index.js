@@ -5,7 +5,9 @@ import { FontAwesome, MaterialIcons } from '@expo/vector-icons';
 import styles from './styles';
 
 
-const InputMessage = ({ value, onChangeText, send, openCamera, openGallery }) => (
+const InputMessage = ({
+  value, onChangeText, send, openCamera, openGallery,
+}) => (
   <View style={styles.wrapper}>
     <View style={styles.containerInput}>
       <TouchableOpacity onPress={openCamera}>
@@ -16,7 +18,7 @@ const InputMessage = ({ value, onChangeText, send, openCamera, openGallery }) =>
       </TouchableOpacity>
       <TextInput
         style={styles.input}
-        placeholder={'Введіть повідомлення'}
+        placeholder='Введіть повідомлення'
         onChangeText={onChangeText}
         value={value}
       />
