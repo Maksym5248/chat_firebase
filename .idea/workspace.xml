@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1528dd33-58c6-48e7-943b-ba660d927736" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/DrawerMenu/index.js" afterPath="$PROJECT_DIR$/app/screens/DrawerMenu/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/firebase/autorize/onAuthStateChanged.js" afterPath="$PROJECT_DIR$/app/services/firebase/autorize/onAuthStateChanged.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/firebase/database/createObjectInChat.js" afterPath="$PROJECT_DIR$/app/services/firebase/database/createObjectInChat.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/services/firebase/database/createUserToFb.js" afterPath="$PROJECT_DIR$/app/services/firebase/database/createUserToFb.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -345,12 +341,12 @@
       <workItem from="1511887409191" duration="1995000" />
       <workItem from="1511899078467" duration="7339000" />
       <workItem from="1511939624002" duration="21907000" />
-      <workItem from="1512026422927" duration="23803000" />
+      <workItem from="1512026422927" duration="23924000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="262583000" />
+    <option name="totallyTimeSpent" value="262704000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
