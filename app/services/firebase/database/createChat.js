@@ -1,6 +1,6 @@
 import ref from './ref';
 import url from '../../../constants/url';
-import createObjectInChat from './createObjectInChat';
+import createObjectInChat from '../../../utils/creator/createObjectInChat';
 
 console.ignoredYellowBox = ['Setting a timer'];
 

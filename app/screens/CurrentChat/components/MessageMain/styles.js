@@ -5,35 +5,35 @@ import { colors } from '../../../../styles';
 const color1 = '#c2c2c2';
 
 const styles = StyleSheet.create({
-  wrapper: {
+  wrapperMain: {
     flexDirection: 'row',
-    justifyContent: 'flex-start',
+    justifyContent: 'flex-end',
     padding: 5,
     transform: [
       { rotate: '180deg' },
     ],
   },
-  container: {
+  containerMain: {
     maxWidth: '70%',
-    alignItems: 'flex-start',
+    alignItems: 'flex-end',
     paddingTop: 5,
     paddingBottom: 5,
   },
-  wrapperMessage: {
-    backgroundColor: color1,
-    alignItems: 'flex-start',
+  wrapperMessageMain: {
+    backgroundColor: '#6fc2e8',
+    alignItems: 'flex-end',
     margin: 5,
     marginBottom: 0,
     padding: 5,
-    paddingRight: 20,
+    paddingLeft: 20,
     borderRadius: 20,
-    borderTopLeftRadius: 0,
+    borderTopRightRadius: 0,
   },
-  time: {
+  timeMain: {
     padding: 5,
   },
-  statusMessage: {
-    paddingLeft: 20,
+  statusMessageMain: {
+    paddingRight: 20,
   },
 });
 

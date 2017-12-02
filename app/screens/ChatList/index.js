@@ -22,20 +22,19 @@ const enhance = compose(
       setUnVisible: () => () => ({
         modal: { isVisible: false, idChat: '' },
       }),
-      itemOnLongPress: () => (id) => {
+      itemOnLongPress: () => (id) =>
         // console.log('uid----------', id);
-        return {
+        ({
           modal: { isVisible: true, idChat: id },
-        };
-      },
-      deleteChat: ({ modal }) => () => {
+        }),
+      deleteChat: ({ modal }) => () =>
         // console.log('uid----------');
         // !!! Запит на видалення !!!!!!!!!!
         // modal.idChat
-        return {
+        ({
           modal: { isVisible: false, idChat: '' },
-        };
-      },
+        })
+      ,
     },
   ),
   withHandlers({

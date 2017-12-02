@@ -20,7 +20,6 @@ const logOut = () => async dispatch => {
     dispatch(initialized(null));
     dispatch(setCurrentUser(createUser()));
     dispatch(removeAllChat());
-
   }).catch((err) => {
     console.log('logOut error .', err);
   });

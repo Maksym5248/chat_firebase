@@ -39,7 +39,7 @@ const chatsIdReducer = (state = initialStateChatId, action) => {
     case types.SET_CHAT:
       const arr = [...state];
       if ([...state].indexOf(action.payload.idChat.toString()) === -1) {
-        arr.push(action.payload.idChat);
+        arr.unshift(action.payload.idChat);
       }
       return arr;
     case types.REMOVE_All_CHAT:

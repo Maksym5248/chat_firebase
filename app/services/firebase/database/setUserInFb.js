@@ -1,4 +1,4 @@
-import createUserToFb from './createUserToFb';
+import createUserToFb from '../../../utils/creator/createUserToFb';
 import ref from './ref';
 import url from '../../../constants/url';
 

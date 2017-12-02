@@ -1,7 +1,7 @@
 import ref from './ref';
 import url from '../../../constants/url';
-import creatorMessages from './creatorMessages';
-import creatorLastMessage from './creatorLastMessage';
+import creatorMessages from '../../../utils/creator/creatorMessages';
+import creatorLastMessage from '../../../utils/creator/creatorLastMessage';
 
 console.ignoredYellowBox = ['Setting a timer'];
 
@@ -14,6 +14,7 @@ const createMessage = (idChat, textMessage, statusMessage, authorId, messageReci
     if (idMessage) resolve(idMessage);
     reject('createChatFb don\'t have response');
   }).then((idMessage) => {
+    console.log('222222222222222222222222222');
     const message = creatorMessages(idMessage, textMessage, statusMessage, authorId);
     messages.child(idMessage).set(message);
     ref(`${url.userProfile}/${authorId}/chatList/${idChat}/lastMessages`).update(creatorLastMessage(message));

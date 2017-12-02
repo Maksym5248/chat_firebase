@@ -42,7 +42,7 @@ const messagesIdReducer = (state = initialStateChatId, action) => {
 
       return {
         ...state,
-        [action.payload.chatId]: messages,
+        [action.payload.chatId]: messages.reverse(),
       };
     case types.REMOVE_All_CURRENT_CHATS:
       return initialStateChatId;

@@ -20,9 +20,8 @@ const sendMessage = (text, idChat) => async (dispatch, getState) => {
     uid,
     autor,
   ).then((idMessage) => {
-    console.log('99999999999999999', idMessage);
+    console.log('333333333333333333333333333', idMessage);
   });
-
 };
 
 export default {

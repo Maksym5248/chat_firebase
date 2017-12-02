@@ -9,7 +9,7 @@ import styles from './styles';
 const Message = ({ user, message, setVisibleModal }) => (
   <View style={styles.wrapper}>
     <TouchableOpacity onPress={setVisibleModal}>
-      <Avatar size={40} src={user.photoUrl} />
+      <Avatar size={40} src={user.photoURL} />
     </TouchableOpacity>
     <View style={styles.container}>
       <View style={styles.wrapperMessage}>
@@ -20,9 +20,6 @@ const Message = ({ user, message, setVisibleModal }) => (
           {moment(message.time).format('hh:mm')}
         </Text>
       </View>
-      <Text style={styles.statusMessage} >
-        {message.status}
-      </Text>
     </View>
   </View>
 );

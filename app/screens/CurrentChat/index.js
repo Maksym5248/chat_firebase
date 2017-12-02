@@ -2,6 +2,8 @@ import { connect } from 'react-redux';
 import { compose, hoistStatics, withState, lifecycle, withStateHandlers, withHandlers, withProps } from 'recompose';
 import CurrentChatScreen from './CurrentChatScreen';
 import { currentChatOperations } from '../../modules/currentChat';
+import updateStatus from '../../services/firebase/database/updateStatus';
+import messagesStatus from '../../constants/messagesStatus';
 
 const { sendMessage } = currentChatOperations;
 
@@ -31,15 +33,22 @@ const enhance = compose(
     },
   ),
   withHandlers({
-    send: ({ text, setText, navigation, dispatch }) => () => {
+    send: ({
+      text, setText, navigation, dispatch,
+    }) => () => {
       const idChat = navigation.state.params.idChat;
       setText('');
-      console.log('text', text);
       dispatch(sendMessage(text, idChat));
     },
     onChangeText: ({ setText }) => (text) => {
       setText(text);
-      console.log('onchange', text);
+    },
+    updateStatus: ({ navigation }) => (id) => {
+      updateStatus(
+        navigation.state.params.idChat,
+        id,
+        messagesStatus.READ,
+      );
     },
   }),
   lifecycle({

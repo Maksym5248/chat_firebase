@@ -1,22 +1,15 @@
 import React from 'react';
-import { StyleSheet, FlatList, KeyboardAvoidingView } from 'react-native';
+import { FlatList, KeyboardAvoidingView, Text } from 'react-native';
 import Type from 'prop-types';
+import components from './components';
+import styles from './styles';
 
-import Message from './components/Message/index';
-import MessageMain from './components/MessageMain/MessageMain';
-import ModalAvatar from './components/ModalAvatar/ModalAvatar';
-import InputMessage from './components/InputMessage/index';
-
-const color = '#F5FCFF';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 2,
-    justifyContent: 'flex-start',
-    alignItems: 'stretch',
-    backgroundColor: color,
-  },
-});
+const {
+  Message,
+  MessageMain,
+  ModalAvatar,
+  InputMessage,
+} = components;
 
 // read || notSent || sending || delivered
 
@@ -31,15 +24,20 @@ const CurrentChatScreen = ({
   messageId,
   userList,
   userCurrent,
+  updateStatus,
 }) => (
   <KeyboardAvoidingView
     style={styles.container}
     behavior='padding'
-    keyboardVerticalOffset={50}
+    keyboardVerticalOffset={70}
   >
     <FlatList
       data={messageId}
+      style={styles.flatList}
       keyExtractor={(item) => item}
+      ListEmptyComponent={(
+        <Text style={styles.empty}>Повідомлень немає</Text>
+      )}
       renderItem={({ item }) => {
         const id = item;
         const autorId = currentChat.messages[id].author;
@@ -62,6 +60,7 @@ const CurrentChatScreen = ({
             setVisibleModal={() => setVisible(user.photoURL)}
             user={user}
             message={message}
+            updateStatus={() => updateStatus(id)}
           />
         );
       }}
@@ -100,6 +99,7 @@ CurrentChatScreen.propTypes = {
   onChangeText: Type.func,
   text: Type.string,
   send: Type.func,
+  updateStatus: Type.func,
   itemOnLongPress: Type.func,
   deleteChat: Type.func,
 };

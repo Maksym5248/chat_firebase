@@ -6,6 +6,6 @@ function creatorMessages(idMessage, textMessage, statusMessage, authorId) {
     status: statusMessage,
     author: authorId,
   };
-};
+}
 
 export default creatorMessages;

@@ -1,24 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, View, Modal, TouchableOpacity } from 'react-native';
+import { View, Modal, TouchableOpacity } from 'react-native';
 import { EvilIcons } from '@expo/vector-icons';
 import Avatar from '../../../../components/Avatar/index';
+import styles from './styles';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'rgba(0, 0, 48, 0.5)',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 5,
-  },
-  containerAvatar: {
-    borderRadius: 5,
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    padding: 5,
-  },
-});
 
 const ModalAvatar = ({ offVisibleModalVisible, src, visible }) => (
   <Modal
