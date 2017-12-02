@@ -4,7 +4,7 @@ import types from './types';
 export const {
   setCurrentChat,
   removeCurrentChat,
-  createMessage,
+  addMessage,
   removeAllCurrentChats,
 } = createActions(
   {

@@ -36,9 +36,11 @@ const enhance = compose(
     send: ({
       text, setText, navigation, dispatch,
     }) => () => {
-      const idChat = navigation.state.params.idChat;
-      setText('');
-      dispatch(sendMessage(text, idChat));
+      if (text !== '') {
+        const idChat = navigation.state.params.idChat;
+        setText('');
+        dispatch(sendMessage(text, idChat));
+      }
     },
     onChangeText: ({ setText }) => (text) => {
       setText(text);
@@ -53,7 +55,7 @@ const enhance = compose(
   }),
   lifecycle({
     componentWillReceiveProps(nextProps) {
-      // console.log('ChatListScreen componentWillReceiveProps messagesId ===========', nextProps.messagesId);
+      console.log('ChatListScreen componentWillReceiveProps messagesId ===========', nextProps.currentChat, nextProps.messagesId);
       // console.log('ChatListScreen componentWillReceiveProps currentChat ===========', nextProps.currentChat);
     },
     componentDidMount() {

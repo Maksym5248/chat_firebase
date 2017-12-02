@@ -52,6 +52,7 @@ const subscribeToAll = () => async (dispatch, getState) => {
     (data) => {
       dispatch(setUnloading());
       // console.log('-----   V - A - L - U - E   -----', data);
+      // Зробити так щоб підписка не була на всіх одразу !!!!
       if (data.exists()) {
         data.forEach((childSnapshot) => {
           const item = childSnapshot.val();
@@ -67,7 +68,7 @@ const subscribeToAll = () => async (dispatch, getState) => {
     subscribe.value(
       `${url.chatList}/${id}`,
       (data) => {
-        console.log('-----   V - A - L - U - E   -----', data);
+        // console.log('-----   V - A - L - U - E   -----', data);
         const currenChat = data.val();
         if (data.exists() && typeof currenChat.messages !== 'undefined') {
           dispatch(setCurrentChat(currenChat));

@@ -7,7 +7,6 @@ import withMoment from '../../../../utils/withMoment';
 
 const defaultAvatar = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8B0hBF1hdy4mTfoMA1Gp0kxYtbp8hSXjbWyTUHoQWs0xbRIs-';
 
-
 const MessageMain = ({ userCurrent, message, modalVisible }) => (
   <View style={styles.wrapperMain}>
     <View style={styles.containerMain}>

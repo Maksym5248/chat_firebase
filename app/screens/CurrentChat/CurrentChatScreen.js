@@ -40,6 +40,7 @@ const CurrentChatScreen = ({
       )}
       renderItem={({ item }) => {
         const id = item;
+        // console.log('currentChat.messages', currentChat.messages, id);
         const autorId = currentChat.messages[id].author;
         const message = currentChat.messages[id];
 
