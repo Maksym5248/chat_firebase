@@ -6,12 +6,12 @@ console.ignoredYellowBox = ['Setting a timer'];
 
 const createChatFb = (idCurrentUser, idUser) => (
   new Promise((resolve, reject) => {
-    const response = ref(url.chatList).push();
+    const response = ref(url.chatList).push(); // ref(url.chatList).push().key
 
     if (response) resolve(response);
     reject('createChatFb don\'t have response');
   }).then((response) => {
-    const arrResponse = response.toString().split('/');
+    const arrResponse = response.toString().split('/'); // response.key - отримати ключ
     const id = arrResponse[arrResponse.length - 1];
     return response.set({ chatId: id }).then(() => id);
   }).then((id) => {

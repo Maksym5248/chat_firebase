@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
+import moment from 'moment';
 import Avatar from '../../../../components/Avatar/index';
 import styles from './styles';
 
-const Message = ({ user, setVisibleModal }) => (
+
+const Message = ({ user, message, setVisibleModal }) => (
   <View style={styles.wrapper}>
     <TouchableOpacity onPress={setVisibleModal}>
       <Avatar size={40} src={user.photoUrl} />
@@ -12,14 +14,14 @@ const Message = ({ user, setVisibleModal }) => (
     <View style={styles.container}>
       <View style={styles.wrapperMessage}>
         <Text >
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+          {message.text}
         </Text>
         <Text style={styles.time} >
-                      20.00
+          {moment(message.time).format('hh:mm')}
         </Text>
       </View>
       <Text style={styles.statusMessage} >
-                  Прочитано
+        {message.status}
       </Text>
     </View>
   </View>
@@ -27,8 +29,8 @@ const Message = ({ user, setVisibleModal }) => (
 
 Message.propTypes = {
   user: PropTypes.object,
+  message: PropTypes.object,
   setVisibleModal: PropTypes.func,
-  src: PropTypes.string,
 };
 
 

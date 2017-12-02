@@ -1,34 +1,62 @@
 import ref from './ref';
 // повертаються не проміси можливо варто переробити під проміси
-async function added(url, functionCallBack) {
-  return Promise.resolve(ref(url).on('child_added', functionCallBack));
+
+
+async function added(url, functionCallBack, error) {
+  return Promise.resolve(ref(url).on('child_added', functionCallBack, error));
 }
 
-async function changed(url, functionCallBack) {
-  return Promise.resolve(ref(url).on('child_changed', functionCallBack));
+async function changed(url, functionCallBack, error) {
+  return Promise.resolve(ref(url).on('child_changed', functionCallBack, error));
 }
 
-async function removed(url, functionCallBack) {
-  return Promise.resolve(ref(url).on('child_removed', functionCallBack));
+async function removed(url, functionCallBack, error) {
+  return Promise.resolve(ref(url).on('child_removed', functionCallBack, error));
+}
+
+async function value(url, functionCallBack, failureCallbackOrContext) {
+  return Promise.resolve(ref(url).on('value', functionCallBack, failureCallbackOrContext));
 }
 
 const subscribe = {
   added,
   changed,
   removed,
+  value,
 };
 
 export default subscribe;
 
+// async function added(url, functionCallBack, error) {
+//   return Promise.resolve(ref(url).on('child_added', functionCallBack, error));
+// }
+//
+// async function changed(url, functionCallBack, error) {
+//   return Promise.resolve(ref(url).on('child_changed', functionCallBack, error));
+// }
+//
+// async function removed(url, functionCallBack, error) {
+//   return Promise.resolve(ref(url).on('child_removed', functionCallBack, error));
+// }
+//
+// async function value(url, functionCallBack, failureCallbackOrContext) {
+//   return Promise.resolve(ref(url).on('value', functionCallBack, failureCallbackOrContext));
+// }
 
-// users.on('child_added', function(data) {
-//   addCommentElement(postElement, data.key, data.val().text, data.val().author);
-// });
+// function value(chatList, url, callBack, failureCallbackOrContext) {
+//   return new Promise((resolve, reject) => {
+//     ref(url).once('value', (data) => {
+//       callBack(data, resolve, reject);
+//     }, failureCallbackOrContext);
 //
-// commentsRef.on('child_changed', function(data) {
-//   setCommentValues(postElement, data.key, data.val().text, data.val().author);
-// });
+//   });
+// }
+
+// function addedd(url, callBack, failureCallbackOrContext) {
+//   return new Promise((resolve, reject) => {
+//     ref(url).on('child_added', (data) => {
+//       callBack(data, resolve, reject);
+//     }, failureCallbackOrContext);
 //
-// commentsRef.on('child_removed', function(data) {
-//   deleteComment(postElement, data.key);
-// });
+//   });
+// }

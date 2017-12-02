@@ -22,7 +22,7 @@ const ChatListItem = ({
             {user.displayName}
           </Text>
           <Text>
-            {moment(lastMessage.date).format('hh:mm')}
+            {moment(lastMessage.time).format('hh:mm')}
           </Text>
           <Text>
             {'Нове'}

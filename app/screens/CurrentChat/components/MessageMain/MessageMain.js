@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import moment from 'moment';
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import Avatar from '../../../../components/Avatar/index';
+
 
 const styles = StyleSheet.create({
   wrapperMain: {
@@ -35,29 +36,25 @@ const styles = StyleSheet.create({
 });
 
 
-const MessageMain = ({ user, dispatch, modalVisible }) => {
-  const title = 'Костін Максим';
-  const date = '20.10.2017';
-  const isNew = 'Нове';
+const MessageMain = ({ userCurrent, message, modalVisible }) => {
 
   return (
     <View style={styles.wrapperMain}>
       <View style={styles.containerMain}>
         <View style={styles.wrapperMessageMain}>
           <Text >
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
-                      animi assumenda delectus earum, facere fuga harum inventore labore
+            {message.text}
           </Text>
           <Text style={styles.timeMain} >
-                      20.00
+            {moment(message.time).format('hh:mm')}
           </Text>
         </View>
         <Text style={styles.statusMessageMain} >
-                  Прочитано
+          {message.status}
         </Text>
       </View>
-      <TouchableOpacity onPress={(e) => null}>
-        <Avatar size={40} />
+      <TouchableOpacity onPress={() => null}>
+        <Avatar size={40} src={userCurrent.photoUrl} />
       </TouchableOpacity>
     </View>
 
@@ -66,9 +63,9 @@ const MessageMain = ({ user, dispatch, modalVisible }) => {
 };
 
 MessageMain.propTypes = {
-  user: PropTypes.object,
+  userCurrent: PropTypes.object,
   modalVisible: PropTypes.func,
-  dispatch: PropTypes.func,
+  message: PropTypes.object,
 };
 
 

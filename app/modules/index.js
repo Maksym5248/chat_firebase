@@ -1,17 +1,19 @@
 import app from './app';
 import navigator from './navigator';
-import settings from './settings';
 import authentication from './authentication';
 import userList from './usersList/reducers';
 import chatList from './chatList/reducers';
+import drawerMenu from './drawerMenu/reducers';
+import currentChatList from './currentChat/reducers';
 
 export default {
   app,
   navigator,
-  settings,
   authentication,
   userList,
   chatList,
+  drawerMenu,
+  currentChatList,
 };
 
 /*

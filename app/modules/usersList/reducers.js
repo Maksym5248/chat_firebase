@@ -14,7 +14,7 @@ const initialStateUser = {
 const initialStateUserId = [];
 
 const usersReducer = handleActions({
-  [types.SET_USER]: mergeIn((action, state) => ({
+  [types.SET_USER_FROM_LIST]: mergeIn((action, state) => ({
     ...state.users,
     [action.payload.uid]: {
       ...action.payload,
@@ -29,11 +29,11 @@ const usersReducer = handleActions({
 
 
 const usersIdReducer = (state = initialStateUserId, action) => {
-  if (action.type === types.SET_USER) {
-    console.log('SET_USER +++++++++++++++++++++++++++++++++++', action.payload);
+  if (action.type === types.SET_USER_FROM_LIST) {
+    // console.log('SET_USER +++++++++++++++++++++++++++++++++++', action.payload);
   }
   switch (action.type) {
-    case types.SET_USER:
+    case types.SET_USER_FROM_LIST:
       const arr = [...state];
       if ([...state].indexOf(action.payload.uid.toString()) === -1) {
         arr.push(action.payload.uid);

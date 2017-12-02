@@ -32,7 +32,7 @@ const chatsReducer = handleActions({
 
 const chatsIdReducer = (state = initialStateChatId, action) => {
   if (action.type === types.SET_CHAT) {
-    console.log('action+++++++++++++++++++++++++++++++++++', action.payload);
+    // console.log('action+++++++++++++++++++++++++++++++++++', action.payload);
   }
 
   switch (action.type) {

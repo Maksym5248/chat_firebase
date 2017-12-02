@@ -5,6 +5,7 @@ import signInWithCredential from '../../services/firebase/autorize/signInWithCre
 import signInWithEmailAndPassword from '../../services/firebase/autorize/signInWithEmailAndPassword';
 import createUserWithEmailAndPassword from '../../services/firebase/autorize/createUserWithEmailAndPassword';
 import createUser from '../../services/firebase/autorize/createUser';
+import { setUnloading } from '../drawerMenu/actions';
 // import { ToastAndroid } from 'react-native';
 // import types from './types';
 // import appTypes from '../app/types';
@@ -25,6 +26,7 @@ const logInWithPasswordAndEmail = emailAndPassord => async dispatch => {
       createUserWithEmailAndPassword(emailAndPassord)
         .then(createUser)
         .then((user) => ifSuccess(user, dispatch))
+        .then(() => dispatch(setUnloading()))
         .catch((err) => {
           dispatch(isLoading(false));
           console.log('err createUserWithEmailAndPassword', err.code, err.message);

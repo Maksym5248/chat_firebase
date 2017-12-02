@@ -1,40 +1,58 @@
 import { connect } from 'react-redux';
-import { compose, hoistStatics, lifecycle, withStateHandlers } from 'recompose';
-import { withLoadingModal } from '../../utils/enhancers';
+import { compose, hoistStatics, withState, lifecycle, withStateHandlers, withHandlers, withProps } from 'recompose';
 import CurrentChatScreen from './CurrentChatScreen';
-import subscribe from '../../services/firebase/database/subscribe';
-import url from '../../constants/url';
+import { currentChatOperations } from '../../modules/currentChat';
+
+const { sendMessage } = currentChatOperations;
 
 const mapStateToProps = state => ({
-  statea: state.app,
-  isLoading: state.app,
+  currentChats: state.currentChatList.currentChat,
+  messagesId: state.currentChatList.messagesId,
+  userList: state.userList.users,
+  userCurrent: state.authentication.currentUser,
 });
 
 const enhance = compose(
   connect(mapStateToProps),
+  withState('text', 'setText', ''),
+  withProps(({ currentChats, messagesId, navigation }) => ({
+    currentChat: currentChats[navigation.state.params.idChat],
+    messageId: messagesId[navigation.state.params.idChat],
+  })),
   withStateHandlers(
     ({ initialCounter = { isVisible: false, photoURL: '' } }) => ({
       modal: initialCounter,
     }),
     {
-      setUnVisible: () => () => ({
-        modal: { isVisible: false, photoURL: '' },
+      setUnVisible: () => () => ({ modal: { isVisible: false, photoURL: '' } }),
+      setVisible: () => (urlCurrentPhoto) => ({
+        modal: { isVisible: true, photoURL: urlCurrentPhoto },
       }),
-      setVisible: () => (urlCurrentPhoto) =>
-        // console.log('uid----------', src);
-        ({
-          modal: { isVisible: true, photoURL: urlCurrentPhoto },
-        })
-      ,
     },
   ),
+  withHandlers({
+    send: ({ text, setText, navigation, dispatch }) => () => {
+      const idChat = navigation.state.params.idChat;
+      setText('');
+      console.log('text', text);
+      dispatch(sendMessage(text, idChat));
+    },
+    onChangeText: ({ setText }) => (text) => {
+      setText(text);
+      console.log('onchange', text);
+    },
+  }),
   lifecycle({
     componentWillReceiveProps(nextProps) {
-      // console.log('ChatListScreen componentWillReceiveProps state ===========', nextProps.statea);
+      // console.log('ChatListScreen componentWillReceiveProps messagesId ===========', nextProps.messagesId);
+      // console.log('ChatListScreen componentWillReceiveProps currentChat ===========', nextProps.currentChat);
     },
     componentDidMount() {
-      const idChat = this.props.navigation.state.params.idChat;
-      console.log('chatId CurrentChatScreen-----------', idChat);
+      // console.log('this.props.currentChat', this.props.currentChat);
+      // console.log('ChatListScreen componentWillReceiveProps messagesId ===========', this.props.messagesId);
+      // console.log('ChatListScreen componentWillReceiveProps currentChat ===========', this.props.currentChat)
+      // const idChat = this.props.navigation.state.params.idChat;
+      // console.log('chatId CurrentChatScreen-----------', idChat);
       // subscribe.changed(url.users, (data) => {
       //   console.log('users log ---------------   data', data);
       // });

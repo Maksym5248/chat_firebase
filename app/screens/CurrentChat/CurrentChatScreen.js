@@ -19,74 +19,52 @@ const styles = StyleSheet.create({
 });
 
 // read || notSent || sending || delivered
-const arr = [{
-  user: {
-    photoUrl: 'https://lh3.googleusercontent.com/3qybHqE4ff9MOts7v5l4S09W3HtOymwDic4LYzNVU-PhDIFvYAbju8qfRKB7AoxeWA=w170',
-  },
-  message: {
-    id: 'g',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam culpa cumque delectus eos impedit modi nihil nisi, nulla rerum ullam.',
-    time: Date.now(),
-    status: 'read',
-    author: 'id',
-  },
-},
-{
-  user: {
-    photoUrl: 'https://lh3.googleusercontent.com/3qybHqE4ff9MOts7v5l4S09W3HtOymwDic4LYzNVU-PhDIFvYAbju8qfRKB7AoxeWA=w170',
-  },
-  message: {
-    id: 'b',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam culpa cumque delectus eos impedit modi nihil nisi, nulla rerum ullam.',
-    time: Date.now(),
-    status: 'read',
-    author: 'id',
-  },
-},
-{
-  user: {
-    photoUrl: 'https://lh3.googleusercontent.com/3qybHqE4ff9MOts7v5l4S09W3HtOymwDic4LYzNVU-PhDIFvYAbju8qfRKB7AoxeWA=w170',
-  },
-  message: {
-    id: 'a',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam culpa cumque delectus eos impedit modi nihil nisi, nulla rerum ullam.',
-    time: Date.now(),
-    status: 'read',
-    author: 'id',
-  },
-},
-{
-  user: {
-    photoUrl: 'https://lh3.googleusercontent.com/3qybHqE4ff9MOts7v5l4S09W3HtOymwDic4LYzNVU-PhDIFvYAbju8qfRKB7AoxeWA=w170',
-  },
-  message: {
-    id: 'c',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam culpa cumque delectus eos impedit modi nihil nisi, nulla rerum ullam.',
-    time: Date.now(),
-    status: 'read',
-    author: 'id',
-  },
-},
-];
 
-
-const CurrentChatScreen = ({ modal, setUnVisible, setVisible }) => (
+const CurrentChatScreen = ({
+  modal,
+  setUnVisible,
+  setVisible,
+  onChangeText,
+  text,
+  send,
+  currentChat,
+  messageId,
+  userList,
+  userCurrent,
+}) => (
   <KeyboardAvoidingView
     style={styles.container}
     behavior='padding'
     keyboardVerticalOffset={50}
   >
     <FlatList
-      data={arr}
-      keyExtractor={(item) => item.message.id}
-      renderItem={({ item }) => item.id === 'a' ?
-        <Message
-          key={item.id}
-          setVisibleModal={() => setVisible(item.photoURL)}
-          user={item.user}
-        /> :
-        <MessageMain />
-      }
+      data={messageId}
+      keyExtractor={(item) => item}
+      renderItem={({ item }) => {
+        const id = item;
+        const autorId = currentChat.messages[id].author;
+        const message = currentChat.messages[id];
+
+        if (autorId === userCurrent.uid) {
+          return (
+            <MessageMain
+              key={id}
+              userCurrent={userCurrent}
+              message={message}
+            />
+          );
+        }
+
+        const user = userList[autorId];
+        return (
+          <Message
+            key={id}
+            setVisibleModal={() => setVisible(user.photoURL)}
+            user={user}
+            message={message}
+          />
+        );
+      }}
     />
     <ModalAvatar
       offVisibleModalVisible={setUnVisible}
@@ -94,9 +72,9 @@ const CurrentChatScreen = ({ modal, setUnVisible, setVisible }) => (
       visible={modal.isVisible}
     />
     <InputMessage
-      value=''
-      onChangeText={() => null}
-      send={() => null}
+      value={text}
+      onChangeText={onChangeText}
+      send={send}
       openCamera={() => null}
       openGallery={() => null}
     />
@@ -112,13 +90,16 @@ CurrentChatScreen.defaudefaultProps = {
 };
 
 CurrentChatScreen.propTypes = {
-  chatList: Type.object,
-  chatsListId: Type.array,
+  currentChat: Type.object,
+  messageId: Type.array,
   userList: Type.object,
+  userCurrent: Type.object,
   modal: Type.object,
   setVisible: Type.func,
   setUnVisible: Type.func,
-  moveToChat: Type.func,
+  onChangeText: Type.func,
+  text: Type.string,
+  send: Type.func,
   itemOnLongPress: Type.func,
   deleteChat: Type.func,
 };

@@ -1,4 +1,4 @@
-import { setUser } from './actions';
+import { setUserFromList } from './actions';
 import createChatFb from '../../services/firebase/database/createChat';
 
 // import { ToastAndroid } from 'react-native';
@@ -11,5 +11,5 @@ const createChat = (idCurrentUser, idUser) => async dispatch => createChatFb(idC
 
 export default {
   createChat,
-  setUser,
+  setUserFromList,
 };

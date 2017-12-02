@@ -23,13 +23,13 @@ const enhance = compose(
         modal: { isVisible: false, idChat: '' },
       }),
       itemOnLongPress: () => (id) => {
-        console.log('uid----------', id);
+        // console.log('uid----------', id);
         return {
           modal: { isVisible: true, idChat: id },
         };
       },
       deleteChat: ({ modal }) => () => {
-        console.log('uid----------');
+        // console.log('uid----------');
         // !!! Запит на видалення !!!!!!!!!!
         // modal.idChat
         return {
