@@ -11,8 +11,7 @@ const createChatFb = (idCurrentUser, idUser) => (
     if (response) resolve(response);
     reject('createChatFb don\'t have response');
   }).then((response) => {
-    const arrResponse = response.toString().split('/'); // response.key - отримати ключ
-    const id = arrResponse[arrResponse.length - 1];
+    const id = response.key;
     return response.set({ chatId: id }).then(() => id);
   }).then((id) => {
     const urlCurrenUserProfile = ref(`${url.userProfile}/${idCurrentUser}/chatList/${id}`);

@@ -26,8 +26,12 @@ const logOut = () => async dispatch => {
 };
 
 const subscribeToAll = () => async (dispatch, getState) => {
-  const { authentication } = getState();
+  const { authentication, chatList } = getState();
   const userProfileUrlChatList = `${url.userProfile}/${authentication.currentUser.uid}/chatList`;
+
+  if (chatList.chatsId.length > 0) {
+    dispatch(setUnloading());
+  }
 
   subscribe.value(
     url.users,

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Text, TouchableOpacity } from 'react-native';
-import moment from 'moment';
 import styles from './styles';
 import Avatar from '../../../../components/Avatar/index';
+import withMoment from '../../../../utils/withMoment';
 
 
 const urlPhoto = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8B0hBF1hdy4mTfoMA1Gp0kxYtbp8hSXjbWyTUHoQWs0xbRIs-';
@@ -22,7 +22,7 @@ const ChatListItem = ({
             {user.displayName}
           </Text>
           <Text>
-            {moment(lastMessage.time).format('hh:mm')}
+            {withMoment(lastMessage.time)}
           </Text>
           <Text>
             {'Нове'}

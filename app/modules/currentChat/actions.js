@@ -10,7 +10,7 @@ export const {
   {
     [types.SET_CURRENT_CHAT]: chat => chat,
     [types.REMOVE_CURRENT_CHAT]: chat => chat,
-    [types.CREATE_MESSAGE]: chat => chat,
+    [types.ADD_MESSAGE]: chat => chat,
   },
   types.REMOVE_All_CURRENT_CHATS,
 );

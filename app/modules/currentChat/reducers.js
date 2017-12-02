@@ -23,6 +23,12 @@ const currentChatsReducer = handleActions({
       ...action.payload,
     },
   })),
+  [types.ADD_MESSAGE]: mergeIn((action, state) => ({
+    ...state,
+    [action.payload.chatId]: {
+      ...action.payload,
+    },
+  })),
   [types.REMOVE_CURRENT_CHAT]: mergeIn((action, state) => ({
     ...state,
     [action.payload.chatId]: null,

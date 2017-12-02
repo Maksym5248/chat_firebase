@@ -4,10 +4,15 @@ import thunk from 'redux-thunk';
 import { persistStore, persistCombineReducers } from 'redux-persist';
 import AsyncStorage from 'redux-persist/es/storage';
 import appReducer from './modules';
-// root
+
 const config = {
   key: 'root',
-  whitelist: ['authentication'],
+  whitelist: [
+    'authentication',
+    'chatList',
+    'currentChatList',
+    'userList',
+  ],
   storage: AsyncStorage,
 };
 const reducer = persistCombineReducers(config, appReducer);
