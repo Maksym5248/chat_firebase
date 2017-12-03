@@ -13,6 +13,7 @@ const onAuthStateChanged = (dispatch) => new Promise((resolve, reject) => (
         dispatch(setCurrentUser(user));
         setUserInFb(user);
         interval = setInterval(() => {
+          // console.log('onAuthStateChanged setInterval');
           setUserInFb(user);
         }, 60000);
         return user;

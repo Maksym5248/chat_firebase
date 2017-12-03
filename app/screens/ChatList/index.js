@@ -23,7 +23,7 @@ const enhance = compose(
         modal: { isVisible: false, idChat: '' },
       }),
       itemOnLongPress: () => (id) =>
-        // console.log('uid----------', id);
+
         ({
           modal: { isVisible: true, idChat: id },
         }),
@@ -47,7 +47,7 @@ const enhance = compose(
       // console.log('ChatListScreen componentWillReceiveProps state ===========', nextProps.chats, nextProps.chatsId);
     },
     componentDidMount() {
-      console.log('userList-----------------', this.props.userList);
+      // console.log('userList-----------------', this.props.userList);
     },
   }),
 );

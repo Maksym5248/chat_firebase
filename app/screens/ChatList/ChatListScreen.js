@@ -18,12 +18,14 @@ const ChatListScreen = ({
   modal,
   setUnVisible,
   deleteChat,
+  userCurrent,
 }) => (
   <View>
     <ScrollView>
       {
         chatsListId.map(item => (
           <ChatListItem
+            currentUser={userCurrent}
             user={userList[chatList[item].lastMessages.autor]}
             lastMessage={chatList[item].lastMessages}
             key={item}
@@ -59,6 +61,7 @@ ChatListScreen.propTypes = {
   moveToChat: Type.func,
   itemOnLongPress: Type.func,
   deleteChat: Type.func,
+  userCurrent: Type.object,
 };
 
 ChatListScreen.navigationOptions = ({ navigation }) => ({

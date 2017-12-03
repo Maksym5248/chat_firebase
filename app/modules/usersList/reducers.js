@@ -4,13 +4,7 @@ import { combineReducers } from 'redux';
 import { mergeIn } from '../../utils/stateHelpers';
 import types from './types';
 
-const initialStateUser = {
-  displayName: null,
-  photoURL: null,
-  uid: null,
-  online: true,
-};
-
+const initialStateUser = {};
 const initialStateUserId = [];
 
 const usersReducer = handleActions({

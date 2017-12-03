@@ -3,6 +3,7 @@ import { FlatList, KeyboardAvoidingView, Text } from 'react-native';
 import Type from 'prop-types';
 import components from './components';
 import styles from './styles';
+import messagesStatus from '../../constants/messagesStatus';
 
 const {
   Message,
@@ -24,7 +25,6 @@ const CurrentChatScreen = ({
   messageId,
   userList,
   userCurrent,
-  updateStatus,
 }) => (
   <KeyboardAvoidingView
     style={styles.container}
@@ -34,13 +34,14 @@ const CurrentChatScreen = ({
     <FlatList
       data={messageId}
       style={styles.flatList}
+      contentContainerStyle={styles.flatListContent}
       keyExtractor={(item) => item}
       ListEmptyComponent={(
         <Text style={styles.empty}>Повідомлень немає</Text>
       )}
       renderItem={({ item }) => {
         const id = item;
-        // console.log('currentChat.messages', currentChat.messages, id);
+        // console.log('+++++++++++++++++++++++++++++++++++++', messageId);
         const autorId = currentChat.messages[id].author;
         const message = currentChat.messages[id];
 
@@ -61,7 +62,6 @@ const CurrentChatScreen = ({
             setVisibleModal={() => setVisible(user.photoURL)}
             user={user}
             message={message}
-            updateStatus={() => updateStatus(id)}
           />
         );
       }}
@@ -100,7 +100,6 @@ CurrentChatScreen.propTypes = {
   onChangeText: Type.func,
   text: Type.string,
   send: Type.func,
-  updateStatus: Type.func,
   itemOnLongPress: Type.func,
   deleteChat: Type.func,
 };

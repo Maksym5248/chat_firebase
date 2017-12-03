@@ -2,10 +2,9 @@ import { connect } from 'react-redux';
 import { compose, hoistStatics, withState, lifecycle, withStateHandlers, withHandlers, withProps } from 'recompose';
 import CurrentChatScreen from './CurrentChatScreen';
 import { currentChatOperations } from '../../modules/currentChat';
-import updateStatus from '../../services/firebase/database/updateStatus';
 import messagesStatus from '../../constants/messagesStatus';
 
-const { sendMessage } = currentChatOperations;
+const { sendMessage, updateStatusToRead } = currentChatOperations;
 
 const mapStateToProps = state => ({
   currentChats: state.currentChatList.currentChat,
@@ -45,37 +44,34 @@ const enhance = compose(
     onChangeText: ({ setText }) => (text) => {
       setText(text);
     },
-    updateStatus: ({ navigation }) => (id) => {
-      updateStatus(
-        navigation.state.params.idChat,
-        id,
-        messagesStatus.READ,
-      );
-    },
   }),
   lifecycle({
     componentWillReceiveProps(nextProps) {
-      console.log('ChatListScreen componentWillReceiveProps messagesId ===========', nextProps.currentChat, nextProps.messagesId);
-      // console.log('ChatListScreen componentWillReceiveProps currentChat ===========', nextProps.currentChat);
+      searchMessageWithoutStatusRead(nextProps, this.props);
     },
     componentDidMount() {
-      // console.log('this.props.currentChat', this.props.currentChat);
-      // console.log('ChatListScreen componentWillReceiveProps messagesId ===========', this.props.messagesId);
-      // console.log('ChatListScreen componentWillReceiveProps currentChat ===========', this.props.currentChat)
-      // const idChat = this.props.navigation.state.params.idChat;
-      // console.log('chatId CurrentChatScreen-----------', idChat);
-      // subscribe.changed(url.users, (data) => {
-      //   console.log('users log ---------------   data', data);
-      // });
-      // subscribe.added(url.users, (data) => {
-      //   console.log('users  added ---------------   data', data);
-      // });
-      // subscribe.removed(url.users, (data) => {
-      //   console.log('users removed ---------------   data', data);
-      // });
-      // console.log('ChatListScreen componentDidMount state ===========', this.props.statea);
+      searchMessageWithoutStatusRead(this.props, this.props);
     },
   }),
 );
+
+function searchMessageWithoutStatusRead(nextProps, props) {
+  const { dispatch, navigation, userCurrent } = props;
+  const { idChat } = navigation.state.params;
+
+  if (typeof nextProps.currentChat !== 'undefined') {
+    nextProps.messageId.forEach((item) => {
+      const author = nextProps.currentChat.messages[item].author;
+      const status = nextProps.currentChat.messages[item].status;
+
+      if (status !== messagesStatus.READ && author !== userCurrent.uid) {
+        dispatch(updateStatusToRead(
+          idChat,
+          item,
+        ));
+      }
+    });
+  }
+}
 
 export default hoistStatics(enhance)(CurrentChatScreen);
