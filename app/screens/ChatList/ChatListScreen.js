@@ -26,7 +26,7 @@ const ChatListScreen = ({
         chatsListId.map(item => (
           <ChatListItem
             currentUser={userCurrent}
-            user={userList[chatList[item].lastMessages.autor]}
+            user={userList[chatList[item].lastMessages.chatWithUser]}
             lastMessage={chatList[item].lastMessages}
             key={item}
             onLongPress={() => itemOnLongPress(item)}

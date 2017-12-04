@@ -52,14 +52,14 @@ const messagesIdReducer = (state = initialStateChatId, action) => {
         [action.payload.chatId]: messages.reverse(),
       };
     case types.ADD_MESSAGE:
-      console.log('action.payload.messages,', action.payload)
       const arrChat = [...state[action.payload.chatId]];
-      // console.log('action+++++++++++++++++++++++++++++++++++', arrChat);
       const key = Object.keys(action.payload.messages);
       const arr = [...state[action.payload.chatId]];
-      arr.unshift(key[0]);
-      // arrChat.unshift(action.payload.messages[0].id);
-      // const arr = [...state];
+      const id = action.payload.messages[key[0]].id;
+
+      if (arrChat.indexOf(id.toString()) === -1) {
+        arr.unshift(key[0]);
+      }
       return {
         ...state,
         [action.payload.chatId]: arr,

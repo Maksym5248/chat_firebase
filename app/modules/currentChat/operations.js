@@ -25,7 +25,7 @@ const updateStatusToRead = (idChat, messageId) => async (dispatch, getState) => 
 
 const sendMessage = (text, idChat) => async (dispatch, getState) => {
   const { uid } = getState().authentication.currentUser;
-  const messageRecipient = getState().chatList.chats[idChat].lastMessages.autor;
+  const messageRecipient = getState().chatList.chats[idChat].lastMessages.chatWithUser;
   const chat = getState().currentChatList.currentChat;
   const idInReducer = Date.now().valueOf().toString(36).substr(2, 9);
 
@@ -53,6 +53,22 @@ const sendMessage = (text, idChat) => async (dispatch, getState) => {
     messageRecipient,
   ).then((idMessage) => {
     // console.log('333333333333333333333333333', idMessage);
+  }).catch((err) => {
+    console.log('error----sendMessage---catch----', err);
+    if (typeof chat[idChat] !== 'undefined') {
+      const messageInChat = {
+        chatId: idChat,
+        messages: {
+          [idInReducer]: creatorMessages(
+            idInReducer,
+            text,
+            messagesStatus.NOTSEND,
+            uid,
+          ),
+        },
+      };
+      dispatch(addMessage(messageInChat));
+    }
   });
 };
 

@@ -15,12 +15,13 @@ const createChatFb = (idCurrentUser, idUser) => (
     return response.set({ chatId: id }).then(() => id);
   }).then((id) => {
     const urlCurrenUserProfile = ref(`${url.userProfile}/${idCurrentUser}/chatList/${id}`);
-    return urlCurrenUserProfile.set(createObjectInChat(id, idUser)).then(() => id);
+    return urlCurrenUserProfile.set(createObjectInChat(id, idUser, idCurrentUser)).then(() => id);
   }).then((id) => {
     const urlUserProfile = ref(`${url.userProfile}/${idUser}/chatList/${id}`);
-    return urlUserProfile.set(createObjectInChat(id, idCurrentUser)).then(() => id);
+    return urlUserProfile.set(createObjectInChat(id, idCurrentUser, idCurrentUser)).then(() => id);
   })
 );
+
 
 export default createChatFb;
 

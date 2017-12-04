@@ -31,9 +31,8 @@ const styles = StyleSheet.create({
     marginLeft: 90,
   },
   headerContent: {
-    flex: 1,
     flexDirection: 'row',
-    alignItems: 'flex-start',
+    alignItems: 'flex-end',
   },
   displayName: {
     flex: 4,

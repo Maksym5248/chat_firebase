@@ -19,7 +19,7 @@ const ChatListItem = ({
   <TouchableOpacity onLongPress={onLongPress} onPress={onPress}>
     <View
       style={lastMessage.status !== messagesStatus.READ &&
-        lastMessage.autor !== currentUser.uid &&
+        lastMessage.author !== currentUser.uid &&
         lastMessage.text !== 'Немає повідомлень' ?
         styles.wrapperIsNew : styles.container}
     >
@@ -36,7 +36,7 @@ const ChatListItem = ({
           </Text>
           <Text style={styles.isNew}>
             {lastMessage.status !== messagesStatus.READ &&
-              lastMessage.autor !== currentUser.uid &&
+              lastMessage.author !== currentUser.uid &&
               lastMessage.text !== 'Немає повідомлень' ? 'нове' : ''}
           </Text>
           <Text style={styles.time}>

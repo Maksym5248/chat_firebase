@@ -3,7 +3,9 @@ function creatorLastMessage(message) {
     text: message.text,
     time: message.time,
     status: message.status,
+    author: message.author,
   };
 }
+
 
 export default creatorLastMessage;

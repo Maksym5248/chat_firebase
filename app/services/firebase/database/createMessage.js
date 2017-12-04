@@ -7,14 +7,12 @@ console.ignoredYellowBox = ['Setting a timer'];
 
 const createMessage = (idChat, textMessage, statusMessage, authorId, messageRecipient) => {
   const messages = ref(`${url.chatList}/${idChat}/messages`);
-  // /userProfile/0Q1Wyc7vK2PjxLZTB7I6uegmbnq2/chatList/-L-5qz5ua4S2H7z6UjGy/lastMessages
   return new Promise((resolve, reject) => {
     const idMessage = messages.push().key; // ref(url.chatList).push().key
 
     if (idMessage) resolve(idMessage);
     reject('createChatFb don\'t have response');
   }).then((idMessage) => {
-    console.log('222222222222222222222222222');
     const message = creatorMessages(idMessage, textMessage, statusMessage, authorId);
     messages.child(idMessage).set(message);
     ref(`${url.userProfile}/${authorId}/chatList/${idChat}/lastMessages`).update(creatorLastMessage(message));

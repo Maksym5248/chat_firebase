@@ -1,8 +1,9 @@
-function createObjectInChat(idChatt, idUser) {
+function createObjectInChat(idChatt, idUser, currentUser) {
   return {
     idChat: idChatt,
     lastMessages: {
-      autor: idUser,
+      chatWithUser: idUser,
+      author: currentUser,
       text: 'Немає повідомлень',
       time: Date.now(),
     },
