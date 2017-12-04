@@ -3,22 +3,30 @@ import { compose, hoistStatics, withState, lifecycle, withStateHandlers, withHan
 import CurrentChatScreen from './CurrentChatScreen';
 import { currentChatOperations } from '../../modules/currentChat';
 import messagesStatus from '../../constants/messagesStatus';
+import updateMeta from '../../services/firebase/database/updateMeta';
 
 const { sendMessage, updateStatusToRead } = currentChatOperations;
+let timer;
+
 
 const mapStateToProps = state => ({
   currentChats: state.currentChatList.currentChat,
   messagesId: state.currentChatList.messagesId,
   userList: state.userList.users,
   userCurrent: state.authentication.currentUser,
+  chatList: state.chatList.chats,
 });
 
 const enhance = compose(
   connect(mapStateToProps),
   withState('text', 'setText', ''),
-  withProps(({ currentChats, messagesId, navigation }) => ({
+  withProps(({
+    currentChats, messagesId, navigation, chatList,
+  }) => ({
     currentChat: currentChats[navigation.state.params.idChat],
     messageId: messagesId[navigation.state.params.idChat],
+    idChat: navigation.state.params.idChat,
+    idUserWithChat: chatList[navigation.state.params.idChat].lastMessages.chatWithUser,
   })),
   withStateHandlers(
     ({ initialCounter = { isVisible: false, photoURL: '' } }) => ({
@@ -33,15 +41,24 @@ const enhance = compose(
   ),
   withHandlers({
     send: ({
-      text, setText, navigation, dispatch,
+      text, setText, dispatch, idChat, userCurrent,
     }) => () => {
+      updateMeta(idChat, fetchingNull(userCurrent.uid));
       if (text !== '') {
-        const idChat = navigation.state.params.idChat;
         setText('');
         dispatch(sendMessage(text, idChat));
       }
     },
-    onChangeText: ({ setText }) => (text) => {
+    onChangeText: ({ setText, userCurrent, idChat }) => (text) => {
+      updateMeta(idChat, {
+        isFetching: {
+          [userCurrent.uid]: userCurrent.uid,
+        },
+      });
+      clearTimeout(timer);
+      timer = setInterval(() => {
+        updateMeta(idChat, fetchingNull(userCurrent.uid));
+      }, 4000);
       setText(text);
     },
   }),
@@ -72,6 +89,14 @@ function searchMessageWithoutStatusRead(nextProps, props) {
       }
     });
   }
+}
+
+function fetchingNull(uid) {
+  return {
+    isFetching: {
+      [uid]: null,
+    },
+  };
 }
 
 export default hoistStatics(enhance)(CurrentChatScreen);

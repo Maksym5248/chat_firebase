@@ -3,7 +3,7 @@ import { FlatList, KeyboardAvoidingView, Text } from 'react-native';
 import Type from 'prop-types';
 import components from './components';
 import styles from './styles';
-import messagesStatus from '../../constants/messagesStatus';
+import withMoment from '../../utils/withMoment';
 
 const {
   Message,
@@ -12,7 +12,7 @@ const {
   InputMessage,
 } = components;
 
-// read || notSent || sending || delivered
+let prevTime = 0;
 
 const CurrentChatScreen = ({
   modal,
@@ -25,6 +25,7 @@ const CurrentChatScreen = ({
   messageId,
   userList,
   userCurrent,
+  idUserWithChat,
 }) => (
   <KeyboardAvoidingView
     style={styles.container}
@@ -36,16 +37,22 @@ const CurrentChatScreen = ({
       style={styles.flatList}
       contentContainerStyle={styles.flatListContent}
       keyExtractor={(item) => item}
-      ListEmptyComponent={(
-        <Text style={styles.empty}>Повідомлень немає</Text>
-      )}
+      ItemSeparatorComponent={({ leadingItem }) => {
+        const time = currentChat.messages[leadingItem].time;
+        const difference = prevTime - 10 * 60 * 1000;
+        if (difference > time) {
+          prevTime = time;
+          return (<Text style={styles.separator}>{withMoment(time)}</Text>);
+        }
+        prevTime = time;
+        return null;
+      }}
       renderItem={({ item }) => {
         const id = item;
-        // console.log('+++++++++++++++++++++++++++++++++++++', messageId);
-        const autorId = currentChat.messages[id].author;
+        const authorId = currentChat.messages[id].author;
         const message = currentChat.messages[id];
 
-        if (autorId === userCurrent.uid) {
+        if (authorId === userCurrent.uid) {
           return (
             <MessageMain
               key={id}
@@ -55,7 +62,7 @@ const CurrentChatScreen = ({
           );
         }
 
-        const user = userList[autorId];
+        const user = userList[authorId];
         return (
           <Message
             key={id}
@@ -66,6 +73,14 @@ const CurrentChatScreen = ({
         );
       }}
     />
+    <Text style={styles.enteringMessage}>
+      {
+        typeof currentChat !== 'undefined' &&
+        typeof currentChat.meta !== 'undefined' &&
+        typeof currentChat.meta.isFetching[idUserWithChat] !== 'undefined' ?
+          'повідомлення вводиться...' : null
+      }
+    </Text>
     <ModalAvatar
       offVisibleModalVisible={setUnVisible}
       src={modal.photoURL}
@@ -102,6 +117,7 @@ CurrentChatScreen.propTypes = {
   send: Type.func,
   itemOnLongPress: Type.func,
   deleteChat: Type.func,
+  idUserWithChat: Type.string,
 };
 
 

@@ -1,8 +1,9 @@
 import { StyleSheet } from 'react-native';
 import { colors } from '../../../../styles';
+import fontSizes from '../../../../styles/fontSizes';
 // import { indent } from '../../../../styles/dimensions';
-// import fontSizes from '../../../../styles/fontSizes';
-const color1 = '#c2c2c2';
+
+// const color1 = '#c2c2c2';
 
 const styles = StyleSheet.create({
   wrapperMain: {
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
     paddingBottom: 5,
   },
   wrapperMessageMain: {
-    backgroundColor: '#6fc2e8',
+    backgroundColor: colors.messageMain,
     alignItems: 'flex-end',
     margin: 5,
     marginBottom: 0,
@@ -29,11 +30,15 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     borderTopRightRadius: 0,
   },
+  textMain: {
+    fontSize: fontSizes.small,
+  },
   timeMain: {
     padding: 5,
   },
   statusMessageMain: {
     paddingRight: 20,
+    fontSize: fontSizes.mini,
   },
 });
 

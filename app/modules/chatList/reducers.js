@@ -38,7 +38,6 @@ const chatsIdReducer = (state = initialStateChatId, action) => {
   switch (action.type) {
     case types.SET_CHAT:
       const arr = [...state];
-      console.log("aaaaaaaaaaaaaaaaaaa", action.payload)
       if (action.payload.idChat && [...state].indexOf(action.payload.idChat.toString()) === -1) {
         arr.unshift(action.payload.idChat);
       }

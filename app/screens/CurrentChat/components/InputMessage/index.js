@@ -24,7 +24,7 @@ const InputMessage = ({
       />
     </View>
     <TouchableOpacity onPress={send}>
-      <FontAwesome name='send' size={48} />
+      <FontAwesome name='send' size={40} />
     </TouchableOpacity>
   </View>
 );

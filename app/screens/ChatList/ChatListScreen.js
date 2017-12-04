@@ -2,11 +2,13 @@ import React from 'react';
 import {
   View,
   ScrollView,
+  TextInput
 } from 'react-native';
 import Type from 'prop-types';
 import { MaterialIcons } from '@expo/vector-icons';
 import ModalMenu from '../../components/ModalMenu';
 import ChatListItem from './components/ChatListItem';
+import styles from './styles';
 
 
 const ChatListScreen = ({
@@ -19,9 +21,18 @@ const ChatListScreen = ({
   setUnVisible,
   deleteChat,
   userCurrent,
+  searchValue,
+  setSearch,
 }) => (
-  <View>
-    <ScrollView>
+  <View style={styles.container}>
+    <TextInput
+      placeholder='Знайти'
+      underlineColorAndroid='white'
+      value={searchValue}
+      onChangeText={setSearch}
+      style={[styles.textInput]}
+    />
+    <ScrollView contentContainerStyle={styles.container}>
       {
         chatsListId.map(item => (
           <ChatListItem
@@ -62,6 +73,8 @@ ChatListScreen.propTypes = {
   itemOnLongPress: Type.func,
   deleteChat: Type.func,
   userCurrent: Type.object,
+  setSearch: Type.func,
+  searchValue: Type.string,
 };
 
 ChatListScreen.navigationOptions = ({ navigation }) => ({

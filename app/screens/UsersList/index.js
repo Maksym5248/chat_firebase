@@ -22,15 +22,11 @@ const enhance = compose(
       setUnVisible: () => () => ({
         modal: { isVisible: false, uidValue: '' },
       }),
-      userListItemOnPress: () => (uid) => {
-        console.log('uid----------', uid);
-        return {
-          modal: { isVisible: true, uidValue: uid },
-        };
-      },
+      userListItemOnPress: () => (uid) => ({
+        modal: { isVisible: true, uidValue: uid },
+      }),
       createChat: ({ modal }, { userCurrent, navigation }) => () => {
         createChatFb(userCurrent.uid, modal.uidValue).then((id) => {
-          console.log('--------------------------------', id);
           navigation.navigate(screens.CurrentChat, { idChat: id });
         }).catch((err) => {
           console.log('err createChatFb', err);

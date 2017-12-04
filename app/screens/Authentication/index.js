@@ -25,16 +25,6 @@ const enhance = compose(
     logInWithPasswordAndEmail: ({ email, password, dispatch }) => () => (
       dispatch(logInWithPasswordAndEmail({ email, password }))),
   }),
-  lifecycle({
-    componentDidMount() {
-      // console.log('chatList ---------------', this.props.chatList);
-      // console.log('chatsListId  ---------------', this.props.chatsListId);
-    },
-    componentWillReceiveProps() {
-      // console.log('chatList ---------------', this.props.chatList);
-      // console.log('chatsListId  ---------------', this.props.chatsListId);
-    },
-  }),
 );
 
 export default hoistStatics(enhance)(AuthenticationScreen);

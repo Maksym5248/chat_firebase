@@ -11,7 +11,7 @@ const MessageMain = ({ userCurrent, message, modalVisible }) => (
   <View style={styles.wrapperMain}>
     <View style={styles.containerMain}>
       <View style={styles.wrapperMessageMain}>
-        <Text >
+        <Text style={styles.textMain}>
           {message.text}
         </Text>
         <Text style={styles.timeMain} >

@@ -1,11 +1,14 @@
 import { StyleSheet } from 'react-native';
 import { colors } from '../../../../styles';
-// import { indent } from '../../../../styles/dimensions';
+import { halfIndent } from '../../../../styles/dimensions';
 // import fontSizes from '../../../../styles/fontSizes';
 
 const styles = StyleSheet.create({
   wrapper: {
     flexDirection: 'row',
+    borderTopColor: colors.backgroundChatListItemBorder,
+    borderWidth: 1,
+    padding: halfIndent,
   },
   containerInput: {
     flex: 6,
