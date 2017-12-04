@@ -28,7 +28,7 @@ ModalMenu.defaudefaultProps = {
 };
 
 ModalMenu.propTypes = {
-  isVisible: PropTypes.bool.isRequired,
+  isVisible: PropTypes.bool,
   setUnVisible: PropTypes.func,
   onPress: PropTypes.func,
   text: PropTypes.string,

@@ -2,30 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1528dd33-58c6-48e7-943b-ba660d927736" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/components/Separator/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/components/Separator/styles.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/services/firebase/database/updateMeta.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/constants/messagesStatus.js" afterPath="$PROJECT_DIR$/app/constants/messagesStatus.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/chatList/reducers.js" afterPath="$PROJECT_DIR$/app/modules/chatList/reducers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/currentChat/reducers.js" afterPath="$PROJECT_DIR$/app/modules/currentChat/reducers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/Authentication/index.js" afterPath="$PROJECT_DIR$/app/screens/Authentication/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/ModalMenu/index.js" afterPath="$PROJECT_DIR$/app/components/ModalMenu/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/ChatList/ChatListScreen.js" afterPath="$PROJECT_DIR$/app/screens/ChatList/ChatListScreen.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/ChatList/components/ChatListItem/styles.js" afterPath="$PROJECT_DIR$/app/screens/ChatList/components/ChatListItem/styles.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/ChatList/index.js" afterPath="$PROJECT_DIR$/app/screens/ChatList/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/ChatList/styles.js" afterPath="$PROJECT_DIR$/app/screens/ChatList/styles.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/components/InputMessage/index.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/InputMessage/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/components/InputMessage/styles.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/InputMessage/styles.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/components/Message/index.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/Message/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/index.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/styles.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/styles.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/index.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/styles.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/styles.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/UsersList/index.js" afterPath="$PROJECT_DIR$/app/screens/UsersList/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/colors.js" afterPath="$PROJECT_DIR$/app/styles/colors.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/fontSizes.js" afterPath="$PROJECT_DIR$/app/styles/fontSizes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/utils/withMoment.js" afterPath="$PROJECT_DIR$/app/utils/withMoment.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,23 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="ChatListScreen.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/screens/ChatList/ChatListScreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/screens/ChatList/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="603">
-              <caret line="55" column="46" lean-forward="true" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+              <caret line="40" column="45" lean-forward="false" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -63,21 +33,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="categoriesReducer.tsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../../../te24live/te24live/frontend/admin/src/reducers/categoriesReducer.tsx">
+      <file leaf-file-name="ChatListScreen.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/screens/ChatList/ChatListScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="497">
+              <caret line="47" column="32" lean-forward="false" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BusinessCategoriesReducer.tsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../../../te24live/te24live/frontend/admin/src/reducers/BusinessCategoriesReducer.tsx">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="102" column="49" lean-forward="false" selection-start-line="102" selection-start-column="19" selection-end-line="102" selection-end-column="49" />
+            <state relative-caret-position="-837">
+              <caret line="32" column="6" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -86,8 +58,8 @@
       <file leaf-file-name="CurrentChatScreen.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="1227">
+              <caret line="86" column="6" lean-forward="true" selection-start-line="86" selection-start-column="6" selection-end-line="86" selection-end-column="6" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -125,7 +97,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/services/firebase/database/subscribe.js" />
         <option value="$PROJECT_DIR$/app/modules/currentChat/index.js" />
         <option value="$PROJECT_DIR$/app/modules/index.js" />
         <option value="$PROJECT_DIR$/app/services/firebase/database/creatorMessages.js" />
@@ -167,15 +138,16 @@
         <option value="$PROJECT_DIR$/app/screens/CurrentChat/components/InputMessage/index.js" />
         <option value="$PROJECT_DIR$/app/components/Separator/index.js" />
         <option value="$PROJECT_DIR$/app/screens/ChatList/components/ChatListItem/styles.js" />
-        <option value="$PROJECT_DIR$/app/screens/CurrentChat/index.js" />
         <option value="$PROJECT_DIR$/app/styles/colors.js" />
         <option value="$PROJECT_DIR$/app/screens/CurrentChat/components/InputMessage/styles.js" />
         <option value="$PROJECT_DIR$/app/screens/CurrentChat/styles.js" />
         <option value="$PROJECT_DIR$/app/utils/withMoment.js" />
-        <option value="$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js" />
         <option value="$PROJECT_DIR$/app/screens/ChatList/styles.js" />
+        <option value="$PROJECT_DIR$/app/components/ModalMenu/index.js" />
         <option value="$PROJECT_DIR$/app/screens/ChatList/index.js" />
         <option value="$PROJECT_DIR$/app/screens/ChatList/ChatListScreen.js" />
+        <option value="$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js" />
+        <option value="$PROJECT_DIR$/app/screens/CurrentChat/index.js" />
       </list>
     </option>
   </component>
@@ -236,13 +208,6 @@
               <item name="ChatWithRe_Ducks" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChatWithRe_Ducks" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChatWithRe_Ducks" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="ChatList" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ChatWithRe_Ducks" type="b2602c69:ProjectViewProjectNode" />
@@ -345,12 +310,12 @@
       <workItem from="1512248110098" duration="877000" />
       <workItem from="1512249721606" duration="3193000" />
       <workItem from="1512289606353" duration="23668000" />
-      <workItem from="1512371772494" duration="21932000" />
+      <workItem from="1512371772494" duration="23660000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="368322000" />
+    <option name="totallyTimeSpent" value="370050000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -374,7 +339,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4516129" sideWeight="0.48753315" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4014337" sideWeight="0.48753315" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -419,14 +384,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.eslintignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/constants/messagesStatus.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -801,24 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="29" column="6" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="29" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../../../te24live/te24live/frontend/admin/src/reducers/categoriesReducer.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -835,10 +774,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/ModalMenu/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="30" column="27" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/screens/ChatList/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="603">
-          <caret line="55" column="46" lean-forward="true" selection-start-line="55" selection-start-column="46" selection-end-line="55" selection-end-column="46" />
+          <caret line="40" column="45" lean-forward="false" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
@@ -847,11 +794,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/screens/ChatList/ChatListScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+        <state relative-caret-position="497">
+          <caret line="47" column="32" lean-forward="false" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="32" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1227">
+          <caret line="86" column="6" lean-forward="true" selection-start-line="86" selection-start-column="6" selection-end-line="86" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-837">
+          <caret line="32" column="6" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>

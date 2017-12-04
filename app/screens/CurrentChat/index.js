@@ -20,25 +20,17 @@ const mapStateToProps = state => ({
 const enhance = compose(
   connect(mapStateToProps),
   withState('text', 'setText', ''),
-  withProps(({
-    currentChats, messagesId, navigation, chatList,
-  }) => ({
-    currentChat: currentChats[navigation.state.params.idChat],
-    messageId: messagesId[navigation.state.params.idChat],
+  withState('photoURL', 'setPhotoURL', null),
+  withProps(({ navigation }) => ({
     idChat: navigation.state.params.idChat,
-    idUserWithChat: chatList[navigation.state.params.idChat].lastMessages.chatWithUser,
   })),
-  withStateHandlers(
-    ({ initialCounter = { isVisible: false, photoURL: '' } }) => ({
-      modal: initialCounter,
-    }),
-    {
-      setUnVisible: () => () => ({ modal: { isVisible: false, photoURL: '' } }),
-      setVisible: () => (urlCurrentPhoto) => ({
-        modal: { isVisible: true, photoURL: urlCurrentPhoto },
-      }),
-    },
-  ),
+  withProps(({
+    currentChats, messagesId, idChat, chatList,
+  }) => ({
+    currentChat: currentChats[idChat],
+    messageId: messagesId[idChat],
+    idUserWithChat: chatList[idChat].lastMessages.chatWithUser,
+  })),
   withHandlers({
     send: ({
       text, setText, dispatch, idChat, userCurrent,
@@ -73,8 +65,7 @@ const enhance = compose(
 );
 
 function searchMessageWithoutStatusRead(nextProps, props) {
-  const { dispatch, navigation, userCurrent } = props;
-  const { idChat } = navigation.state.params;
+  const { dispatch, idChat, userCurrent } = props;
 
   if (typeof nextProps.currentChat !== 'undefined') {
     nextProps.messageId.forEach((item) => {

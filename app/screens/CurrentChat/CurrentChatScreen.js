@@ -15,9 +15,8 @@ const {
 let prevTime = 0;
 
 const CurrentChatScreen = ({
-  modal,
-  setUnVisible,
-  setVisible,
+  photoURL,
+  setPhotoURL,
   onChangeText,
   text,
   send,
@@ -66,7 +65,7 @@ const CurrentChatScreen = ({
         return (
           <Message
             key={id}
-            setVisibleModal={() => setVisible(user.photoURL)}
+            setVisibleModal={() => setPhotoURL(user.photoURL)}
             user={user}
             message={message}
           />
@@ -82,9 +81,9 @@ const CurrentChatScreen = ({
       }
     </Text>
     <ModalAvatar
-      offVisibleModalVisible={setUnVisible}
-      src={modal.photoURL}
-      visible={modal.isVisible}
+      offVisibleModalVisible={() => setPhotoURL(null)}
+      src={photoURL}
+      visible={Boolean(photoURL)}
     />
     <InputMessage
       value={text}
@@ -109,8 +108,8 @@ CurrentChatScreen.propTypes = {
   messageId: Type.array,
   userList: Type.object,
   userCurrent: Type.object,
-  modal: Type.object,
-  setVisible: Type.func,
+  photoURL: Type.string,
+  setPhotoURL: Type.func,
   setUnVisible: Type.func,
   onChangeText: Type.func,
   text: Type.string,

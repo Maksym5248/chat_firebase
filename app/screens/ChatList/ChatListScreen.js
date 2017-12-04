@@ -2,7 +2,7 @@ import React from 'react';
 import {
   View,
   ScrollView,
-  TextInput
+  TextInput,
 } from 'react-native';
 import Type from 'prop-types';
 import { MaterialIcons } from '@expo/vector-icons';
@@ -16,13 +16,12 @@ const ChatListScreen = ({
   chatList,
   userList,
   moveToChat,
-  itemOnLongPress,
-  modal,
-  setUnVisible,
+  setIdChat,
   deleteChat,
   userCurrent,
   searchValue,
   setSearch,
+  idChat,
 }) => (
   <View style={styles.container}>
     <TextInput
@@ -40,14 +39,14 @@ const ChatListScreen = ({
             user={userList[chatList[item].lastMessages.chatWithUser]}
             lastMessage={chatList[item].lastMessages}
             key={item}
-            onLongPress={() => itemOnLongPress(item)}
+            onLongPress={() => setIdChat(item)}
             onPress={() => moveToChat(item)}
           />))
       }
     </ScrollView>
     <ModalMenu
-      isVisible={modal.isVisible}
-      setUnVisible={setUnVisible}
+      isVisible={Boolean(idChat)}
+      setUnVisible={() => setIdChat(false)}
       onPress={deleteChat}
       text='Видалити'
     />
@@ -67,14 +66,13 @@ ChatListScreen.propTypes = {
   chatList: Type.object,
   chatsListId: Type.array,
   userList: Type.object,
-  modal: Type.object,
-  setUnVisible: Type.func,
   moveToChat: Type.func,
-  itemOnLongPress: Type.func,
+  setIdChat: Type.func,
   deleteChat: Type.func,
   userCurrent: Type.object,
   setSearch: Type.func,
   searchValue: Type.string,
+  idChat: Type.string,
 };
 
 ChatListScreen.navigationOptions = ({ navigation }) => ({
