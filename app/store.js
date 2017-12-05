@@ -4,12 +4,12 @@ import thunk from 'redux-thunk';
 import { persistStore, persistCombineReducers } from 'redux-persist';
 import AsyncStorage from 'redux-persist/es/storage';
 import appReducer from './modules';
+//     'chatList',
 
 const config = {
   key: 'root',
   whitelist: [
     'authentication',
-    'chatList',
     'currentChatList',
     'userList',
   ],
@@ -25,7 +25,7 @@ function configureStore() {
   );
 
   const persistor = persistStore(store);
-  // persistor.purge();
+  persistor.purge();
   return { persistor, store };
 }
 

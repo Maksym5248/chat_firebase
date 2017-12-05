@@ -5,22 +5,25 @@ import Avatar from '../../../../components/Avatar/index';
 import styles from './styles';
 import withMoment from '../../../../utils/withMoment';
 
+
 const defaultAvatar = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8B0hBF1hdy4mTfoMA1Gp0kxYtbp8hSXjbWyTUHoQWs0xbRIs-';
 
-const MessageMain = ({ userCurrent, message, modalVisible }) => (
+const MessageMain = ({ userCurrent, message, onPressText }) => (
   <View style={styles.wrapperMain}>
     <View style={styles.containerMain}>
-      <View style={styles.wrapperMessageMain}>
-        <Text style={styles.textMain}>
-          {message.text}
+      <TouchableOpacity onLongPress={onPressText}>
+        <View style={styles.wrapperMessageMain}>
+          <Text style={styles.textMain}>
+            {message.text}
+          </Text>
+          <Text style={styles.timeMain} >
+            {withMoment(message.time)}
+          </Text>
+        </View>
+        <Text style={styles.statusMessageMain} >
+          {message.status}
         </Text>
-        <Text style={styles.timeMain} >
-          {withMoment(message.time)}
-        </Text>
-      </View>
-      <Text style={styles.statusMessageMain} >
-        {message.status}
-      </Text>
+      </TouchableOpacity>
     </View>
     <TouchableOpacity onPress={() => null}>
       <Avatar size={40} src={userCurrent.photoURL !== 'none' ? userCurrent.photoURL : defaultAvatar} />
@@ -30,7 +33,7 @@ const MessageMain = ({ userCurrent, message, modalVisible }) => (
 
 MessageMain.propTypes = {
   userCurrent: PropTypes.object,
-  modalVisible: PropTypes.func,
+  onPressText: PropTypes.func,
   message: PropTypes.object,
 };
 

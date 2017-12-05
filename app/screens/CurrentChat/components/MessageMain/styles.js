@@ -4,15 +4,16 @@ import fontSizes from '../../../../styles/fontSizes';
 // import { indent } from '../../../../styles/dimensions';
 
 // const color1 = '#c2c2c2';
+const rotate180 = [
+  { rotate: '180deg' },
+];
 
 const styles = StyleSheet.create({
   wrapperMain: {
     flexDirection: 'row',
     justifyContent: 'flex-end',
     padding: 5,
-    transform: [
-      { rotate: '180deg' },
-    ],
+    transform: rotate180,
   },
   containerMain: {
     maxWidth: '70%',

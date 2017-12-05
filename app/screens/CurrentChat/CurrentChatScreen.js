@@ -4,19 +4,20 @@ import Type from 'prop-types';
 import components from './components';
 import styles from './styles';
 import withMoment from '../../utils/withMoment';
+import ModalMenu from '../../components/ModalMenu/index';
 
 const {
   Message,
   MessageMain,
-  ModalAvatar,
+  ModalProfile,
   InputMessage,
 } = components;
 
 let prevTime = 0;
 
 const CurrentChatScreen = ({
-  photoURL,
-  setPhotoURL,
+  selectedUser,
+  setSelectedUser,
   onChangeText,
   text,
   send,
@@ -25,6 +26,9 @@ const CurrentChatScreen = ({
   userList,
   userCurrent,
   idUserWithChat,
+  idMessage,
+  setIdMessage,
+  deleteMessage,
 }) => (
   <KeyboardAvoidingView
     style={styles.container}
@@ -50,22 +54,21 @@ const CurrentChatScreen = ({
         const id = item;
         const authorId = currentChat.messages[id].author;
         const message = currentChat.messages[id];
-
         if (authorId === userCurrent.uid) {
           return (
             <MessageMain
               key={id}
               userCurrent={userCurrent}
               message={message}
+              onPressText={() => setIdMessage(id)}
             />
           );
         }
-
         const user = userList[authorId];
         return (
           <Message
             key={id}
-            setVisibleModal={() => setPhotoURL(user.photoURL)}
+            setVisibleModal={() => setSelectedUser(user)}
             user={user}
             message={message}
           />
@@ -80,10 +83,16 @@ const CurrentChatScreen = ({
           'повідомлення вводиться...' : null
       }
     </Text>
-    <ModalAvatar
-      offVisibleModalVisible={() => setPhotoURL(null)}
-      src={photoURL}
-      visible={Boolean(photoURL)}
+    <ModalProfile
+      setUnVisible={() => setSelectedUser(null)}
+      selectedUser={selectedUser || {}}
+      isVisible={Boolean(selectedUser)}
+    />
+    <ModalMenu
+      isVisible={Boolean(idMessage)}
+      setUnVisible={() => setIdMessage(null)}
+      onPress={deleteMessage}
+      text='Видалити'
     />
     <InputMessage
       value={text}
@@ -108,15 +117,15 @@ CurrentChatScreen.propTypes = {
   messageId: Type.array,
   userList: Type.object,
   userCurrent: Type.object,
-  photoURL: Type.string,
-  setPhotoURL: Type.func,
-  setUnVisible: Type.func,
+  selectedUser: Type.object,
+  setSelectedUser: Type.func,
   onChangeText: Type.func,
   text: Type.string,
   send: Type.func,
-  itemOnLongPress: Type.func,
-  deleteChat: Type.func,
   idUserWithChat: Type.string,
+  idMessage: Type.string,
+  setIdMessage: Type.func,
+  deleteMessage: Type.func,
 };
 
 

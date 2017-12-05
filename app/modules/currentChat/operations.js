@@ -12,7 +12,7 @@ import updateStatus from '../../services/firebase/database/updateStatus';
 
 const updateStatusToRead = (idChat, messageId) => async (dispatch, getState) => {
   const { uid } = getState().authentication.currentUser;
-  const messageRecipient = getState().chatList.chats[idChat].lastMessages.autor;
+  const messageRecipient = getState().chatList.chats[idChat].lastMessages.chatWithUser;
 
   updateStatus(
     idChat,
@@ -52,7 +52,7 @@ const sendMessage = (text, idChat) => async (dispatch, getState) => {
     uid,
     messageRecipient,
   ).then((idMessage) => {
-    // console.log('333333333333333333333333333', idMessage);
+    // console.log('---------------idMessage---------------', idMessage);
   }).catch((err) => {
     console.log('error----sendMessage---catch----', err);
     if (typeof chat[idChat] !== 'undefined') {

@@ -18,8 +18,7 @@ const styles = StyleSheet.create({
     transform: rotate180,
   },
   flatListContent: {
-    // flex: 1,
-    // justifyContent: 'flex-end',
+   // transform: rotate180,
   },
   enteringMessage: {
     textAlign: 'center',
@@ -29,7 +28,6 @@ const styles = StyleSheet.create({
   empty: {
     textAlign: 'center',
     fontSize: fontSizes.big,
-    transform: rotate180,
   },
   separator: {
     position: 'absolute',

@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   },
   fillAll: {
     flex: 1,
-    paddingTop: 20,
+    paddingTop: 24,
   },
   row: {
     flexDirection: 'row',

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { compose, withState, withHandlers, hoistStatics, lifecycle } from 'recompose';
+import { compose, withState, withHandlers, hoistStatics } from 'recompose';
 import { withLoadingModal } from '../../utils/enhancers';
 import AuthenticationScreen from './AuthenticationScreen';
 import { authenticationOperations } from '../../modules/authentication';
@@ -7,7 +7,6 @@ import { authenticationOperations } from '../../modules/authentication';
 const { logInWithPasswordAndEmail, logInWithFacebook } = authenticationOperations;
 
 const mapStateToProps = state => ({
-  statea: state.app,
   isLoading: state.app.isLoading,
   chatList: state.chatList.chats,
   chatsListId: state.chatList.chatsId,

@@ -6,8 +6,8 @@ import types from './types';
 
 const initialStateChat = {
   chatId: 'string',
-  lastMessages: {
-    autor: 'id',
+  lastMessages: { // review
+    author: 'id',
     date: 1511943565859,
     text: 'Немає повідомлень',
   },
@@ -39,9 +39,18 @@ const chatsIdReducer = (state = initialStateChatId, action) => {
     case types.SET_CHAT:
       const arr = [...state];
       if (action.payload.idChat && [...state].indexOf(action.payload.idChat.toString()) === -1) {
-        arr.unshift(action.payload.idChat);
+        arr.push(action.payload.idChat);
       }
-      return arr;
+      return arr.reverse();
+    case types.REMOVE_CHAT:
+      const array = [...state];
+
+      if (action.payload.idChat) {
+        const index = [...state].indexOf(action.payload.idChat.toString());
+        array.splice(index, 1);
+      }
+
+      return array;
     case types.REMOVE_All_CHAT:
       return initialStateChatId;
     default:

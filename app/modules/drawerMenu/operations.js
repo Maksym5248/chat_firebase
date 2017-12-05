@@ -10,7 +10,7 @@ import subscribe from '../../services/firebase/database/subscribe';
 import { setCurrentChat } from '../currentChat/actions';
 
 const { setUserFromList } = userListOperations;
-const { setChat, removeAllChat } = chatListOperations;
+const { setChat, removeChat, removeAllChat } = chatListOperations;
 
 
 const logOut = () => async dispatch => {
@@ -51,8 +51,6 @@ const subscribeToAll = () => async (dispatch, getState) => {
     userProfileUrlChatList,
     (data) => {
       dispatch(setUnloading());
-      // console.log('-----   V - A - L - U - E   -----', data);
-      // Зробити так щоб підписка не була на всіх одразу !!!!
       if (data.exists()) {
         data.forEach((childSnapshot) => {
           const item = childSnapshot.val();
@@ -63,6 +61,13 @@ const subscribeToAll = () => async (dispatch, getState) => {
     },
     error,
   );
+
+  subscribe.removed(userProfileUrlChatList, (data) => {
+    dispatch(removeChat(data.val()));
+    console.log('users removed ---------------   data', data);
+  });
+
+
   // typeof m = 'undefined'
   function subscribeToCurrentChat(id) {
     subscribe.value(
@@ -79,32 +84,42 @@ const subscribeToAll = () => async (dispatch, getState) => {
   }
 };
 
-  // subscribe.addedd(userProfileUrlChatList, (data, resolve, reject) => {
-  //   callBack(data, dispatch);
-  //   resolve(data);
-  // })
-  //   .then((res) => {
-  //     dispatch(setUnloading());
-  //     console.log('res---userProfileUrlChatList---------------', res);
-  //   })
-  //   .catch((err) => {
-  //     dispatch(setUnloading());
-  //     console.log('res---userProfileUrlChatList---------------', err);
-  //   });
+function error(err) {
+  console.log('failureCallbackOrContext----------', err);
+}
+
+export default {
+  logOut,
+  subscribeToAll,
+};
 
 
-  // chatList
-  // subscribe.added(
-  //   userProfileUrlChatList,
-  //   (data) => dispatch(setChat(createObjectInChat(null, null, data))),
-  //   error,
-  // );
-  //
-  // subscribe.changed(
-  //   userProfileUrlChatList,
-  //   (data) => dispatch(setChat(createObjectInChat(null, null, data))),
-  //   error,
-  // );
+// subscribe.addedd(userProfileUrlChatList, (data, resolve, reject) => {
+//   callBack(data, dispatch);
+//   resolve(data);
+// })
+//   .then((res) => {
+//     dispatch(setUnloading());
+//     console.log('res---userProfileUrlChatList---------------', res);
+//   })
+//   .catch((err) => {
+//     dispatch(setUnloading());
+//     console.log('res---userProfileUrlChatList---------------', err);
+//   });
+
+
+// chatList
+// subscribe.added(
+//   userProfileUrlChatList,
+//   (data) => dispatch(setChat(createObjectInChat(null, null, data))),
+//   error,
+// );
+//
+// subscribe.changed(
+//   userProfileUrlChatList,
+//   (data) => dispatch(setChat(createObjectInChat(null, null, data))),
+//   error,
+// );
 
 // subscribe.added(
 //   url.users,
@@ -119,14 +134,3 @@ const subscribeToAll = () => async (dispatch, getState) => {
 // subscribe.removed(url.users, (data) => {
 //   // console.log('users removed ---------------   data', data);
 // });
-
-
-function error(err) {
-  console.log('failureCallbackOrContext----------', err);
-}
-
-export default {
-  logOut,
-  subscribeToAll,
-};
-

@@ -1,23 +1,14 @@
 import { connect } from 'react-redux';
-import { compose, withHandlers, withState } from 'recompose';
+import { compose, withState, hoistStatics } from 'recompose';
+import ProfileScreen from './ProfileScreen';
 
-import SettingsScreen from './ProfileScreen';
-import * as settingsOperations from '../../modules/settings/operations';
-
-const authorize = ({ twitterToken, setSettingsProps }) => () => {
-  // TODO: check Twitter Token
-
-  setSettingsProps({ twitterToken });
-};
-
-const mapDispatchToProps = {
-  ...settingsOperations,
-};
+const mapStateToProps = state => ({
+  userCurrent: state.authentication.currentUser,
+});
 
 const enhance = compose(
-  connect(null, mapDispatchToProps),
+  connect(mapStateToProps),
   withState('twitterToken', 'setTwitterToken', 'sda'),
-  withHandlers({ authorize }),
 );
 
-export default enhance(SettingsScreen);
+export default hoistStatics(enhance)(ProfileScreen);

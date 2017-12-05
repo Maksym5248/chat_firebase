@@ -3,15 +3,16 @@ import { colors } from '../../../../styles';
 // import { indent } from '../../../../styles/dimensions';
 // import fontSizes from '../../../../styles/fontSizes';
 const color1 = '#c2c2c2';
+const rotate180 = [
+  { rotate: '180deg' },
+];
 
 const styles = StyleSheet.create({
   wrapper: {
     flexDirection: 'row',
     justifyContent: 'flex-start',
     padding: 5,
-    transform: [
-      { rotate: '180deg' },
-    ],
+    transform: rotate180,
   },
   container: {
     maxWidth: '70%',

@@ -7,8 +7,8 @@ const initialState = {
   twitterToken: null,
 };
 
-const settingsReducer = handleActions({
+const profileReducer = handleActions({
   [types.SET_PROP]: mergeIn(action => action.payload),
 }, initialState);
 
-export default settingsReducer;
+export default profileReducer;

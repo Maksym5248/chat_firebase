@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { View, Text, TouchableOpacity } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 import styles from './styles';
 import withMoment from '../../../../utils/withMoment';
 import AvatarWithStatus from '../../../../components/AvatarWithStatus/index';
@@ -9,7 +10,9 @@ const defaultAvatar = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8B
 
 
 const Message = ({ user, message, setVisibleModal }) => (
-  <View style={styles.wrapper}>
+  <View
+    style={styles.wrapper}
+  >
     <TouchableOpacity onPress={setVisibleModal}>
       <AvatarWithStatus
         time={typeof user !== 'undefined' ? user.online.valueOf() : null}

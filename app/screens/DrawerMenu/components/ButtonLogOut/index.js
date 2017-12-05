@@ -6,11 +6,10 @@ import styles from './styles';
 
 const ButtonLogOut = ({ onPress }) => (
   <TouchableOpacity onPress={onPress} style={styles.container}>
-    <MaterialCommunityIcons name='exit-to-app' size={18} />
-    <Text> Вийти </Text>
+    <Text style={styles.text}> Вийти </Text>
   </TouchableOpacity>
 );
-
+//  <MaterialCommunityIcons name='exit-to-app' size={18} />
 ButtonLogOut.propTypes = {
   onPress: PropTypes.func,
 };

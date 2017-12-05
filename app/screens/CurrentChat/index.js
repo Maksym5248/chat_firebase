@@ -1,13 +1,14 @@
 import { connect } from 'react-redux';
-import { compose, hoistStatics, withState, lifecycle, withStateHandlers, withHandlers, withProps } from 'recompose';
+import { compose, hoistStatics, withState, lifecycle, withHandlers, withProps } from 'recompose';
 import CurrentChatScreen from './CurrentChatScreen';
 import { currentChatOperations } from '../../modules/currentChat';
 import messagesStatus from '../../constants/messagesStatus';
 import updateMeta from '../../services/firebase/database/updateMeta';
+import remove from '../../services/firebase/database/remove';
 
 const { sendMessage, updateStatusToRead } = currentChatOperations;
 let timer;
-
+let i = 0;
 
 const mapStateToProps = state => ({
   currentChats: state.currentChatList.currentChat,
@@ -20,7 +21,8 @@ const mapStateToProps = state => ({
 const enhance = compose(
   connect(mapStateToProps),
   withState('text', 'setText', ''),
-  withState('photoURL', 'setPhotoURL', null),
+  withState('selectedUser', 'setSelectedUser', null),
+  withState('idMessage', 'setIdMessage', null),
   withProps(({ navigation }) => ({
     idChat: navigation.state.params.idChat,
   })),
@@ -53,12 +55,18 @@ const enhance = compose(
       }, 4000);
       setText(text);
     },
+    deleteMessage: ({ setIdMessage, idMessage, idChat }) => () => {
+      remove.message(idChat, idMessage);
+      setIdMessage(null);
+    },
   }),
   lifecycle({
     componentWillReceiveProps(nextProps) {
+      console.log('-----------------------++++++', i++);
       searchMessageWithoutStatusRead(nextProps, this.props);
     },
     componentDidMount() {
+      console.log('-----------------------++++++', i++);
       searchMessageWithoutStatusRead(this.props, this.props);
     },
   }),

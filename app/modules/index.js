@@ -1,10 +1,11 @@
 import app from './app';
 import navigator from './navigator';
 import authentication from './authentication';
-import userList from './usersList/reducers';
-import chatList from './chatList/reducers';
-import drawerMenu from './drawerMenu/reducers';
-import currentChatList from './currentChat/reducers';
+import userList from './usersList';
+import chatList from './chatList';
+import drawerMenu from './drawerMenu';
+import currentChatList from './currentChat';
+import profileReducer from './profile';
 
 export default {
   app,
@@ -14,13 +15,14 @@ export default {
   chatList,
   drawerMenu,
   currentChatList,
+  profileReducer,
 };
 
 /*
 const appReducer = combineReducers({
   app,
   navigator,
-  settings,
+  profile,
   authenticationReducer,
 })
 

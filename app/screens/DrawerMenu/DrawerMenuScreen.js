@@ -2,7 +2,6 @@ import React from 'react';
 import { DrawerItems, SafeAreaView } from 'react-navigation';
 import { ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
-import { AppLoading } from 'expo';
 import styles from './styles';
 import ButtonLogOut from './components/ButtonLogOut';
 

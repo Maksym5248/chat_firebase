@@ -6,17 +6,25 @@ import { colors } from '../../../../styles';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'rgba(0, 0, 48, 0.5)',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 5,
+    backgroundColor: 'rgba(0, 0, 48, 0.5)',
   },
-  containerAvatar: {
-    borderRadius: 5,
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    padding: 5,
+  contentContainer: {
+    borderRadius: 15,
+    padding: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#e3e3e3',
+  },
+  text: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 5,
   },
 });
 
 export default styles;
+
+
+// backgroundColor: colors.backgroundColor,

@@ -44,7 +44,7 @@ const currentChatsReducer = handleActions({
 const messagesIdReducer = (state = initialStateChatId, action) => {
   switch (action.type) {
     case types.SET_CURRENT_CHAT:
-      // const arr = [...state];
+      // console.log('-------------------');
       const messages = Object.keys(action.payload.messages);
       return {
         ...state,
