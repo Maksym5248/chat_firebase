@@ -45,7 +45,7 @@ const sendMessage = (text, idChat) => async (dispatch, getState) => {
   //   dispatch(addMessage(messageInChat));
   // }
 
-  createMessage(
+  return createMessage(
     idChat,
     text,
     messagesStatus.DELIVERED,

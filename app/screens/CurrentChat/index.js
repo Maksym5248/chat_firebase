@@ -25,7 +25,6 @@ const enhance = compose(
   withState('text', 'setText', ''),
   withState('selectedUser', 'setSelectedUser', null),
   withState('idMessage', 'setIdMessage', null),
-  withState('animation', 'setAnimation', false),
   withProps(({
     currentChats, messagesId, idChat, chatList,
   }) => ({
@@ -34,6 +33,7 @@ const enhance = compose(
     idUserWithChat: chatList[idChat].lastMessages.chatWithUser,
   })),
   withHandlers(() => {
+    let messageMain = null;
     let message = null;
 
     return {
@@ -60,8 +60,14 @@ const enhance = compose(
         remove.message(idChat, idMessage);
         setIdMessage(null);
       },
-      animation: () => ref => { if (ref) { message = ref; } },
-      rubberBand: () => () => {
+      animationMessageMain: () => ref => { if (ref) { messageMain = ref; } },
+      rubberBandMessageMain: () => () => {
+        if (messageMain) {
+          messageMain.rubberBand(800);
+        }
+      },
+      animationMessage: () => ref => { if (ref) { message = ref; } },
+      rubberBandMessage: () => () => {
         if (message) {
           message.rubberBand(800);
         }
@@ -71,19 +77,14 @@ const enhance = compose(
   lifecycle({
     componentWillReceiveProps(nextProps) {
       searchMessageWithoutStatusRead(nextProps, this.props);
-      // this.props.setAnimation(true);
-      // this.props.setAnimation('rubberBand');
-      // this.props.rubberBand();
     },
     componentDidMount() {
       searchMessageWithoutStatusRead(this.props, this.props);
-      console.log('this.props.rubberBand()');
     },
     componentDidUpdate(prevProps) {
-     // if (this.props.messageId.length > prevProps.messageId.length) {
-        console.log('------------------------');
-        this.props.rubberBand();
-     // }
+      if (this.props.messageId.length > prevProps.messageId.length) {
+        this.props.rubberBandMessageMain();
+      }
     },
   }),
 );

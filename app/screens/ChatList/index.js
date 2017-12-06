@@ -28,8 +28,14 @@ const enhance = compose(
     }),
   })),
   withHandlers({
-    moveToChat: ({ navigation }) => (id) => {
-      navigation.navigate(screens.CurrentChat, { idChat: id });
+    moveToChat: ({ navigation, chatList, userList }) => (id) => {
+      const userId = chatList[id].lastMessages.chatWithUser;
+      const { displayName, photoURL } = userList[userId];
+      navigation.navigate(screens.CurrentChat, {
+        idChat: id,
+        displayName,
+        photoURL,
+      });
     },
     deleteChat: ({ setIdChat, idChat, userCurrent }) => () => {
       remove.chat(idChat, userCurrent.uid);

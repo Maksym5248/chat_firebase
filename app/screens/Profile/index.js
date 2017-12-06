@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { compose, withState, hoistStatics } from 'recompose';
+import { compose, hoistStatics } from 'recompose';
 import ProfileScreen from './ProfileScreen';
 
 const mapStateToProps = state => ({
@@ -8,7 +8,6 @@ const mapStateToProps = state => ({
 
 const enhance = compose(
   connect(mapStateToProps),
-  withState('twitterToken', 'setTwitterToken', 'sda'),
 );
 
 export default hoistStatics(enhance)(ProfileScreen);

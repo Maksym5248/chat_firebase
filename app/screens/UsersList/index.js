@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { compose, withStateHandlers, withHandlers, hoistStatics, lifecycle } from 'recompose';
+import { compose, withStateHandlers, hoistStatics } from 'recompose';
 import UsersListScreen from './UsersListScreen';
 import screens from '../../constants/screens';
 import createChatFb from '../../services/firebase/database/createChat';
@@ -9,7 +9,6 @@ const mapStateToProps = state => ({
   userList: state.userList.users,
   userListId: state.userList.usersId,
   userCurrent: state.authentication.currentUser,
-  isLoading: false,
 });
 
 const enhance = compose(
@@ -25,9 +24,14 @@ const enhance = compose(
       userListItemOnPress: () => (uid) => ({
         modal: { isVisible: true, uidValue: uid },
       }),
-      createChat: ({ modal }, { userCurrent, navigation }) => () => {
+      createChat: ({ modal }, { userCurrent, navigation, userList }) => () => {
         createChatFb(userCurrent.uid, modal.uidValue).then((id) => {
-          navigation.navigate(screens.CurrentChat, { idChat: id });
+          const { displayName, photoURL } = userList[modal.uidValue];
+          navigation.navigate(screens.CurrentChat, {
+            idChat: id,
+            displayName,
+            photoURL,
+          });
         }).catch((err) => {
           console.log('err createChatFb', err);
         });
@@ -37,18 +41,6 @@ const enhance = compose(
       },
     },
   ),
-  withHandlers({
-
-  }),
-  lifecycle({
-    // componentWillReceiveProps() {
-    //   // console.log('сomponentWillreciveProps userList', this.props.userList);
-    //   // console.log('сomponentWillreciveProps userListID', this.props.userListId);
-    // },
-    componentDidMount() {
-
-    },
-  }),
 );
 
 export default hoistStatics(enhance)(UsersListScreen);

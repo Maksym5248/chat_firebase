@@ -5,14 +5,12 @@ import * as Animatable from 'react-native-animatable';
 import styles from './styles';
 import withMoment from '../../../../utils/withMoment';
 import AvatarWithStatus from '../../../../components/AvatarWithStatus/index';
-import messagesStatus from '../../../../constants/messagesStatus';
 
 const defaultAvatar = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8B0hBF1hdy4mTfoMA1Gp0kxYtbp8hSXjbWyTUHoQWs0xbRIs-';
 
-
-const Message = ({ user, message, setVisibleModal }) => (
+const Message = ({ user, message, setVisibleModal, animation }) => (
   <Animatable.View
-    animation={'rubberBand'}
+    ref={animation}
   >
     <View
       style={styles.wrapper}
@@ -42,6 +40,7 @@ Message.propTypes = {
   user: PropTypes.object,
   message: PropTypes.object,
   setVisibleModal: PropTypes.func,
+  animation: PropTypes.func,
 };
 
 

@@ -5,6 +5,10 @@ import components from './components';
 import styles from './styles';
 import withMoment from '../../utils/withMoment';
 import ModalMenu from '../../components/ModalMenu/index';
+import Avatar from '../../components/Avatar/index';
+
+const defaultAvatar = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8B0hBF1hdy4mTfoMA1Gp0kxYtbp8hSXjbWyTUHoQWs0xbRIs-';
+
 
 const {
   Message,
@@ -29,7 +33,8 @@ const CurrentChatScreen = ({
   idMessage,
   setIdMessage,
   deleteMessage,
-  animation,
+  animationMessageMain,
+  animationMessage,
 }) => (
   <KeyboardAvoidingView
     style={styles.container}
@@ -58,7 +63,7 @@ const CurrentChatScreen = ({
         if (authorId === userCurrent.uid) {
           return (
             <MessageMain
-              animation={animation}
+              animation={animationMessageMain}
               key={id}
               userCurrent={userCurrent}
               message={message}
@@ -69,6 +74,7 @@ const CurrentChatScreen = ({
         const user = userList[authorId];
         return (
           <Message
+            animation={animationMessage}
             key={id}
             setVisibleModal={() => setSelectedUser(user)}
             user={user}
@@ -107,7 +113,13 @@ const CurrentChatScreen = ({
 );
 
 CurrentChatScreen.navigationOptions = ({ navigation }) => ({
-  title: 'Чат',
+  title: navigation.state.params.displayName,
+  headerRight: (
+    <Avatar
+      size={50}
+      marginRight={10}
+      src={navigation.state.params.photoURL !== 'none' ? navigation.state.params.photoURL : defaultAvatar}
+    />),
 });
 
 CurrentChatScreen.defaudefaultProps = {
@@ -128,7 +140,8 @@ CurrentChatScreen.propTypes = {
   idMessage: Type.string,
   setIdMessage: Type.func,
   deleteMessage: Type.func,
-  animation: Type.func,
+  animationMessageMain: Type.func,
+  animationMessage: Type.func,
 };
 
 
