@@ -2,43 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1528dd33-58c6-48e7-943b-ba660d927736" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/profile/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/modules/profile/operations.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/services/firebase/database/remove.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/modules/settings/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/modules/settings/operations.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/chatList/operations.js" afterPath="$PROJECT_DIR$/app/modules/chatList/operations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/chatList/reducers.js" afterPath="$PROJECT_DIR$/app/modules/chatList/reducers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/currentChat/operations.js" afterPath="$PROJECT_DIR$/app/modules/currentChat/operations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/currentChat/reducers.js" afterPath="$PROJECT_DIR$/app/modules/currentChat/reducers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/drawerMenu/index.js" afterPath="$PROJECT_DIR$/app/modules/drawerMenu/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/drawerMenu/operations.js" afterPath="$PROJECT_DIR$/app/modules/drawerMenu/operations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/index.js" afterPath="$PROJECT_DIR$/app/modules/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/Authentication/index.js" afterPath="$PROJECT_DIR$/app/screens/Authentication/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/ChatList/components/ChatListItem/styles.js" afterPath="$PROJECT_DIR$/app/screens/ChatList/components/ChatListItem/styles.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/ChatList/index.js" afterPath="$PROJECT_DIR$/app/screens/ChatList/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/components/Message/index.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/Message/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/components/Message/styles.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/Message/styles.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/index.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/styles.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/styles.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/components/index.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/index.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/styles.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/styles.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/DrawerMenu/DrawerMenuScreen.js" afterPath="$PROJECT_DIR$/app/screens/DrawerMenu/DrawerMenuScreen.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/DrawerMenu/components/ButtonLogOut/index.js" afterPath="$PROJECT_DIR$/app/screens/DrawerMenu/components/ButtonLogOut/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/DrawerMenu/components/ButtonLogOut/styles.js" afterPath="$PROJECT_DIR$/app/screens/DrawerMenu/components/ButtonLogOut/styles.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/Profile/ProfileScreen.js" afterPath="$PROJECT_DIR$/app/screens/Profile/ProfileScreen.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/Profile/index.js" afterPath="$PROJECT_DIR$/app/screens/Profile/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/Profile/styles.js" afterPath="$PROJECT_DIR$/app/screens/Profile/styles.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/store.js" afterPath="$PROJECT_DIR$/app/store.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/styles.js" afterPath="$PROJECT_DIR$/app/styles/styles.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/modules/settings/reducers.js" afterPath="$PROJECT_DIR$/app/modules/profile/reducers.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/modules/settings/types.js" afterPath="$PROJECT_DIR$/app/modules/profile/types.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/components/ModalAvatar/index.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/ModalProfile/index.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/components/ModalAvatar/styles.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/ModalProfile/styles.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,23 +22,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/index.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="603">
+              <caret line="83" column="6" lean-forward="false" selection-start-line="83" selection-start-column="6" selection-end-line="83" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="reducers.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/modules/currentChat/reducers.js">
+      <file leaf-file-name="CurrentChatScreen.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="50" column="51" lean-forward="false" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
+            <state relative-caret-position="771">
+              <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
               <folding>
-                <element signature="e#0#46#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -137,14 +121,14 @@
         <option value="$PROJECT_DIR$/app/screens/DrawerMenu/DrawerMenuScreen.js" />
         <option value="$PROJECT_DIR$/app/screens/DrawerMenu/components/ButtonLogOut/index.js" />
         <option value="$PROJECT_DIR$/app/screens/DrawerMenu/components/ButtonLogOut/styles.js" />
-        <option value="$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/index.js" />
-        <option value="$PROJECT_DIR$/app/screens/CurrentChat/components/Message/index.js" />
-        <option value="$PROJECT_DIR$/app/screens/CurrentChat/index.js" />
-        <option value="$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js" />
         <option value="$PROJECT_DIR$/app/screens/CurrentChat/components/Message/styles.js" />
         <option value="$PROJECT_DIR$/app/screens/CurrentChat/styles.js" />
-        <option value="$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/styles.js" />
         <option value="$PROJECT_DIR$/app/modules/currentChat/reducers.js" />
+        <option value="$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/styles.js" />
+        <option value="$PROJECT_DIR$/app/screens/CurrentChat/components/Message/index.js" />
+        <option value="$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js" />
+        <option value="$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/index.js" />
+        <option value="$PROJECT_DIR$/app/screens/CurrentChat/index.js" />
       </list>
     </option>
   </component>
@@ -167,8 +151,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="width" value="1317" />
+    <option name="x" value="-10" />
+    <option name="width" value="1522" />
     <option name="height" value="1030" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -187,7 +171,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -204,14 +188,14 @@
               <item name="ChatWithRe_Ducks" type="b2602c69:ProjectViewProjectNode" />
               <item name="ChatWithRe_Ducks" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ChatWithRe_Ducks" type="b2602c69:ProjectViewProjectNode" />
               <item name="ChatWithRe_Ducks" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="currentChat" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="AvatarWithStatus" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ChatWithRe_Ducks" type="b2602c69:ProjectViewProjectNode" />
@@ -223,13 +207,40 @@
               <item name="ChatWithRe_Ducks" type="b2602c69:ProjectViewProjectNode" />
               <item name="ChatWithRe_Ducks" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
+              <item name="screens" type="462c0819:PsiDirectoryNode" />
+              <item name="CurrentChat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChatWithRe_Ducks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChatWithRe_Ducks" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="screens" type="462c0819:PsiDirectoryNode" />
+              <item name="CurrentChat" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChatWithRe_Ducks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChatWithRe_Ducks" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="screens" type="462c0819:PsiDirectoryNode" />
+              <item name="CurrentChat" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Message" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChatWithRe_Ducks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChatWithRe_Ducks" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="screens" type="462c0819:PsiDirectoryNode" />
+              <item name="CurrentChat" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="MessageMain" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -247,18 +258,18 @@
     <property name="node.js.selected.package.standard" value="" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\utils\creator" />
-      <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\components" />
-      <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\services" />
-      <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\utils\firebase\autorize" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\components" />
       <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\services\firebase\database" />
       <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\components\AvatarWithStatus" />
       <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\screens\CurrentChat\components\ModalAvatar" />
       <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\screens\CurrentChat\components\MessageMain" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\utils\creator" />
+      <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\components" />
+      <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\services" />
+      <recent name="D:\Programing\Tutorial\Javascript\react_native\task\ChatWithRe_Ducks\app\utils\firebase\autorize" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -322,12 +333,15 @@
       <workItem from="1512371772494" duration="23660000" />
       <workItem from="1512406348117" duration="1405000" />
       <workItem from="1512458055802" duration="14532000" />
-      <workItem from="1512476612108" duration="13298000" />
+      <workItem from="1512476612108" duration="22333000" />
+      <workItem from="1512558928797" duration="5389000" />
+      <workItem from="1512566873239" duration="1933000" />
+      <workItem from="1512575414380" duration="7973000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="399832000" />
+    <option name="totallyTimeSpent" value="424162000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -341,17 +355,17 @@
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23076923" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13687003" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297619" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="ReactNative" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.51246685" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37275985" sideWeight="0.48753315" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.79091996" sideWeight="0.48753315" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -367,19 +381,20 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9605735" sideWeight="0.5103448" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.51246685" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6690562" sideWeight="0.48965517" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28912467" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40860215" sideWeight="0.48753315" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13687003" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,20 +410,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../../../te24live/te24live/frontend/admin/src/reducers/categoriesReducer.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../../../../te24live/te24live/frontend/admin/src/reducers/BusinessCategoriesReducer.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="102" column="49" lean-forward="false" selection-start-line="102" selection-start-column="19" selection-end-line="102" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/chatList/actions.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -463,7 +464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="83" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="83" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -494,7 +494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -538,7 +537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -553,7 +551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -656,9 +653,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -684,9 +678,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1797">
           <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -694,9 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -704,7 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -712,7 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -724,29 +710,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="100" column="44" lean-forward="true" selection-start-line="100" selection-start-column="44" selection-end-line="100" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/Message/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/Message/styles.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -758,38 +725,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/currentChat/reducers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/AvatarWithStatus/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-216">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/Message/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/react-native-animatable/typings/react-native-animatable.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3783">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/styles.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+        <state relative-caret-position="768">
+          <caret line="34" column="30" lean-forward="false" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js">
+    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="40" column="39" lean-forward="true" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+        <state relative-caret-position="96">
+          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/index.js">
+    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="771">
+          <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/currentChat/reducers.js">
+    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="50" column="51" lean-forward="false" selection-start-line="50" selection-start-column="51" selection-end-line="50" selection-end-column="51" />
+        <state relative-caret-position="603">
+          <caret line="83" column="6" lean-forward="false" selection-start-line="83" selection-start-column="6" selection-end-line="83" selection-end-column="6" />
           <folding>
-            <element signature="e#0#46#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>

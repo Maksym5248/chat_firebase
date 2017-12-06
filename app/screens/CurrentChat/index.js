@@ -8,7 +8,6 @@ import remove from '../../services/firebase/database/remove';
 
 const { sendMessage, updateStatusToRead } = currentChatOperations;
 let timer;
-let i = 0;
 
 const mapStateToProps = state => ({
   currentChats: state.currentChatList.currentChat,
@@ -20,12 +19,13 @@ const mapStateToProps = state => ({
 
 const enhance = compose(
   connect(mapStateToProps),
-  withState('text', 'setText', ''),
-  withState('selectedUser', 'setSelectedUser', null),
-  withState('idMessage', 'setIdMessage', null),
   withProps(({ navigation }) => ({
     idChat: navigation.state.params.idChat,
   })),
+  withState('text', 'setText', ''),
+  withState('selectedUser', 'setSelectedUser', null),
+  withState('idMessage', 'setIdMessage', null),
+  withState('animation', 'setAnimation', false),
   withProps(({
     currentChats, messagesId, idChat, chatList,
   }) => ({
@@ -33,43 +33,69 @@ const enhance = compose(
     messageId: messagesId[idChat],
     idUserWithChat: chatList[idChat].lastMessages.chatWithUser,
   })),
-  withHandlers({
-    send: ({
-      text, setText, dispatch, idChat, userCurrent,
-    }) => () => {
-      updateMeta(idChat, fetchingNull(userCurrent.uid));
-      if (text !== '') {
-        setText('');
-        dispatch(sendMessage(text, idChat));
-      }
-    },
-    onChangeText: ({ setText, userCurrent, idChat }) => (text) => {
-      updateMeta(idChat, {
-        isFetching: {
-          [userCurrent.uid]: userCurrent.uid,
-        },
-      });
-      clearTimeout(timer);
-      timer = setInterval(() => {
+  withHandlers(() => {
+    // let message = null;
+
+    return {
+      send: ({ text, setText, dispatch, idChat, userCurrent }) => () => {
         updateMeta(idChat, fetchingNull(userCurrent.uid));
-      }, 4000);
-      setText(text);
-    },
-    deleteMessage: ({ setIdMessage, idMessage, idChat }) => () => {
-      remove.message(idChat, idMessage);
-      setIdMessage(null);
-    },
+        if (text !== '') {
+          setText('');
+          dispatch(sendMessage(text, idChat));
+        }
+      },
+      onChangeText: ({ setText, userCurrent, idChat }) => (text) => {
+        updateMeta(idChat, {
+          isFetching: {
+            [userCurrent.uid]: userCurrent.uid,
+          },
+        });
+        clearTimeout(timer);
+        timer = setInterval(() => {
+          updateMeta(idChat, fetchingNull(userCurrent.uid));
+        }, 4000);
+        setText(text);
+      },
+      deleteMessage: ({ setIdMessage, idMessage, idChat }) => () => {
+        remove.message(idChat, idMessage);
+        setIdMessage(null);
+      },
+      animation: () => ref => { if (ref) { this.message = ref; } },
+      rubberBand: () => () => { if (this.message) { this.message.rubberBand(800); } },
+    };
   }),
   lifecycle({
     componentWillReceiveProps(nextProps) {
-      console.log('-----------------------++++++', i++);
       searchMessageWithoutStatusRead(nextProps, this.props);
+      // this.props.setAnimation(true);
+      // this.props.setAnimation('rubberBand');
+      // this.props.rubberBand();
     },
     componentDidMount() {
-      console.log('-----------------------++++++', i++);
       searchMessageWithoutStatusRead(this.props, this.props);
+      console.log('this.props.rubberBand()');
+
+      // зупинити анімацію
+      // this.anim.bounce(800);
+      // console.log('+', this.props.animation);
+    },
+    componentDidUpdate() {
+      console.log('this.props.rubberBand()');
+      this.props.rubberBand();
+
+      // зупинити анімацію
+      // this.anim.bounce(800);
+      // console.log('+', this.props.animation);
     },
   }),
+  // shouldUpdate((props, nextProps) => ({
+  //   animation: () => {
+  //     if (nextProps.animation) {
+  //       return true;
+  //     }
+  //     return false;
+  //   },
+  // })),
 );
 
 function searchMessageWithoutStatusRead(nextProps, props) {

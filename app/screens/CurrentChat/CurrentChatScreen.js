@@ -29,6 +29,7 @@ const CurrentChatScreen = ({
   idMessage,
   setIdMessage,
   deleteMessage,
+  animation,
 }) => (
   <KeyboardAvoidingView
     style={styles.container}
@@ -57,6 +58,7 @@ const CurrentChatScreen = ({
         if (authorId === userCurrent.uid) {
           return (
             <MessageMain
+              animation={animation}
               key={id}
               userCurrent={userCurrent}
               message={message}
@@ -126,6 +128,7 @@ CurrentChatScreen.propTypes = {
   idMessage: Type.string,
   setIdMessage: Type.func,
   deleteMessage: Type.func,
+  animation: Type.func,
 };
 
 

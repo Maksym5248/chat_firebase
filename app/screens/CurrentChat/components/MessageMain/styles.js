@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
   },
   statusMessageMain: {
     paddingRight: 20,
+    textAlign: 'right',
     fontSize: fontSizes.mini,
   },
 });

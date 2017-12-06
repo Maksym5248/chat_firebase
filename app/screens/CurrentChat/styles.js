@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     transform: rotate180,
   },
   flatListContent: {
-   // transform: rotate180,
+    // transform: rotate180,
   },
   enteringMessage: {
     textAlign: 'center',
