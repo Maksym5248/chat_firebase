@@ -30,20 +30,20 @@ const sendMessage = (text, idChat) => async (dispatch, getState) => {
   const idInReducer = Date.now().valueOf().toString(36).substr(2, 9);
 
 
-  if (typeof chat[idChat] !== 'undefined') {
-    const messageInChat = {
-      chatId: idChat,
-      messages: {
-        [idInReducer]: creatorMessages(
-          idInReducer,
-          text,
-          messagesStatus.SENDING,
-          uid,
-        ),
-      },
-    };
-    dispatch(addMessage(messageInChat));
-  }
+  // if (typeof chat[idChat] !== 'undefined') {
+  //   const messageInChat = {
+  //     chatId: idChat,
+  //     messages: {
+  //       [idInReducer]: creatorMessages(
+  //         idInReducer,
+  //         text,
+  //         messagesStatus.SENDING,
+  //         uid,
+  //       ),
+  //     },
+  //   };
+  //   dispatch(addMessage(messageInChat));
+  // }
 
   createMessage(
     idChat,

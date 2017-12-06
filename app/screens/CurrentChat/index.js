@@ -34,7 +34,7 @@ const enhance = compose(
     idUserWithChat: chatList[idChat].lastMessages.chatWithUser,
   })),
   withHandlers(() => {
-    // let message = null;
+    let message = null;
 
     return {
       send: ({ text, setText, dispatch, idChat, userCurrent }) => () => {
@@ -60,8 +60,12 @@ const enhance = compose(
         remove.message(idChat, idMessage);
         setIdMessage(null);
       },
-      animation: () => ref => { if (ref) { this.message = ref; } },
-      rubberBand: () => () => { if (this.message) { this.message.rubberBand(800); } },
+      animation: () => ref => { if (ref) { message = ref; } },
+      rubberBand: () => () => {
+        if (message) {
+          message.rubberBand(800);
+        }
+      },
     };
   }),
   lifecycle({
@@ -74,28 +78,14 @@ const enhance = compose(
     componentDidMount() {
       searchMessageWithoutStatusRead(this.props, this.props);
       console.log('this.props.rubberBand()');
-
-      // зупинити анімацію
-      // this.anim.bounce(800);
-      // console.log('+', this.props.animation);
     },
-    componentDidUpdate() {
-      console.log('this.props.rubberBand()');
-      this.props.rubberBand();
-
-      // зупинити анімацію
-      // this.anim.bounce(800);
-      // console.log('+', this.props.animation);
+    componentDidUpdate(prevProps) {
+     // if (this.props.messageId.length > prevProps.messageId.length) {
+        console.log('------------------------');
+        this.props.rubberBand();
+     // }
     },
   }),
-  // shouldUpdate((props, nextProps) => ({
-  //   animation: () => {
-  //     if (nextProps.animation) {
-  //       return true;
-  //     }
-  //     return false;
-  //   },
-  // })),
 );
 
 function searchMessageWithoutStatusRead(nextProps, props) {
