@@ -20,6 +20,7 @@ const enhance = compose(
     searchValue, chatList, chatsListId, userList,
   }) => ({
     chatsListId: chatsListId.filter((item) => {
+
       const expr = new RegExp(searchValue.toLowerCase());
       const idUser = chatList[item].lastMessages.chatWithUser;
       const name = userList[idUser].displayName;
@@ -30,12 +31,14 @@ const enhance = compose(
   withHandlers({
     moveToChat: ({ navigation, chatList, userList }) => (id) => {
       const userId = chatList[id].lastMessages.chatWithUser;
-      const { displayName, photoURL } = userList[userId];
-      navigation.navigate(screens.CurrentChat, {
-        idChat: id,
-        displayName,
-        photoURL,
-      });
+      if (userList[userId]) {
+        const { displayName, photoURL } = userList[userId];
+        navigation.navigate(screens.CurrentChat, {
+          idChat: id,
+          displayName,
+          photoURL,
+        });
+      }
     },
     deleteChat: ({ setIdChat, idChat, userCurrent }) => () => {
       remove.chat(idChat, userCurrent.uid);

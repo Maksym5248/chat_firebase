@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import { compose, withState, withHandlers, hoistStatics } from 'recompose';
-import { withLoadingModal } from '../../utils/enhancers';
 import AuthenticationScreen from './AuthenticationScreen';
 import { authenticationOperations } from '../../modules/authentication';
 
@@ -16,7 +15,6 @@ const enhance = compose(
   connect(mapStateToProps),
   withState('email', 'setEmail', ''),
   withState('password', 'setPassword', ''),
-  withLoadingModal.stateProp('isLoading'),
   withHandlers({
     setEmail: ({ setEmail }) => (text) => setEmail(text),
     setPassword: ({ setPassword }) => (text) => setPassword(text),

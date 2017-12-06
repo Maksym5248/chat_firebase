@@ -6,9 +6,8 @@ import Avatar from '../../../../components/Avatar/index';
 import styles from './styles';
 import withMoment from '../../../../utils/withMoment';
 
-// animation={'rubberBand'}
 const defaultAvatar = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8B0hBF1hdy4mTfoMA1Gp0kxYtbp8hSXjbWyTUHoQWs0xbRIs-';
-// stopAnimation()
+
 const MessageMain = ({ userCurrent, message, onPressText, animation }) => (
   <Animatable.View
     ref={animation}

@@ -9,6 +9,19 @@ import updateStatus from '../../services/firebase/database/updateStatus';
 // import types from './types';
 // import appTypes from '../app/types';
 
+const updateMeta = (idChat, messageId) => async (dispatch, getState) => {
+  const { uid } = getState().authentication.currentUser;
+  const messageRecipient = getState().chatList.chats[idChat].lastMessages.chatWithUser;
+
+  updateStatus(
+    idChat,
+    messageId,
+    messagesStatus.READ,
+    uid,
+    messageRecipient,
+  );
+};
+
 
 const updateStatusToRead = (idChat, messageId) => async (dispatch, getState) => {
   const { uid } = getState().authentication.currentUser;

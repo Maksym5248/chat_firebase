@@ -60,10 +60,15 @@ const CurrentChatScreen = ({
         const id = item;
         const authorId = currentChat.messages[id].author;
         const message = currentChat.messages[id];
+
         if (authorId === userCurrent.uid) {
           return (
             <MessageMain
-              animation={animationMessageMain}
+              animation={ref => {
+                if (ref) {
+                  animationMessageMain(ref, id);
+                }
+              }}
               key={id}
               userCurrent={userCurrent}
               message={message}
@@ -71,10 +76,15 @@ const CurrentChatScreen = ({
             />
           );
         }
+
         const user = userList[authorId];
         return (
           <Message
-            animation={animationMessage}
+            animation={ref => {
+              if (ref) {
+                animationMessage(ref, id);
+              }
+            }}
             key={id}
             setVisibleModal={() => setSelectedUser(user)}
             user={user}

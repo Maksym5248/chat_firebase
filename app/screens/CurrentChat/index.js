@@ -33,8 +33,8 @@ const enhance = compose(
     idUserWithChat: chatList[idChat].lastMessages.chatWithUser,
   })),
   withHandlers(() => {
-    let messageMain = null;
-    let message = null;
+    const refMessagesMain = {};
+    const refMessages = {};
 
     return {
       send: ({ text, setText, dispatch, idChat, userCurrent }) => () => {
@@ -60,30 +60,41 @@ const enhance = compose(
         remove.message(idChat, idMessage);
         setIdMessage(null);
       },
-      animationMessageMain: () => ref => { if (ref) { messageMain = ref; } },
-      rubberBandMessageMain: () => () => {
-        if (messageMain) {
-          messageMain.rubberBand(800);
+      animationMessageMain: () => (ref, id) => {
+        if (ref) {
+          refMessagesMain[id] = ref;
         }
       },
-      animationMessage: () => ref => { if (ref) { message = ref; } },
-      rubberBandMessage: () => () => {
-        if (message) {
-          message.rubberBand(800);
+      rubberBandMessageMain: () => (id) => {
+        refMessagesMain[id].rubberBand(800);
+      },
+      animationMessage: () => (ref, id) => {
+        if (ref) {
+          refMessages[id] = ref;
         }
+      },
+      rubberBandMessage: () => (id) => {
+        refMessages[id].rubberBand(800);
       },
     };
   }),
   lifecycle({
-    componentWillReceiveProps(nextProps) {
-      searchMessageWithoutStatusRead(nextProps, this.props);
-    },
+    // componentWillReceiveProps(nextProps) {
+    //
+    // },
     componentDidMount() {
       searchMessageWithoutStatusRead(this.props, this.props);
     },
     componentDidUpdate(prevProps) {
-      if (this.props.messageId.length > prevProps.messageId.length) {
-        this.props.rubberBandMessageMain();
+      // if (this.props.messageId &&
+      //   this.props.messageId.length === 1) {
+      //   this.props.rubberBandMessageMain(this.props.messageId[0]);
+      // }
+      console.log('-------------this.props.messageId', this.props.messageId);
+      searchMessageWithoutStatusRead(this.props, prevProps);
+      if (this.props.messageId && prevProps.messageId &&
+        this.props.messageId.length > prevProps.messageId.length || 0) {
+        this.props.rubberBandMessageMain(this.props.messageId[0]);
       }
     },
   }),

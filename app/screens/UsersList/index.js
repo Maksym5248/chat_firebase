@@ -1,8 +1,7 @@
 import { connect } from 'react-redux';
 import { compose, withStateHandlers, hoistStatics } from 'recompose';
 import UsersListScreen from './UsersListScreen';
-import screens from '../../constants/screens';
-import createChatFb from '../../services/firebase/database/createChat';
+import { userListOperations } from '../../modules/usersList';
 
 
 const mapStateToProps = state => ({
@@ -24,17 +23,8 @@ const enhance = compose(
       userListItemOnPress: () => (uid) => ({
         modal: { isVisible: true, uidValue: uid },
       }),
-      createChat: ({ modal }, { userCurrent, navigation, userList }) => () => {
-        createChatFb(userCurrent.uid, modal.uidValue).then((id) => {
-          const { displayName, photoURL } = userList[modal.uidValue];
-          navigation.navigate(screens.CurrentChat, {
-            idChat: id,
-            displayName,
-            photoURL,
-          });
-        }).catch((err) => {
-          console.log('err createChatFb', err);
-        });
+      createChat: ({ modal }, { dispatch, navigation }) => () => {
+        dispatch(userListOperations.createChat(modal.uidValue, navigation));
         return {
           modal: { isVisible: false, uidValue: '' },
         };

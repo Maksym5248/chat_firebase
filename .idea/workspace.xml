@@ -3,14 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="1528dd33-58c6-48e7-943b-ba660d927736" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/Avatar/index.js" afterPath="$PROJECT_DIR$/app/components/Avatar/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/currentChat/operations.js" afterPath="$PROJECT_DIR$/app/modules/currentChat/operations.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/modules/usersList/operations.js" afterPath="$PROJECT_DIR$/app/modules/usersList/operations.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/Authentication/index.js" afterPath="$PROJECT_DIR$/app/screens/Authentication/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/ChatList/index.js" afterPath="$PROJECT_DIR$/app/screens/ChatList/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/components/Message/index.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/Message/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/index.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/CurrentChat/index.js" afterPath="$PROJECT_DIR$/app/screens/CurrentChat/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/Profile/index.js" afterPath="$PROJECT_DIR$/app/screens/Profile/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/screens/UsersList/index.js" afterPath="$PROJECT_DIR$/app/screens/UsersList/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,12 +23,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/screens/UsersList/index.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="38" lean-forward="true" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-              <folding />
+            <state relative-caret-position="-192">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,11 +38,43 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="26" column="47" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="47" />
+            <state relative-caret-position="696">
+              <caret line="128" column="51" lean-forward="false" selection-start-line="128" selection-start-column="51" selection-end-line="128" selection-end-column="51" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CurrentChatScreen.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="617">
+              <caret line="123" column="0" lean-forward="true" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/styles.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="38" column="4" lean-forward="false" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,7 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/services/firebase/database/createMessage.js" />
         <option value="$PROJECT_DIR$/app/services/firebase/database/createChat.js" />
         <option value="$PROJECT_DIR$/app/services/firebase/database/updateFetching.js" />
         <option value="$PROJECT_DIR$/app/constants/messagesStatus.js" />
@@ -82,7 +113,6 @@
         <option value="$PROJECT_DIR$/app/components/ModalMenu/index.js" />
         <option value="$PROJECT_DIR$/app/screens/ChatList/ChatListScreen.js" />
         <option value="$PROJECT_DIR$/app/modules/chatList/operations.js" />
-        <option value="$PROJECT_DIR$/app/modules/drawerMenu/operations.js" />
         <option value="$PROJECT_DIR$/app/modules/chatList/reducers.js" />
         <option value="$PROJECT_DIR$/app/constants/url.js" />
         <option value="$PROJECT_DIR$/app/services/firebase/database/remove.js" />
@@ -94,7 +124,6 @@
         <option value="$PROJECT_DIR$/app/modules/index.js" />
         <option value="$PROJECT_DIR$/app/modules/drawerMenu/index.js" />
         <option value="$PROJECT_DIR$/app/components/Profile/index.js" />
-        <option value="$PROJECT_DIR$/app/screens/Authentication/index.js" />
         <option value="$PROJECT_DIR$/app/screens/Profile/styles.js" />
         <option value="$PROJECT_DIR$/app/screens/CurrentChat/components/ModalProfile/styles.js" />
         <option value="$PROJECT_DIR$/app/screens/Profile/ProfileScreen.js" />
@@ -104,20 +133,23 @@
         <option value="$PROJECT_DIR$/app/screens/DrawerMenu/components/ButtonLogOut/index.js" />
         <option value="$PROJECT_DIR$/app/screens/DrawerMenu/components/ButtonLogOut/styles.js" />
         <option value="$PROJECT_DIR$/app/screens/CurrentChat/components/Message/styles.js" />
-        <option value="$PROJECT_DIR$/app/screens/CurrentChat/styles.js" />
         <option value="$PROJECT_DIR$/app/modules/currentChat/reducers.js" />
         <option value="$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/styles.js" />
         <option value="$PROJECT_DIR$/app/services/firebase/database/updateMeta.js" />
         <option value="$PROJECT_DIR$/app/screens/CurrentChat/components/Message/index.js" />
-        <option value="$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/index.js" />
         <option value="$PROJECT_DIR$/app/modules/currentChat/operations.js" />
-        <option value="$PROJECT_DIR$/app/screens/CurrentChat/index.js" />
-        <option value="$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js" />
         <option value="$PROJECT_DIR$/app/components/Avatar/index.js" />
-        <option value="$PROJECT_DIR$/app/screens/ChatList/index.js" />
         <option value="$PROJECT_DIR$/app/screens/DrawerMenu/index.js" />
         <option value="$PROJECT_DIR$/app/screens/Profile/index.js" />
         <option value="$PROJECT_DIR$/app/screens/UsersList/index.js" />
+        <option value="$PROJECT_DIR$/app/screens/Authentication/index.js" />
+        <option value="$PROJECT_DIR$/app/modules/drawerMenu/operations.js" />
+        <option value="$PROJECT_DIR$/app/screens/ChatList/index.js" />
+        <option value="$PROJECT_DIR$/app/modules/usersList/operations.js" />
+        <option value="$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/index.js" />
+        <option value="$PROJECT_DIR$/app/screens/CurrentChat/index.js" />
+        <option value="$PROJECT_DIR$/app/screens/CurrentChat/styles.js" />
+        <option value="$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js" />
       </list>
     </option>
   </component>
@@ -191,7 +223,17 @@
               <item name="ChatWithRe_Ducks" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="UsersList" type="462c0819:PsiDirectoryNode" />
+              <item name="CurrentChat" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ChatWithRe_Ducks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ChatWithRe_Ducks" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="screens" type="462c0819:PsiDirectoryNode" />
+              <item name="CurrentChat" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="MessageMain" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -293,12 +335,12 @@
       <workItem from="1512476612108" duration="22333000" />
       <workItem from="1512558928797" duration="5389000" />
       <workItem from="1512566873239" duration="1933000" />
-      <workItem from="1512575414380" duration="20743000" />
+      <workItem from="1512575414380" duration="26663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="436932000" />
+    <option name="totallyTimeSpent" value="442852000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -321,7 +363,7 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56630826" sideWeight="0.48753315" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36678615" sideWeight="0.48753315" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -368,49 +410,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/modules/profile/types.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/profile/operations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/constants/screens.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/drawerMenu/reducers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/profile/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/modules/profile/reducers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/modules/drawerMenu/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -455,13 +454,6 @@
         <state relative-caret-position="432">
           <caret line="21" column="23" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="21" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/UsersList/UsersListScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -524,26 +516,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="10" lean-forward="false" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/Message/styles.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/styles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="37" column="25" lean-forward="false" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -639,7 +615,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -657,7 +633,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -667,34 +643,6 @@
         <state relative-caret-position="-165">
           <caret line="45" column="6" lean-forward="true" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/services/firebase/database/createChat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="121" column="8" lean-forward="true" selection-start-line="121" selection-start-column="8" selection-end-line="121" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -714,28 +662,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/Authentication/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="55" lean-forward="false" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/ChatList/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="32" column="57" lean-forward="false" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/screens/DrawerMenu/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -748,21 +680,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/index.js">
+    <entry file="file://$PROJECT_DIR$/app/modules/drawerMenu/reducers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="26" column="47" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="47" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/UsersList/UsersListScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/authentication/operations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#38#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/screens/UsersList/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="38" lean-forward="true" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+        <state relative-caret-position="507">
+          <caret line="31" column="6" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/Authentication/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/usersList/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/firebase/database/createChat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/ChatList/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/drawerMenu/operations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/modules/usersList/operations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="47" lean-forward="true" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#44#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/services/firebase/database/subscribe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/components/MessageMain/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-192">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="128" column="51" lean-forward="false" selection-start-line="128" selection-start-column="51" selection-end-line="128" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/styles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="38" column="4" lean-forward="false" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/screens/CurrentChat/CurrentChatScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="123" column="0" lean-forward="true" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
