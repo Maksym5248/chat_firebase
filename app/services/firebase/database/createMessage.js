@@ -13,10 +13,9 @@ const createMessage = (idChat, textMessage, statusMessage, authorId, messageReci
     reject('createChatFb don\'t have response');
   }).then((idMessage) => {
     const message = creatorMessages(idMessage, textMessage, statusMessage, authorId);
-    messages.child(idMessage).set(message);
-    console.log('-----createMessage-----');
     ref(`${url.userProfile}/${authorId}/chatList/${idChat}/lastMessages`).update(creatorLastMessage(message));
     ref(`${url.userProfile}/${messageRecipient}/chatList/${idChat}/lastMessages`).update(creatorLastMessage(message));
+    messages.child(idMessage).set(message);
     return idMessage;
   });
 };

@@ -55,17 +55,14 @@ const enhance = compose(
       rubberBandMessageMain: () => (id) => {
         refMessagesMain[id].rubberBand(800);
       },
-      animationMessage: ({ dispatch, idChat }) => (ref, id, status) => {
+      refMessage: ({ dispatch, idChat }) => (ref, id, status) => {
         if (status !== messagesStatus.READ && ref) {
           refMessages[id] = ref;
-
           dispatch(updateStatusToRead(
             idChat,
             id,
           ));
         }
-
-        // if (ref) { refMessages[id] = ref; }
       },
       rubberBandMessage: () => (id) => {
         refMessages[id].rubberBand(800);
@@ -73,40 +70,14 @@ const enhance = compose(
     };
   }),
   lifecycle({
-    componentDidMount() {
-      // searchMessageWithoutStatusRead(this.props);
-    },
     componentDidUpdate(prevProps) {
-     // searchMessageWithoutStatusRead(this.props, this.props.rubberBandMessage);
-      // this.props.rubberBandMessage();
-     if (this.props.messageId && prevProps.messageId &&
+      if (this.props.messageId && prevProps.messageId &&
          this.props.userCurrent.uid === this.props.currentChat.messages[this.props.messageId[0]].author &&
          this.props.messageId.length > prevProps.messageId.length) {
-       this.props.rubberBandMessageMain(this.props.messageId[0]);
-     }
+        this.props.rubberBandMessageMain(this.props.messageId[0]);
+      }
     },
   }),
 );
-
-// function searchMessageWithoutStatusRead(props, rubberBandMessage = null) {
-//   const { dispatch, idChat, userCurrent } = props;
-//   if (typeof props.currentChat !== 'undefined') {
-//     props.messageId.forEach((item) => {
-//       const author = props.currentChat.messages[item].author;
-//       const status = props.currentChat.messages[item].status;
-//
-//       if (status !== messagesStatus.READ && author !== userCurrent.uid) {
-//         dispatch(updateStatusToRead(
-//           idChat,
-//           item,
-//         ));
-//         if (rubberBandMessage !== null) {
-//           // rubberBandMessage(item);
-//         }
-//       }
-//     });
-//   }
-// }
-
 
 export default hoistStatics(enhance)(CurrentChatScreen);
