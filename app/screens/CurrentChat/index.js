@@ -3,11 +3,9 @@ import { compose, hoistStatics, withState, lifecycle, withHandlers, withProps } 
 import CurrentChatScreen from './CurrentChatScreen';
 import { currentChatOperations } from '../../modules/currentChat';
 import messagesStatus from '../../constants/messagesStatus';
-import updateMeta from '../../services/firebase/database/updateMeta';
 import remove from '../../services/firebase/database/remove';
 
-const { sendMessage, updateStatusToRead } = currentChatOperations;
-let timer;
+const { sendMessage, updateStatusToRead, updateMeta } = currentChatOperations;
 
 const mapStateToProps = state => ({
   currentChats: state.currentChatList.currentChat,
@@ -37,23 +35,14 @@ const enhance = compose(
     const refMessages = {};
 
     return {
-      send: ({ text, setText, dispatch, idChat, userCurrent }) => () => {
-        updateMeta(idChat, fetchingNull(userCurrent.uid));
+      send: ({ text, setText, dispatch, idChat }) => () => {
         if (text !== '') {
           setText('');
           dispatch(sendMessage(text, idChat));
         }
       },
-      onChangeText: ({ setText, userCurrent, idChat }) => (text) => {
-        updateMeta(idChat, {
-          isFetching: {
-            [userCurrent.uid]: userCurrent.uid,
-          },
-        });
-        clearTimeout(timer);
-        timer = setInterval(() => {
-          updateMeta(idChat, fetchingNull(userCurrent.uid));
-        }, 4000);
+      onChangeText: ({ setText, userCurrent, idChat, dispatch }) => (text) => {
+        dispatch(updateMeta(idChat, userCurrent.uid));
         setText(text);
       },
       deleteMessage: ({ setIdMessage, idMessage, idChat }) => () => {
@@ -61,17 +50,13 @@ const enhance = compose(
         setIdMessage(null);
       },
       animationMessageMain: () => (ref, id) => {
-        if (ref) {
-          refMessagesMain[id] = ref;
-        }
+        if (ref) { refMessagesMain[id] = ref; }
       },
       rubberBandMessageMain: () => (id) => {
         refMessagesMain[id].rubberBand(800);
       },
       animationMessage: () => (ref, id) => {
-        if (ref) {
-          refMessages[id] = ref;
-        }
+        if (ref) { refMessages[id] = ref; }
       },
       rubberBandMessage: () => (id) => {
         refMessages[id].rubberBand(800);
@@ -79,51 +64,41 @@ const enhance = compose(
     };
   }),
   lifecycle({
-    // componentWillReceiveProps(nextProps) {
-    //
-    // },
     componentDidMount() {
-      searchMessageWithoutStatusRead(this.props, this.props);
+      searchMessageWithoutStatusRead(this.props);
     },
     componentDidUpdate(prevProps) {
-      // if (this.props.messageId &&
-      //   this.props.messageId.length === 1) {
-      //   this.props.rubberBandMessageMain(this.props.messageId[0]);
-      // }
-      console.log('-------------this.props.messageId', this.props.messageId);
-      searchMessageWithoutStatusRead(this.props, prevProps);
+      searchMessageWithoutStatusRead(this.props, this.props.rubberBandMessage);
       if (this.props.messageId && prevProps.messageId &&
-        this.props.messageId.length > prevProps.messageId.length || 0) {
+          this.props.userCurrent.uid === this.props.currentChat.messages[this.props.messageId[0]].author &&
+          this.props.messageId.length > prevProps.messageId.length) {
         this.props.rubberBandMessageMain(this.props.messageId[0]);
       }
     },
   }),
 );
 
-function searchMessageWithoutStatusRead(nextProps, props) {
+function searchMessageWithoutStatusRead(props, rubberBandMessage = null) {
   const { dispatch, idChat, userCurrent } = props;
-
-  if (typeof nextProps.currentChat !== 'undefined') {
-    nextProps.messageId.forEach((item) => {
-      const author = nextProps.currentChat.messages[item].author;
-      const status = nextProps.currentChat.messages[item].status;
+  // console.log('ssssssssssssssssssssssssssss');
+  if (typeof props.currentChat !== 'undefined') {
+    props.messageId.forEach((item) => {
+      const author = props.currentChat.messages[item].author;
+      const status = props.currentChat.messages[item].status;
 
       if (status !== messagesStatus.READ && author !== userCurrent.uid) {
+        console.log('ssssssssssssssssssssssssssss', idChat, item);
         dispatch(updateStatusToRead(
           idChat,
           item,
         ));
+        if (rubberBandMessage !== null) {
+          rubberBandMessage(item);
+        }
       }
     });
   }
 }
 
-function fetchingNull(uid) {
-  return {
-    isFetching: {
-      [uid]: null,
-    },
-  };
-}
 
 export default hoistStatics(enhance)(CurrentChatScreen);

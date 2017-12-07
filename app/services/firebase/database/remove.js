@@ -3,11 +3,11 @@ import url from '../../../constants/url';
 
 
 function chat(idChat, uid) {
-  ref(`${url.userProfile}/${uid}${url.chatList}/${idChat}`).remove();
+  return Promise.resolve(ref(`${url.userProfile}/${uid}${url.chatList}/${idChat}`).remove());
 }
 
 function message(idChat, messagesId) {
-  ref(`${url.chatList}/${idChat}/messages/${messagesId}`).remove();
+  return Promise.resolve(ref(`${url.chatList}/${idChat}/messages/${messagesId}`).remove());
 }
 
 const remove = {

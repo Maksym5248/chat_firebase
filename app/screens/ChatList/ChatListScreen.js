@@ -46,7 +46,7 @@ const ChatListScreen = ({
     </ScrollView>
     <ModalMenu
       isVisible={Boolean(idChat)}
-      setUnVisible={() => setIdChat(false)}
+      setUnVisible={() => setIdChat(null)}
       onPress={deleteChat}
       text='Видалити'
     />

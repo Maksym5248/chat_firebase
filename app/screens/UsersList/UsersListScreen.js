@@ -5,7 +5,7 @@ import {
 import Type from 'prop-types';
 import { MaterialIcons } from '@expo/vector-icons';
 import UserListItem from './components/UserListItem';
-import s from './styles';
+import styles from './styles';
 import ModalMenu from '../../components/ModalMenu';
 
 const UsersListScreen = ({
@@ -17,7 +17,7 @@ const UsersListScreen = ({
   createChat,
   userListItemOnPress,
 }) => (
-  <ScrollView style={s.container}>
+  <ScrollView style={styles.container}>
     {
       userListId.map(item => {
         if (item && userCurrent.uid && userCurrent.uid !== item) {
@@ -36,14 +36,6 @@ const UsersListScreen = ({
   </ScrollView>
 );
 
-// {
-//   userListId.map(item => {
-//     if (item && userCurrent.uid !== item) {
-//       return <UserListItem user={userList[item]} />;
-//     }
-//     return null;
-//   })
-// }
 
 UsersListScreen.defaudefaultProps = {
   userCurrent: {},
