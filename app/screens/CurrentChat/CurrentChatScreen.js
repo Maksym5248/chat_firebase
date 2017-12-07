@@ -6,6 +6,7 @@ import styles from './styles';
 import withMoment from '../../utils/withMoment';
 import ModalMenu from '../../components/ModalMenu/index';
 import Avatar from '../../components/Avatar/index';
+import messagesStatus from '../../constants/messagesStatus';
 
 const defaultAvatar = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8B0hBF1hdy4mTfoMA1Gp0kxYtbp8hSXjbWyTUHoQWs0xbRIs-';
 
@@ -35,6 +36,7 @@ const CurrentChatScreen = ({
   deleteMessage,
   animationMessageMain,
   animationMessage,
+  changeMessageStatus,
 }) => (
   <KeyboardAvoidingView
     style={styles.container}
@@ -82,7 +84,7 @@ const CurrentChatScreen = ({
           <Message
             animation={ref => {
               if (ref) {
-                animationMessage(ref, id);
+                animationMessage(ref, id, message.status);
               }
             }}
             key={id}
@@ -152,6 +154,7 @@ CurrentChatScreen.propTypes = {
   deleteMessage: Type.func,
   animationMessageMain: Type.func,
   animationMessage: Type.func,
+  changeMessageStatus: Type.func,
 };
 
 

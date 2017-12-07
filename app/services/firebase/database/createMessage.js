@@ -9,12 +9,12 @@ const createMessage = (idChat, textMessage, statusMessage, authorId, messageReci
   const messages = ref(`${url.chatList}/${idChat}/messages`);
   return new Promise((resolve, reject) => {
     const idMessage = messages.push().key; // ref(url.chatList).push().key
-
     if (idMessage) resolve(idMessage);
     reject('createChatFb don\'t have response');
   }).then((idMessage) => {
     const message = creatorMessages(idMessage, textMessage, statusMessage, authorId);
     messages.child(idMessage).set(message);
+    console.log('-----createMessage-----');
     ref(`${url.userProfile}/${authorId}/chatList/${idChat}/lastMessages`).update(creatorLastMessage(message));
     ref(`${url.userProfile}/${messageRecipient}/chatList/${idChat}/lastMessages`).update(creatorLastMessage(message));
     return idMessage;

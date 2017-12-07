@@ -27,19 +27,17 @@ const updateMeta = (idChat, uid) => async () => {
 const updateStatusToRead = (idChat, messageId) => async (dispatch, getState) => {
   const { uid } = getState().authentication.currentUser;
   const messageRecipient = getState().chatList.chats[idChat].lastMessages.chatWithUser;
-    console.log('++++++++++++++++++++++++++++++++++++', idChat,
-      messageId,
-      messagesStatus.READ,
-      uid,
-      messageRecipient);
 
-  updateStatus(
+  return updateStatus(
     idChat,
     messageId,
     messagesStatus.READ,
     uid,
     messageRecipient,
   );
+  //.then((response) => {
+  //     console.log('------------------', response);
+  // });
 };
 
 const sendMessage = (text, idChat) => async (dispatch, getState) => {
@@ -63,7 +61,6 @@ const sendMessage = (text, idChat) => async (dispatch, getState) => {
   //   };
   //   dispatch(addMessage(messageInChat));
   // }
-
   return createMessage(
     idChat,
     text,
